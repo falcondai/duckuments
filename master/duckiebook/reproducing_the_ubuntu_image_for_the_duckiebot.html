@@ -2228,11 +2228,10 @@ div#tocdiv .toc_a_for_part {
     size: 1.2 GB
   SHA256: dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
 </code></pre>
-<p>Run the command <code>sha256</code> to make sure you have the right version:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> sha256 ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
+<p>Run the command <code>sha256sum</code> to make sure you have the right version:</p>
+<pre class="console"><code>laptop <span class="console_sign">$</span> sha256sum ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
 dc3afcad68a5de3ba683dc30d2093a3b5b3cd6b2c16c0b5de8d50fede78f75c2
 </code></pre>
-<p>(to run this command you may need to do <code>sudo apt-get install hashalot</code>)</p>
 <p>If the string does not correspond exactly, your download was corrupted.
 Delete the file and try again.</p>
 <p>Then decompress using the command <code>xz</code>:</p>
