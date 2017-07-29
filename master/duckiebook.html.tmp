@@ -547,7 +547,8 @@ with password <code>quackquack</code>.</p>
 commands:</p>
 <pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> update
 duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> dist-upgrade
-</code></pre><div style="display:none">Because of mathjax bug</div>
+</code></pre>
+<p>(Expect dist-upgrade to take quite a long time - e.g. 2hrs)</p><div style="display:none">Because of mathjax bug</div>
 </section></section></section><section class="with-header-inside" id="reproducing-the-ubuntu-image-for-laptops:section" level="sec"><!--Warning: Adding prefix 'sec' to current id 'reproducing-the-ubuntu-image-for-laptops' for h1.--><h1 counter-sec="12" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_2_reproducing_duckietop.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_2_reproducing_duckietop.md" id="sec:reproducing-the-ubuntu-image-for-laptops" label-name="Reproducing the Ubuntu image for laptops" label-number="12" label-self="" label-what="Chapter" label-what-number="Chapter 12" label-what-number-name="Chapter 12 - Reproducing the Ubuntu image for laptops">Reproducing the Ubuntu image for laptops</h1><section class="without-header-inside" level="sub">
 <p>These are Andrea’s notes for the laptops (Duckietops).</p>
 <p>The image was Ubuntu Mate 16.04.2.</p>
