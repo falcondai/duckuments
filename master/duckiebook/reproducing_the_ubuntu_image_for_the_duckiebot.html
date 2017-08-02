@@ -1770,6 +1770,9 @@ div#tocdiv .toc_a_for_part {
 <li class="toc_li-depth-3 toc_li_for_sec">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:step-1-from-blank-to-minimal-setup"><span class="toc_what">Section</span> <span class="toc_number">11.1</span><span class="toc_sep"> - </span><span class="toc_name">Step 1: From blank to minimal setup</span></a>
 </li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:part-2-dependencies-and-configurations"><span class="toc_what">Section</span> <span class="toc_number">11.2</span><span class="toc_sep"> - </span><span class="toc_name">Part 2: Dependencies and Configurations</span></a>
+</li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
@@ -1998,10 +2001,10 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul></div><div class="super"><a class="link_prev link-different-file" href="assembling_the_duckiebot.html#assembling-the-duckiebot:section">prev</a><section class="with-header-inside main-section-for-page" id="reproducing-the-ubuntu-image-for-the-duckiebot:section" level="sec" next="reproducing-the-ubuntu-image-for-laptops:section" prev="assembling-the-duckiebot:section"><!--Warning: Adding prefix 'sec' to current id 'reproducing-the-ubuntu-image-for-the-duckiebot' for h1.--><h1 counter-sec="11" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="sec:reproducing-the-ubuntu-image-for-the-duckiebot" label-name="Reproducing the Ubuntu image for the Duckiebot" label-number="11" label-self="" label-what="Chapter" label-what-number="Chapter 11" label-what-number-name="Chapter 11 - Reproducing the Ubuntu image for the Duckiebot">Reproducing the Ubuntu image for the Duckiebot<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h1><section class="without-header-inside" level="sub">
 <p>These are the instructions to reproduce the Ubuntu image that we use.</p>
-<p>We organize this in three steps:</p>
+<p>We organize this in two steps:</p>
 <ul>
-<li>Step 1: From downloaded image, to updated setup.</li>
-<li>Step 2: Installation of ros and other dependencies.</li>
+<li>Step 1: Downloading and loading the raw ubuntu image</li>
+<li>Step 2: Installation of ros and other dependencies and other configurations</li>
 </ul>
 </section><section class="with-header-inside" id="step-1-from-blank-to-minimal-setup:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'step-1-from-blank-to-minimal-setup' for h2.--><h2 counter-sec="11" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="sub:step-1-from-blank-to-minimal-setup" label-name="Step 1: From blank to minimal setup" label-number="11.1" label-self="" label-what="Section" label-what-number="Section 11.1" label-what-number-name="Section 11.1 - Step 1: From blank to minimal setup">Step 1: From blank to minimal setup<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h2><section class="without-header-inside" level="subsub">
 <p>Resources necessaries:</p>
@@ -2066,7 +2069,105 @@ commands:</p>
 <pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> update
 duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> dist-upgrade
 </code></pre>
-<p>(Expect dist-upgrade to take quite a long time - e.g. 2hrs)</p><div style="display:none">Because of mathjax bug</div>
+<p>(Expect dist-upgrade to take quite a long time - e.g. 2hrs)</p>
+</section></section><section class="with-header-inside" id="part-2-dependencies-and-configurations:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'part-2-dependencies-and-configurations' for h2.--><h2 counter-sec="11" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="sub:part-2-dependencies-and-configurations" label-name="Part 2: Dependencies and Configurations" label-number="11.2" label-self="" label-what="Section" label-what-number="Section 11.2" label-what-number-name="Section 11.2 - Part 2: Dependencies and Configurations">Part 2: Dependencies and Configurations<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h2><section class="with-header-inside" id="raspi-config:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'raspi-config' for h3.--><h3 counter-sec="11" counter-sub="2" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:raspi-config" label-name="Raspi Config" label-number="11.2.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 11.2.1" label-what-number-name="Subsection 11.2.1 - Raspi Config">Raspi Config<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h3>
+<p>The raspi is not sshable by default, the camera is disabled, and the I2C bus is disabled. We need to fix those things:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> raspi-config 
+ choose 3. Interfacing Options,
+ P2 SSH
+ change no to yes
+ back
+ P1 camera
+ change no to yes
+ back
+ P3 I2C
+ change no to yes
+ back 
+ finish
+</code></pre>
+<p>things to be installed:</p>
+</section><section class="with-header-inside" id="ros:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'ros' for h3.--><h3 counter-sec="11" counter-sub="2" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:ros" label-name="ROS" label-number="11.2.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 11.2.2" label-what-number-name="Subsection 11.2.2 - ROS">ROS<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h3>
+<p>first commands are copied from <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">http://wiki.ros.org/kinetic/Installation/Ubuntu</a></p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> sh <span class="program_option">-c</span> 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release <span class="program_option">-sc)</span> main" &gt; /etc/apt/sources.list.d/ros-latest.list'
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> apt-key adv <span class="program_option">--keyserver</span> hkp://ha.pool.sks-keyservers.net:80 <span class="program_option">--recv-key</span> 421C365BD9FF1F717815A3895523BAEEB01FA116
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> update
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> <span class="install program_command">install</span> ros-kinetic-desktop-full
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> <span class="install program_command">install</span> ros-$ROS_DISTRO-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
+</code></pre>
+</section><section class="with-header-inside" id="install-packages:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'install-packages' for h3.--><h3 counter-sec="11" counter-sub="2" counter-subsub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:install-packages" label-name="Install packages" label-number="11.2.3" label-self="3) " label-what="Subsection" label-what-number="Subsection 11.2.3" label-what-number-name="Subsection 11.2.3 - Install packages">Install packages<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h3>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt-get program">apt-get</span> <span class="install program_command">install</span> <span class="program_option">-y</span> emacs vim byobu build-essential git <span class="python program">python</span> python-dev ipython libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev python-sklearn i2c-tools python-smbus
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="pip program">pip</span> <span class="install program_command">install</span> scipy <span class="program_option">--upgrade</span>
+</code></pre>
+<p>(may need to do the following but might be done already through raspi-config):</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> usermod <span class="program_option">-a</span> <span class="program_option">-G</span> i2c ubuntu
+duckibot <span class="console_sign">$</span> <span class="sudo program">sudo</span> udevadm trigger
+</code></pre>
+</section><section class="with-header-inside" id="optional-user-preferences:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'optional-user-preferences' for h3.--><h3 counter-sec="11" counter-sub="2" counter-subsub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:optional-user-preferences" label-name="Optional user preferences" label-number="11.2.4" label-self="4) " label-what="Subsection" label-what-number="Subsection 11.2.4" label-what-number-name="Subsection 11.2.4 - Optional user preferences">Optional user preferences<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h3>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> byobu-enable (automatically boot into byobu) can be disabled with byobu-disable
+</code></pre>
+</section><section class="with-header-inside" id="wireless-configuration:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'wireless-configuration' for h3.--><h3 counter-sec="11" counter-sub="2" counter-subsub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:wireless-configuration" label-name="Wireless configuration" label-number="11.2.5" label-self="5) " label-what="Subsection" label-what-number="Subsection 11.2.5" label-what-number-name="Subsection 11.2.5 - Wireless configuration">Wireless configuration<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h3>
+<p>There are the two key to edit files:</p>
+<ul>
+<li><code>/etc/network/interfaces</code> should look like this:</li>
+</ul>
+<pre><code> interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+#source-directory /etc/network/interfaces.d
+
+auto wlan0
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# Wireless network interface
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+</code></pre>
+<ul>
+<li><code>/etc/wpa_supplicant/wpa_supplicant.conf</code> should look like this:</li>
+</ul>
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+ssid="duckietown"
+psk="quackquack"
+proto=RSN
+key_mgmt=WPA-PSK
+pairwise=CCMP
+auth_alg=OPEN
+}
+network={
+   key_mgmt=NONE
+}
+</code></pre>
+</section><section class="with-header-inside" id="ssh-config:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'ssh-config' for h3.--><h3 counter-sec="11" counter-sub="2" counter-subsub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:ssh-config" label-name="SSH config" label-number="11.2.6" label-self="6) " label-what="Subsection" label-what-number="Subsection 11.2.6" label-what-number-name="Subsection 11.2.6 - SSH config">SSH config<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h3>
+<p>add .authorized_keys in the image so that we can all do passwordless ssh.
+Create the authorized_key files</p>
+<p>On the PI, download the official key:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="cd program">cd</span>  
+duckiebot <span class="console_sign">$</span> mkdir .ssh
+duckiebot <span class="console_sign">$</span> chmod g-rwx,o-rwx .ssh
+duckiebot <span class="console_sign">$</span> wget <span class="program_option">-O</span> .ssh/authorized_keys https://www.dropbox.com/s/pxyou3qy1p8m4d0/duckietown_key1.pub?dl=1
+</code></pre>
+</section><section class="with-header-inside" id="swap-space:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'swap-space' for h3.--><h3 counter-sec="11" counter-sub="2" counter-subsub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:swap-space" label-name="Swap Space" label-number="11.2.7" label-self="7) " label-what="Subsection" label-what-number="Subsection 11.2.7" label-what-number-name="Subsection 11.2.7 - Swap Space">Swap Space<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a></h3>
+<p>Do the following:</p>
+<p>Create an empty file using the dd (device-to-device copy) command:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> dd if=/dev/zero of=/swap0 bs=1M count=512 # This is for a 512 MB swap space.
+</code></pre>
+<p>Format the file for use as swap:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> mkswap /swap0
+</code></pre>
+<p>Add the swap file to the system configuration:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> nano  /etc/fstab and add “/swap0 swap swap” at the bottom
+</code></pre>
+<p>Activate the swap space:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> swapon <span class="program_option">-a</span>
+</code></pre>
+<p>(Can probably do something similar through raspi-config)</p><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="reproducing_the_ubuntu_image_for_laptops.html#reproducing-the-ubuntu-image-for-laptops:section">next</a></div><div>
 <style>
 #disqus_section {
