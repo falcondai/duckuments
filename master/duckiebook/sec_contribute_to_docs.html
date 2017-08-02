@@ -2020,7 +2020,7 @@ div#tocdiv .toc_a_for_part {
 <p>Cd into directory:</p>
 <pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
 </code></pre>
-<p>On Ubuntu 16.04, create a virtual environment usign <code>virtualenv</code>:</p>
+<p>On Ubuntu 16.04, create a virtual environment usign <code>virtualenv</code> (<code>sudo apt install virtualenv</code> if needed):</p>
 <pre class="console"><code><span class="console_sign">$</span> virtualenv <span class="program_option">--system-site-packages</span> deploy
 </code></pre>
 <p>In other distributions you might need to use <code>venv</code>:</p>
@@ -2042,6 +2042,7 @@ div#tocdiv .toc_a_for_part {
 <pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS/mcdp
 <span class="console_sign">$</span> <span class="python program">python</span> setup.py <span class="develop program_command">develop</span>
 </code></pre>
+<p>(LP: I got a permission error here and stopped)</p>
 <p>Depending on your system, you might need to install these other dependencies:
 (It should not be necessary on Ubuntu 16 given the <code>apt-get</code> commands above.)</p>
 <pre class="console"><code><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
