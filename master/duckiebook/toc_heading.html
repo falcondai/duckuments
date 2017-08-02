@@ -1500,332 +1500,52 @@ figcaption {
   color: lightgrey !important;
   float: right;
 }
-/* These are the fixes for printing / prince */
-body {
-  page: normal;
-}
-h1:not(#booktitle) {
-  prince-page-group: start;
-  string-set: current-header content();
-}
-section#part\:introduction\:section {
-  page: part-introduction;
-}
-section#part\:domains\:section {
-  page: part-domains;
-}
-section#part\:reference\:section {
-  page: part-reference;
-}
-section#part\:math\:section {
-  page: part-math;
-}
-section#part\:developers\:section {
-  page: part-developers;
-}
-@page part-introduction:left {
-  @left-top {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @left-middle {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @left-bottom {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @top-left-corner {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @bottom-left-corner {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-}
-@page part-introduction:right {
-  @right-middle {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @right-top {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @right-bottom {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @top-right-corner {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-  @bottom-right-corner {
-    background-color: #f1d6f9;
-    content: ' ';
-  }
-}
-@page part-domains:left {
-  @left-top {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @left-middle {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @left-bottom {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @top-left-corner {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @bottom-left-corner {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-}
-@page part-domains:right {
-  @right-middle {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @right-top {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @right-bottom {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @top-right-corner {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-  @bottom-right-corner {
-    background-color: #d8d6f9;
-    content: ' ';
-  }
-}
-@page part-reference:left {
-  @left-top {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @left-middle {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @left-bottom {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @top-left-corner {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @bottom-left-corner {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-}
-@page part-reference:right {
-  @right-middle {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @right-top {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @right-bottom {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @top-right-corner {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-  @bottom-right-corner {
-    background-color: #d6f3f9;
-    content: ' ';
-  }
-}
-@page part-math:left {
-  @left-top {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @left-middle {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @left-bottom {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @top-left-corner {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @bottom-left-corner {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-}
-@page part-math:right {
-  @right-middle {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @right-top {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @right-bottom {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @top-right-corner {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-  @bottom-right-corner {
-    background-color: #d9f9d6;
-    content: ' ';
-  }
-}
-@page {
-  @top {
-    vertical-align: bottom;
-    content: string(current-header);
-    font-size: 10pt;
-    font-variant: small-caps;
-    padding-bottom: 10pt;
-  }
-}
-@page :right {
-  @top-right {
-    vertical-align: bottom;
-    font-size: 10pt;
-    content: counter(page);
-    padding-bottom: 10pt;
-    padding-right: 5pt;
-  }
-}
-@page :left {
-  @top-left {
-    vertical-align: bottom;
-    font-size: 10pt;
-    content: counter(page);
-    padding-bottom: 10pt;
-    padding-left: 5pt;
-  }
-}
-@page :first {
-  @top {
-    content: none;
-  }
-  @top-right {
-    content: none;
-  }
-}
-h1[id^='part:'] {
-  display: flow(part-string);
-}
-/* only in the manual */
-h1:not(#booktitle) {
-  page-break-before: always;
-}
-td pre {
-  margin-top: 0 !important;
-  margin: 0 !important;
-}
-p + table {
-  margin-top: 0.9em !important;
-}
-/*
-
-pre {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}*/
-#mine {
-  text-align: center;
-}
-/*table {
-    width: 100% !important;
-}
-*/
 @media screen {
-  body div > ul:not(.toc) {
-    margin-left: 0em;
-    padding-left: 2em;
-    /*border : solid 1px blue;*/
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+  body {
+    display: inline-block;
+  }
+  html {
+    text-align: center;
+  }
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    width: 360pt;
+    /* A5 is  420pt × 595  */
+    background-color: white;
+    /** essentially these are our "page margins" **/
+    border-right: solid 30pt white;
+    border-left: solid 30pt white;
+    margin-top: 0;
+  }
+  html {
+    background-color: #eee;
+    border-right: solid 1px gray;
+  }
+  /* zoom the page - equal to browser zoom */
+  body {
+    transform: scale(1.5);
+    transform: scale(66.66666667%);
+    transform-origin: top center;
+  }
+  /** add space for h1, in place of page breaks **/
+  h1:not(#booktitle) {
+    margin-top: 4em;
   }
 }
-@media print {
-  /* this is some thing weird, not very robust. Need div.document */
-  body div > ul:not(.toc) {
-    /*border : solid 1px blue;*/
-    margin-left: 2em;
-    /*prince wants */
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-  ul.toc ul:not(.toc) {
-    /*border : solid 1px red;*/
-  }
+code {
+  font-family: "Anka/Coder Narrow", monospace;
 }
-footnote {
-  float: footnote;
-  font-size: smaller;
+pre code {
+  line-height: 120%;
 }
-@page {
-  @footnotes {
-    border-top: solid black thin;
-    margin-left: 1em;
-    padding-top: 3pt;
-    margin-top: 5pt;
-  }
+pre + p {
+  margin-top: 1.5em;
 }
-/* saves 75% of time */
-/*ul.toc { display: none; }*/
-/*span.MathJax_SVG { border: solid 1px red;  position: relative; left: -4em;}*/
-/* fix this in Prince */
-svg {
-  max-width: 100%;
-}
-figcaption {
-  page-break-before: avoid;
-}
-/*
-@media print {
-h1::after {
-    margin-top: -3em;
-    content: ' ';
-    background-color: red;
-    position: absolute;
-    left: 3cm;
-    width: 8cm;
-    height: 3cm;
-    display: block;
-    top: 0;
-}
-*/
-#main_toc ul,
-#main_toc li {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-#main_toc code.keyword {
-  color: black;
+li p {
+  display: inline;
 }
 @page {
   size: 6.125in 9.250in;
@@ -1864,9 +1584,6 @@ h1::after {
     color: black;
   }
 }
-.main-section-for-page {
-  min-height: 65vh;
-}
 div#tocdiv {
   padding: 2em;
 }
@@ -1901,6 +1618,9 @@ div#tocdiv .toc_a_for_part {
   margin-bottom: 1em;
   padding-left: 2em;
   text-align: left;
+}
+.main-section-for-page {
+  min-height: 65vh;
 }
 /*
 
@@ -2091,191 +1811,188 @@ div#tocdiv .toc_a_for_part {
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_buffalo_access_point.html#sec:setup-buffalo-access-point"><span class="toc_what">Chapter</span> <span class="toc_number">15</span><span class="toc_sep"> - </span><span class="toc_name">Setup Buffalo access point</span></a>
-</li>
-<li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_the_laptops.html#sec:setup-the-laptops"><span class="toc_what">Chapter</span> <span class="toc_number">16</span><span class="toc_sep"> - </span><span class="toc_name">Setup the laptops</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_the_laptops.html#sec:setup-the-laptops"><span class="toc_what">Chapter</span> <span class="toc_number">15</span><span class="toc_sep"> - </span><span class="toc_name">Setup the laptops</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_the_laptops.html#sub:setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">16.1</span><span class="toc_sep"> - </span><span class="toc_name">Setup an Ubuntu laptop to ssh to the duckiebot</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_the_laptops.html#sub:setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">15.1</span><span class="toc_sep"> - </span><span class="toc_name">Setup an Ubuntu laptop to ssh to the duckiebot</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_github_access.html#sec:setup-github-access"><span class="toc_what">Chapter</span> <span class="toc_number">17</span><span class="toc_sep"> - </span><span class="toc_name">Setup Github access</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_github_access.html#sec:setup-github-access"><span class="toc_what">Chapter</span> <span class="toc_number">16</span><span class="toc_sep"> - </span><span class="toc_name">Setup Github access</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-an-ssh-key-on-your-machine"><span class="toc_what">Section</span> <span class="toc_number">17.1</span><span class="toc_sep"> - </span><span class="toc_name">Create an SSH key on your machine</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-an-ssh-key-on-your-machine"><span class="toc_what">Section</span> <span class="toc_number">16.1</span><span class="toc_sep"> - </span><span class="toc_name">Create an SSH key on your machine</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-a-github-account"><span class="toc_what">Section</span> <span class="toc_number">17.2</span><span class="toc_sep"> - </span><span class="toc_name">Create a Github account</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-a-github-account"><span class="toc_what">Section</span> <span class="toc_number">16.2</span><span class="toc_sep"> - </span><span class="toc_name">Create a Github account</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:creation-of-ssh-config-file-for-your-machine"><span class="toc_what">Section</span> <span class="toc_number">17.3</span><span class="toc_sep"> - </span><span class="toc_name">Creation of SSH config file for your machine</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:creation-of-ssh-config-file-for-your-machine"><span class="toc_what">Section</span> <span class="toc_number">16.3</span><span class="toc_sep"> - </span><span class="toc_name">Creation of SSH config file for your machine</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:setting-up-global-configurations-for-git"><span class="toc_what">Section</span> <span class="toc_number">17.4</span><span class="toc_sep"> - </span><span class="toc_name">Setting up global configurations for Git</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:setting-up-global-configurations-for-git"><span class="toc_what">Section</span> <span class="toc_number">16.4</span><span class="toc_sep"> - </span><span class="toc_name">Setting up global configurations for Git</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="software_setup_and_rc_remote_control.html#sec:software-setup-and-rc-remote-control"><span class="toc_what">Chapter</span> <span class="toc_number">18</span><span class="toc_sep"> - </span><span class="toc_name">Software setup and RC remote control</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="software_setup_and_rc_remote_control.html#sec:software-setup-and-rc-remote-control"><span class="toc_what">Chapter</span> <span class="toc_number">17</span><span class="toc_sep"> - </span><span class="toc_name">Software setup and RC remote control</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:clone-the-duckietown-repository"><span class="toc_what">Section</span> <span class="toc_number">18.1</span><span class="toc_sep"> - </span><span class="toc_name">Clone the Duckietown repository</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:clone-the-duckietown-repository"><span class="toc_what">Section</span> <span class="toc_number">17.1</span><span class="toc_sep"> - </span><span class="toc_name">Clone the Duckietown repository</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:set-up-ros-environment-on-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">18.2</span><span class="toc_sep"> - </span><span class="toc_name">Set up ROS environment on the Duckiebot</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:set-up-ros-environment-on-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">17.2</span><span class="toc_sep"> - </span><span class="toc_name">Set up ROS environment on the Duckiebot</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:add-your-vehicle-to-the-machines-file"><span class="toc_what">Section</span> <span class="toc_number">18.3</span><span class="toc_sep"> - </span><span class="toc_name">Add your vehicle to the machines file</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:add-your-vehicle-to-the-machines-file"><span class="toc_what">Section</span> <span class="toc_number">17.3</span><span class="toc_sep"> - </span><span class="toc_name">Add your vehicle to the machines file</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:run-the-joystick-demo"><span class="toc_what">Section</span> <span class="toc_number">18.4</span><span class="toc_sep"> - </span><span class="toc_name">Run the joystick demo</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:run-the-joystick-demo"><span class="toc_what">Section</span> <span class="toc_number">17.4</span><span class="toc_sep"> - </span><span class="toc_name">Run the joystick demo</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="proper_shutdown_procedure_for_the_pi.html#sec:proper-shutdown-procedure-for-the-pi"><span class="toc_what">Chapter</span> <span class="toc_number">19</span><span class="toc_sep"> - </span><span class="toc_name">Proper shutdown procedure for the PI</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="proper_shutdown_procedure_for_the_pi.html#sec:proper-shutdown-procedure-for-the-pi"><span class="toc_what">Chapter</span> <span class="toc_number">18</span><span class="toc_sep"> - </span><span class="toc_name">Proper shutdown procedure for the PI</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="joystick_plus_camera_output.html#sec:joystick-plus-camera-output"><span class="toc_what">Chapter</span> <span class="toc_number">20</span><span class="toc_sep"> - </span><span class="toc_name">Joystick plus camera output</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="joystick_plus_camera_output.html#sec:joystick-plus-camera-output"><span class="toc_what">Chapter</span> <span class="toc_number">19</span><span class="toc_sep"> - </span><span class="toc_name">Joystick plus camera output</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="wheel_calibration.html#sec:wheel-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">21</span><span class="toc_sep"> - </span><span class="toc_name">Wheel calibration</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="wheel_calibration.html#sec:wheel-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">20</span><span class="toc_sep"> - </span><span class="toc_name">Wheel calibration</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="camera_calibration.html#sec:camera-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">22</span><span class="toc_sep"> - </span><span class="toc_name">Camera calibration</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="camera_calibration.html#sec:camera-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">21</span><span class="toc_sep"> - </span><span class="toc_name">Camera calibration</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="taking_a_log.html#sec:taking-a-log"><span class="toc_what">Chapter</span> <span class="toc_number">23</span><span class="toc_sep"> - </span><span class="toc_name">Taking a log</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="taking_a_log.html#sec:taking-a-log"><span class="toc_what">Chapter</span> <span class="toc_number">22</span><span class="toc_sep"> - </span><span class="toc_name">Taking a log</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="create_a_ros_package.html#sec:create-a-ros-package"><span class="toc_what">Chapter</span> <span class="toc_number">24</span><span class="toc_sep"> - </span><span class="toc_name">Create a ROS package</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="create_a_ros_package.html#sec:create-a-ros-package"><span class="toc_what">Chapter</span> <span class="toc_number">23</span><span class="toc_sep"> - </span><span class="toc_name">Create a ROS package</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="reference_for_useful_software_commands.html#sec:reference-for-useful-software-commands"><span class="toc_what">Chapter</span> <span class="toc_number">25</span><span class="toc_sep"> - </span><span class="toc_name">Reference for useful software commands</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="reference_for_useful_software_commands.html#sec:reference-for-useful-software-commands"><span class="toc_what">Chapter</span> <span class="toc_number">24</span><span class="toc_sep"> - </span><span class="toc_name">Reference for useful software commands</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:ssh"><span class="toc_what">Section</span> <span class="toc_number">25.1</span><span class="toc_sep"> - </span><span class="toc_name">SSH</span></a>
-</li>
-<li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:byobu"><span class="toc_what">Section</span> <span class="toc_number">25.2</span><span class="toc_sep"> - </span><span class="toc_name">Byobu</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:ssh"><span class="toc_what">Section</span> <span class="toc_number">24.1</span><span class="toc_sep"> - </span><span class="toc_name">SSH</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:vim"><span class="toc_what">Section</span> <span class="toc_number">25.3</span><span class="toc_sep"> - </span><span class="toc_name">VIM</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:byobu"><span class="toc_what">Section</span> <span class="toc_number">24.2</span><span class="toc_sep"> - </span><span class="toc_name">Byobu</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:htop"><span class="toc_what">Section</span> <span class="toc_number">25.4</span><span class="toc_sep"> - </span><fragment><code>htop</code></fragment></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:vim"><span class="toc_what">Section</span> <span class="toc_number">24.3</span><span class="toc_sep"> - </span><span class="toc_name">VIM</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:git-and-related-commands"><span class="toc_what">Section</span> <span class="toc_number">25.5</span><span class="toc_sep"> - </span><span class="toc_name">Git and related commands</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:htop"><span class="toc_what">Section</span> <span class="toc_number">24.4</span><span class="toc_sep"> - </span><fragment><code>htop</code></fragment></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:git-and-related-commands"><span class="toc_what">Section</span> <span class="toc_number">24.5</span><span class="toc_sep"> - </span><span class="toc_name">Git and related commands</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="integrate_package_in_the_architecture.html#sec:integrate-package-in-the-architecture"><span class="toc_what">Chapter</span> <span class="toc_number">26</span><span class="toc_sep"> - </span><span class="toc_name">Integrate package in the architecture</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="integrate_package_in_the_architecture.html#sec:integrate-package-in-the-architecture"><span class="toc_what">Chapter</span> <span class="toc_number">25</span><span class="toc_sep"> - </span><span class="toc_name">Integrate package in the architecture</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="led_setup.html#sec:led-setup"><span class="toc_what">Chapter</span> <span class="toc_number">27</span><span class="toc_sep"> - </span><span class="toc_name">LED Setup</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="led_setup.html#sec:led-setup"><span class="toc_what">Chapter</span> <span class="toc_number">26</span><span class="toc_sep"> - </span><span class="toc_name">LED Setup</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="acquiring_the_parts_for_duckietown_2017.html#sec:acquiring-the-parts-for-duckietown-2017"><span class="toc_what">Chapter</span> <span class="toc_number">28</span><span class="toc_sep"> - </span><span class="toc_name">Acquiring the parts for Duckietown (2017)</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="acquiring_the_parts_for_duckietown_2017.html#sec:acquiring-the-parts-for-duckietown-2017"><span class="toc_what">Chapter</span> <span class="toc_number">27</span><span class="toc_sep"> - </span><span class="toc_name">Acquiring the parts for Duckietown (2017)</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="traffic_light_assembly.html#sec:traffic-light-assembly"><span class="toc_what">Chapter</span> <span class="toc_number">29</span><span class="toc_sep"> - </span><span class="toc_name">Traffic Light Assembly</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="traffic_light_assembly.html#sec:traffic-light-assembly"><span class="toc_what">Chapter</span> <span class="toc_number">28</span><span class="toc_sep"> - </span><span class="toc_name">Traffic Light Assembly</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_modeling.html#part:modeling"><span class="toc_what">Part</span> <span class="toc_number">3</span><span class="toc_sep"> - </span><span class="toc_name">Modeling</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="kinematics_of_duckiebot.html#sec:kinematics-of-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">30</span><span class="toc_sep"> - </span><span class="toc_name">Kinematics of Duckiebot</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="kinematics_of_duckiebot.html#sec:kinematics-of-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">29</span><span class="toc_sep"> - </span><span class="toc_name">Kinematics of Duckiebot</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_contribute.html#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">4</span><span class="toc_sep"> - </span><span class="toc_name">How to contribute</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">31</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">30</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:complete-list-of-accounts"><span class="toc_what">Section</span> <span class="toc_number">31.1</span><span class="toc_sep"> - </span><span class="toc_name">Complete list of accounts</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:complete-list-of-accounts"><span class="toc_what">Section</span> <span class="toc_number">30.1</span><span class="toc_sep"> - </span><span class="toc_name">Complete list of accounts</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-fall-2017"><span class="toc_what">Section</span> <span class="toc_number">31.2</span><span class="toc_sep"> - </span><span class="toc_name">For Fall 2017</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-fall-2017"><span class="toc_what">Section</span> <span class="toc_number">30.2</span><span class="toc_sep"> - </span><span class="toc_name">For Fall 2017</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-other-contributors"><span class="toc_what">Section</span> <span class="toc_number">31.3</span><span class="toc_sep"> - </span><span class="toc_name">For other contributors</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-other-contributors"><span class="toc_what">Section</span> <span class="toc_number">30.3</span><span class="toc_sep"> - </span><span class="toc_name">For other contributors</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">32</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">31</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:where-the-documentation-is"><span class="toc_what">Section</span> <span class="toc_number">32.1</span><span class="toc_sep"> - </span><span class="toc_name">Where the documentation is</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:where-the-documentation-is"><span class="toc_what">Section</span> <span class="toc_number">31.1</span><span class="toc_sep"> - </span><span class="toc_name">Where the documentation is</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:editing-links"><span class="toc_what">Section</span> <span class="toc_number">32.2</span><span class="toc_sep"> - </span><span class="toc_name">Editing links</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:editing-links"><span class="toc_what">Section</span> <span class="toc_number">31.2</span><span class="toc_sep"> - </span><span class="toc_name">Editing links</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:comments"><span class="toc_what">Section</span> <span class="toc_number">32.3</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:comments"><span class="toc_what">Section</span> <span class="toc_number">31.3</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:installing-docs-system"><span class="toc_what">Section</span> <span class="toc_number">32.4</span><span class="toc_sep"> - </span><span class="toc_name">Installing dependencies for compiling the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:installing-docs-system"><span class="toc_what">Section</span> <span class="toc_number">31.4</span><span class="toc_sep"> - </span><span class="toc_name">Installing dependencies for compiling the documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:troubleshooting-installation-problems"><span class="toc_what">Section</span> <span class="toc_number">32.5</span><span class="toc_sep"> - </span><span class="toc_name">Troubleshooting installation problems</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:troubleshooting-installation-problems"><span class="toc_what">Section</span> <span class="toc_number">31.5</span><span class="toc_sep"> - </span><span class="toc_name">Troubleshooting installation problems</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:compiling-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">32.6</span><span class="toc_sep"> - </span><span class="toc_name">Compiling the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:compiling-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">31.6</span><span class="toc_sep"> - </span><span class="toc_name">Compiling the documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:deploying-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">32.7</span><span class="toc_sep"> - </span><span class="toc_name">Deploying the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:deploying-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">31.7</span><span class="toc_sep"> - </span><span class="toc_name">Deploying the documentation</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_documentation_manual.html#sec:documentation-manual"><span class="toc_what">Chapter</span> <span class="toc_number">33</span><span class="toc_sep"> - </span><span class="toc_name">Features of the documentation writing system</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_documentation_manual.html#sec:documentation-manual"><span class="toc_what">Chapter</span> <span class="toc_number">32</span><span class="toc_sep"> - </span><span class="toc_name">Features of the documentation writing system</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">33.1</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">32.1</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:other-interesting-features"><span class="toc_what">Section</span> <span class="toc_number">33.2</span><span class="toc_sep"> - </span><span class="toc_name">Other interesting features</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:other-interesting-features"><span class="toc_what">Section</span> <span class="toc_number">32.2</span><span class="toc_sep"> - </span><span class="toc_name">Other interesting features</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:limitations"><span class="toc_what">Section</span> <span class="toc_number">33.3</span><span class="toc_sep"> - </span><span class="toc_name">Limitations</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:limitations"><span class="toc_what">Section</span> <span class="toc_number">32.3</span><span class="toc_sep"> - </span><span class="toc_name">Limitations</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sec:fall-2017-ethzudemttinctu-experience"><span class="toc_what">Chapter</span> <span class="toc_number">34</span><span class="toc_sep"> - </span><span class="toc_name">Fall 2017 - ETHZ/UdeM/TTI/NCTU experience</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sec:fall-2017-ethzudemttinctu-experience"><span class="toc_what">Chapter</span> <span class="toc_number">33</span><span class="toc_sep"> - </span><span class="toc_name">Fall 2017 - ETHZ/UdeM/TTI/NCTU experience</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:general-remarks"><span class="toc_what">Section</span> <span class="toc_number">34.1</span><span class="toc_sep"> - </span><span class="toc_name">General remarks</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:general-remarks"><span class="toc_what">Section</span> <span class="toc_number">33.1</span><span class="toc_sep"> - </span><span class="toc_name">General remarks</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:synchronization-between-classes"><span class="toc_what">Section</span> <span class="toc_number">34.2</span><span class="toc_sep"> - </span><span class="toc_name">Synchronization between classes</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:synchronization-between-classes"><span class="toc_what">Section</span> <span class="toc_number">33.2</span><span class="toc_sep"> - </span><span class="toc_name">Synchronization between classes</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-students"><span class="toc_what">Section</span> <span class="toc_number">34.3</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-students"><span class="toc_what">Section</span> <span class="toc_number">33.3</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-all-instructors-and-tas"><span class="toc_what">Section</span> <span class="toc_number">34.4</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for all instructors and TAs</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-all-instructors-and-tas"><span class="toc_what">Section</span> <span class="toc_number">33.4</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for all instructors and TAs</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:other-accounts-for-organizers"><span class="toc_what">Section</span> <span class="toc_number">34.5</span><span class="toc_sep"> - </span><span class="toc_name">Other accounts for organizers</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:other-accounts-for-organizers"><span class="toc_what">Section</span> <span class="toc_number">33.5</span><span class="toc_sep"> - </span><span class="toc_name">Other accounts for organizers</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-eth-zurich-students"><span class="toc_what">Section</span> <span class="toc_number">34.6</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for ETH Z&amp;uuml;rich students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-eth-zurich-students"><span class="toc_what">Section</span> <span class="toc_number">33.6</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for ETH Z&amp;uuml;rich students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-udem-students"><span class="toc_what">Section</span> <span class="toc_number">34.7</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for UdeM students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-udem-students"><span class="toc_what">Section</span> <span class="toc_number">33.7</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for UdeM students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-tti-students"><span class="toc_what">Section</span> <span class="toc_number">34.8</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for TTI students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-tti-students"><span class="toc_what">Section</span> <span class="toc_number">33.8</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for TTI students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-nctu-students"><span class="toc_what">Section</span> <span class="toc_number">34.9</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for NCTU students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-nctu-students"><span class="toc_what">Section</span> <span class="toc_number">33.9</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for NCTU students</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="bibliography.html#sec:bibliography"><span class="toc_what">Chapter</span> <span class="toc_number">35</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="bibliography.html#sec:bibliography"><span class="toc_what">Chapter</span> <span class="toc_number">34</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
 </li>
 </ul>
 </li>
@@ -2428,191 +2145,188 @@ div#tocdiv .toc_a_for_part {
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_buffalo_access_point.html#sec:setup-buffalo-access-point"><span class="toc_what">Chapter</span> <span class="toc_number">15</span><span class="toc_sep"> - </span><span class="toc_name">Setup Buffalo access point</span></a>
-</li>
-<li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_the_laptops.html#sec:setup-the-laptops"><span class="toc_what">Chapter</span> <span class="toc_number">16</span><span class="toc_sep"> - </span><span class="toc_name">Setup the laptops</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_the_laptops.html#sec:setup-the-laptops"><span class="toc_what">Chapter</span> <span class="toc_number">15</span><span class="toc_sep"> - </span><span class="toc_name">Setup the laptops</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_the_laptops.html#sub:setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">16.1</span><span class="toc_sep"> - </span><span class="toc_name">Setup an Ubuntu laptop to ssh to the duckiebot</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_the_laptops.html#sub:setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">15.1</span><span class="toc_sep"> - </span><span class="toc_name">Setup an Ubuntu laptop to ssh to the duckiebot</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_github_access.html#sec:setup-github-access"><span class="toc_what">Chapter</span> <span class="toc_number">17</span><span class="toc_sep"> - </span><span class="toc_name">Setup Github access</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_github_access.html#sec:setup-github-access"><span class="toc_what">Chapter</span> <span class="toc_number">16</span><span class="toc_sep"> - </span><span class="toc_name">Setup Github access</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-an-ssh-key-on-your-machine"><span class="toc_what">Section</span> <span class="toc_number">17.1</span><span class="toc_sep"> - </span><span class="toc_name">Create an SSH key on your machine</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-an-ssh-key-on-your-machine"><span class="toc_what">Section</span> <span class="toc_number">16.1</span><span class="toc_sep"> - </span><span class="toc_name">Create an SSH key on your machine</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-a-github-account"><span class="toc_what">Section</span> <span class="toc_number">17.2</span><span class="toc_sep"> - </span><span class="toc_name">Create a Github account</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:create-a-github-account"><span class="toc_what">Section</span> <span class="toc_number">16.2</span><span class="toc_sep"> - </span><span class="toc_name">Create a Github account</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:creation-of-ssh-config-file-for-your-machine"><span class="toc_what">Section</span> <span class="toc_number">17.3</span><span class="toc_sep"> - </span><span class="toc_name">Creation of SSH config file for your machine</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:creation-of-ssh-config-file-for-your-machine"><span class="toc_what">Section</span> <span class="toc_number">16.3</span><span class="toc_sep"> - </span><span class="toc_name">Creation of SSH config file for your machine</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:setting-up-global-configurations-for-git"><span class="toc_what">Section</span> <span class="toc_number">17.4</span><span class="toc_sep"> - </span><span class="toc_name">Setting up global configurations for Git</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_github_access.html#sub:setting-up-global-configurations-for-git"><span class="toc_what">Section</span> <span class="toc_number">16.4</span><span class="toc_sep"> - </span><span class="toc_name">Setting up global configurations for Git</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="software_setup_and_rc_remote_control.html#sec:software-setup-and-rc-remote-control"><span class="toc_what">Chapter</span> <span class="toc_number">18</span><span class="toc_sep"> - </span><span class="toc_name">Software setup and RC remote control</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="software_setup_and_rc_remote_control.html#sec:software-setup-and-rc-remote-control"><span class="toc_what">Chapter</span> <span class="toc_number">17</span><span class="toc_sep"> - </span><span class="toc_name">Software setup and RC remote control</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:clone-the-duckietown-repository"><span class="toc_what">Section</span> <span class="toc_number">18.1</span><span class="toc_sep"> - </span><span class="toc_name">Clone the Duckietown repository</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:clone-the-duckietown-repository"><span class="toc_what">Section</span> <span class="toc_number">17.1</span><span class="toc_sep"> - </span><span class="toc_name">Clone the Duckietown repository</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:set-up-ros-environment-on-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">18.2</span><span class="toc_sep"> - </span><span class="toc_name">Set up ROS environment on the Duckiebot</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:set-up-ros-environment-on-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">17.2</span><span class="toc_sep"> - </span><span class="toc_name">Set up ROS environment on the Duckiebot</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:add-your-vehicle-to-the-machines-file"><span class="toc_what">Section</span> <span class="toc_number">18.3</span><span class="toc_sep"> - </span><span class="toc_name">Add your vehicle to the machines file</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:add-your-vehicle-to-the-machines-file"><span class="toc_what">Section</span> <span class="toc_number">17.3</span><span class="toc_sep"> - </span><span class="toc_name">Add your vehicle to the machines file</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:run-the-joystick-demo"><span class="toc_what">Section</span> <span class="toc_number">18.4</span><span class="toc_sep"> - </span><span class="toc_name">Run the joystick demo</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:run-the-joystick-demo"><span class="toc_what">Section</span> <span class="toc_number">17.4</span><span class="toc_sep"> - </span><span class="toc_name">Run the joystick demo</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="proper_shutdown_procedure_for_the_pi.html#sec:proper-shutdown-procedure-for-the-pi"><span class="toc_what">Chapter</span> <span class="toc_number">19</span><span class="toc_sep"> - </span><span class="toc_name">Proper shutdown procedure for the PI</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="proper_shutdown_procedure_for_the_pi.html#sec:proper-shutdown-procedure-for-the-pi"><span class="toc_what">Chapter</span> <span class="toc_number">18</span><span class="toc_sep"> - </span><span class="toc_name">Proper shutdown procedure for the PI</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="joystick_plus_camera_output.html#sec:joystick-plus-camera-output"><span class="toc_what">Chapter</span> <span class="toc_number">20</span><span class="toc_sep"> - </span><span class="toc_name">Joystick plus camera output</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="joystick_plus_camera_output.html#sec:joystick-plus-camera-output"><span class="toc_what">Chapter</span> <span class="toc_number">19</span><span class="toc_sep"> - </span><span class="toc_name">Joystick plus camera output</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="wheel_calibration.html#sec:wheel-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">21</span><span class="toc_sep"> - </span><span class="toc_name">Wheel calibration</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="wheel_calibration.html#sec:wheel-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">20</span><span class="toc_sep"> - </span><span class="toc_name">Wheel calibration</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="camera_calibration.html#sec:camera-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">22</span><span class="toc_sep"> - </span><span class="toc_name">Camera calibration</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="camera_calibration.html#sec:camera-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">21</span><span class="toc_sep"> - </span><span class="toc_name">Camera calibration</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="taking_a_log.html#sec:taking-a-log"><span class="toc_what">Chapter</span> <span class="toc_number">23</span><span class="toc_sep"> - </span><span class="toc_name">Taking a log</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="taking_a_log.html#sec:taking-a-log"><span class="toc_what">Chapter</span> <span class="toc_number">22</span><span class="toc_sep"> - </span><span class="toc_name">Taking a log</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="create_a_ros_package.html#sec:create-a-ros-package"><span class="toc_what">Chapter</span> <span class="toc_number">24</span><span class="toc_sep"> - </span><span class="toc_name">Create a ROS package</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="create_a_ros_package.html#sec:create-a-ros-package"><span class="toc_what">Chapter</span> <span class="toc_number">23</span><span class="toc_sep"> - </span><span class="toc_name">Create a ROS package</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="reference_for_useful_software_commands.html#sec:reference-for-useful-software-commands"><span class="toc_what">Chapter</span> <span class="toc_number">25</span><span class="toc_sep"> - </span><span class="toc_name">Reference for useful software commands</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="reference_for_useful_software_commands.html#sec:reference-for-useful-software-commands"><span class="toc_what">Chapter</span> <span class="toc_number">24</span><span class="toc_sep"> - </span><span class="toc_name">Reference for useful software commands</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:ssh"><span class="toc_what">Section</span> <span class="toc_number">25.1</span><span class="toc_sep"> - </span><span class="toc_name">SSH</span></a>
-</li>
-<li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:byobu"><span class="toc_what">Section</span> <span class="toc_number">25.2</span><span class="toc_sep"> - </span><span class="toc_name">Byobu</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:ssh"><span class="toc_what">Section</span> <span class="toc_number">24.1</span><span class="toc_sep"> - </span><span class="toc_name">SSH</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:vim"><span class="toc_what">Section</span> <span class="toc_number">25.3</span><span class="toc_sep"> - </span><span class="toc_name">VIM</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:byobu"><span class="toc_what">Section</span> <span class="toc_number">24.2</span><span class="toc_sep"> - </span><span class="toc_name">Byobu</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:htop"><span class="toc_what">Section</span> <span class="toc_number">25.4</span><span class="toc_sep"> - </span><fragment><code>htop</code></fragment></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:vim"><span class="toc_what">Section</span> <span class="toc_number">24.3</span><span class="toc_sep"> - </span><span class="toc_name">VIM</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:git-and-related-commands"><span class="toc_what">Section</span> <span class="toc_number">25.5</span><span class="toc_sep"> - </span><span class="toc_name">Git and related commands</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:htop"><span class="toc_what">Section</span> <span class="toc_number">24.4</span><span class="toc_sep"> - </span><fragment><code>htop</code></fragment></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reference_for_useful_software_commands.html#sub:git-and-related-commands"><span class="toc_what">Section</span> <span class="toc_number">24.5</span><span class="toc_sep"> - </span><span class="toc_name">Git and related commands</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="integrate_package_in_the_architecture.html#sec:integrate-package-in-the-architecture"><span class="toc_what">Chapter</span> <span class="toc_number">26</span><span class="toc_sep"> - </span><span class="toc_name">Integrate package in the architecture</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="integrate_package_in_the_architecture.html#sec:integrate-package-in-the-architecture"><span class="toc_what">Chapter</span> <span class="toc_number">25</span><span class="toc_sep"> - </span><span class="toc_name">Integrate package in the architecture</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="led_setup.html#sec:led-setup"><span class="toc_what">Chapter</span> <span class="toc_number">27</span><span class="toc_sep"> - </span><span class="toc_name">LED Setup</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="led_setup.html#sec:led-setup"><span class="toc_what">Chapter</span> <span class="toc_number">26</span><span class="toc_sep"> - </span><span class="toc_name">LED Setup</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="acquiring_the_parts_for_duckietown_2017.html#sec:acquiring-the-parts-for-duckietown-2017"><span class="toc_what">Chapter</span> <span class="toc_number">28</span><span class="toc_sep"> - </span><span class="toc_name">Acquiring the parts for Duckietown (2017)</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="acquiring_the_parts_for_duckietown_2017.html#sec:acquiring-the-parts-for-duckietown-2017"><span class="toc_what">Chapter</span> <span class="toc_number">27</span><span class="toc_sep"> - </span><span class="toc_name">Acquiring the parts for Duckietown (2017)</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="traffic_light_assembly.html#sec:traffic-light-assembly"><span class="toc_what">Chapter</span> <span class="toc_number">29</span><span class="toc_sep"> - </span><span class="toc_name">Traffic Light Assembly</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="traffic_light_assembly.html#sec:traffic-light-assembly"><span class="toc_what">Chapter</span> <span class="toc_number">28</span><span class="toc_sep"> - </span><span class="toc_name">Traffic Light Assembly</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_modeling.html#part:modeling"><span class="toc_what">Part</span> <span class="toc_number">3</span><span class="toc_sep"> - </span><span class="toc_name">Modeling</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="kinematics_of_duckiebot.html#sec:kinematics-of-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">30</span><span class="toc_sep"> - </span><span class="toc_name">Kinematics of Duckiebot</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="kinematics_of_duckiebot.html#sec:kinematics-of-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">29</span><span class="toc_sep"> - </span><span class="toc_name">Kinematics of Duckiebot</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_contribute.html#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">4</span><span class="toc_sep"> - </span><span class="toc_name">How to contribute</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">31</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">30</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:complete-list-of-accounts"><span class="toc_what">Section</span> <span class="toc_number">31.1</span><span class="toc_sep"> - </span><span class="toc_name">Complete list of accounts</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:complete-list-of-accounts"><span class="toc_what">Section</span> <span class="toc_number">30.1</span><span class="toc_sep"> - </span><span class="toc_name">Complete list of accounts</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-fall-2017"><span class="toc_what">Section</span> <span class="toc_number">31.2</span><span class="toc_sep"> - </span><span class="toc_name">For Fall 2017</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-fall-2017"><span class="toc_what">Section</span> <span class="toc_number">30.2</span><span class="toc_sep"> - </span><span class="toc_name">For Fall 2017</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-other-contributors"><span class="toc_what">Section</span> <span class="toc_number">31.3</span><span class="toc_sep"> - </span><span class="toc_name">For other contributors</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-other-contributors"><span class="toc_what">Section</span> <span class="toc_number">30.3</span><span class="toc_sep"> - </span><span class="toc_name">For other contributors</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">32</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">31</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:where-the-documentation-is"><span class="toc_what">Section</span> <span class="toc_number">32.1</span><span class="toc_sep"> - </span><span class="toc_name">Where the documentation is</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:where-the-documentation-is"><span class="toc_what">Section</span> <span class="toc_number">31.1</span><span class="toc_sep"> - </span><span class="toc_name">Where the documentation is</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:editing-links"><span class="toc_what">Section</span> <span class="toc_number">32.2</span><span class="toc_sep"> - </span><span class="toc_name">Editing links</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:editing-links"><span class="toc_what">Section</span> <span class="toc_number">31.2</span><span class="toc_sep"> - </span><span class="toc_name">Editing links</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:comments"><span class="toc_what">Section</span> <span class="toc_number">32.3</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:comments"><span class="toc_what">Section</span> <span class="toc_number">31.3</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:installing-docs-system"><span class="toc_what">Section</span> <span class="toc_number">32.4</span><span class="toc_sep"> - </span><span class="toc_name">Installing dependencies for compiling the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:installing-docs-system"><span class="toc_what">Section</span> <span class="toc_number">31.4</span><span class="toc_sep"> - </span><span class="toc_name">Installing dependencies for compiling the documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:troubleshooting-installation-problems"><span class="toc_what">Section</span> <span class="toc_number">32.5</span><span class="toc_sep"> - </span><span class="toc_name">Troubleshooting installation problems</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:troubleshooting-installation-problems"><span class="toc_what">Section</span> <span class="toc_number">31.5</span><span class="toc_sep"> - </span><span class="toc_name">Troubleshooting installation problems</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:compiling-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">32.6</span><span class="toc_sep"> - </span><span class="toc_name">Compiling the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:compiling-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">31.6</span><span class="toc_sep"> - </span><span class="toc_name">Compiling the documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:deploying-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">32.7</span><span class="toc_sep"> - </span><span class="toc_name">Deploying the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:deploying-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">31.7</span><span class="toc_sep"> - </span><span class="toc_name">Deploying the documentation</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_documentation_manual.html#sec:documentation-manual"><span class="toc_what">Chapter</span> <span class="toc_number">33</span><span class="toc_sep"> - </span><span class="toc_name">Features of the documentation writing system</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_documentation_manual.html#sec:documentation-manual"><span class="toc_what">Chapter</span> <span class="toc_number">32</span><span class="toc_sep"> - </span><span class="toc_name">Features of the documentation writing system</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">33.1</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">32.1</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:other-interesting-features"><span class="toc_what">Section</span> <span class="toc_number">33.2</span><span class="toc_sep"> - </span><span class="toc_name">Other interesting features</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:other-interesting-features"><span class="toc_what">Section</span> <span class="toc_number">32.2</span><span class="toc_sep"> - </span><span class="toc_name">Other interesting features</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:limitations"><span class="toc_what">Section</span> <span class="toc_number">33.3</span><span class="toc_sep"> - </span><span class="toc_name">Limitations</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:limitations"><span class="toc_what">Section</span> <span class="toc_number">32.3</span><span class="toc_sep"> - </span><span class="toc_name">Limitations</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sec:fall-2017-ethzudemttinctu-experience"><span class="toc_what">Chapter</span> <span class="toc_number">34</span><span class="toc_sep"> - </span><span class="toc_name">Fall 2017 - ETHZ/UdeM/TTI/NCTU experience</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sec:fall-2017-ethzudemttinctu-experience"><span class="toc_what">Chapter</span> <span class="toc_number">33</span><span class="toc_sep"> - </span><span class="toc_name">Fall 2017 - ETHZ/UdeM/TTI/NCTU experience</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:general-remarks"><span class="toc_what">Section</span> <span class="toc_number">34.1</span><span class="toc_sep"> - </span><span class="toc_name">General remarks</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:general-remarks"><span class="toc_what">Section</span> <span class="toc_number">33.1</span><span class="toc_sep"> - </span><span class="toc_name">General remarks</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:synchronization-between-classes"><span class="toc_what">Section</span> <span class="toc_number">34.2</span><span class="toc_sep"> - </span><span class="toc_name">Synchronization between classes</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:synchronization-between-classes"><span class="toc_what">Section</span> <span class="toc_number">33.2</span><span class="toc_sep"> - </span><span class="toc_name">Synchronization between classes</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-students"><span class="toc_what">Section</span> <span class="toc_number">34.3</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-students"><span class="toc_what">Section</span> <span class="toc_number">33.3</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-all-instructors-and-tas"><span class="toc_what">Section</span> <span class="toc_number">34.4</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for all instructors and TAs</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:accounts-for-all-instructors-and-tas"><span class="toc_what">Section</span> <span class="toc_number">33.4</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for all instructors and TAs</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:other-accounts-for-organizers"><span class="toc_what">Section</span> <span class="toc_number">34.5</span><span class="toc_sep"> - </span><span class="toc_name">Other accounts for organizers</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:other-accounts-for-organizers"><span class="toc_what">Section</span> <span class="toc_number">33.5</span><span class="toc_sep"> - </span><span class="toc_name">Other accounts for organizers</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-eth-zurich-students"><span class="toc_what">Section</span> <span class="toc_number">34.6</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for ETH Z&amp;uuml;rich students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-eth-zurich-students"><span class="toc_what">Section</span> <span class="toc_number">33.6</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for ETH Z&amp;uuml;rich students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-udem-students"><span class="toc_what">Section</span> <span class="toc_number">34.7</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for UdeM students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-udem-students"><span class="toc_what">Section</span> <span class="toc_number">33.7</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for UdeM students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-tti-students"><span class="toc_what">Section</span> <span class="toc_number">34.8</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for TTI students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-tti-students"><span class="toc_what">Section</span> <span class="toc_number">33.8</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for TTI students</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-nctu-students"><span class="toc_what">Section</span> <span class="toc_number">34.9</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for NCTU students</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="fall_2017_ethzudemttinctu_experience.html#sub:additional-information-for-nctu-students"><span class="toc_what">Section</span> <span class="toc_number">33.9</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for NCTU students</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="bibliography.html#sec:bibliography"><span class="toc_what">Chapter</span> <span class="toc_number">35</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="bibliography.html#sec:bibliography"><span class="toc_what">Chapter</span> <span class="toc_number">34</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
 </li>
 </ul>
 </li>
