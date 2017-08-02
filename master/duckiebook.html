@@ -2666,29 +2666,6 @@ laptop / duckiebot $ git config --global user.name "&lt;name&gt;"
 <p>Then, build the workspace (you have to be under the catkin_ws folder to invoke catkin_make)</p>
 <pre class="console"><code>duckiebot <span class="console_sign">$</span> make build
 </code></pre>
-<p><strong>Note</strong>: <em>the catkin_make command might fail</em> with a message about “exhausted virtual memory” and invoking “do make -j4 -l4” failed. The output output is similar to this:</p>
-<pre><code>[  2%] [  4%] [  4%] Building CXX object slam/CMakeFiles/sum_and_average_node.dir/src/sum_and_average_node.cpp.o
-Building CXX object slam/CMakeFiles/slamNode.dir/src/slamNode.cpp.o
-Building CXX object slam/CMakeFiles/listener.dir/src/listener.cpp.o
-virtual memory exhausted: Cannot allocate memory
-make[2]: *** [slam/CMakeFiles/listener.dir/src/listener.cpp.o] Error 1
-make[1]: *** [slam/CMakeFiles/listener.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-Invoking "make -j4 -l4" failed
-</code></pre>
-<p>Do the following:</p>
-<p>Create an empty file using the dd (device-to-device copy) command:</p>
-<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> dd if=/dev/zero of=/swap0 bs=1M count=512 # This is for a 512 MB swap space.
-</code></pre>
-<p>Format the file for use as swap:</p>
-<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> mkswap /swap0
-</code></pre>
-<p>Add the swap file to the system configuration:</p>
-<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> emacs  /etc/fstab and add "/swap0 swap swap" at the bottom
-</code></pre>
-<p>Activate the swap space:</p>
-<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> swapon <span class="program_option">-a</span>
-</code></pre>
 </section></section><section class="with-header-inside" id="add-your-vehicle-to-the-machines-file:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'add-your-vehicle-to-the-machines-file' for h2.--><h2 counter-sec="17" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_5_rc_control_remote.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control_remote.md" id="sub:add-your-vehicle-to-the-machines-file" label-name="Add your vehicle to the machines file" label-number="17.3" label-self="" label-what="Section" label-what-number="Section 17.3" label-what-number-name="Section 17.3 - Add your vehicle to the machines file">Add your vehicle to the machines file<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control_remote.md"> ✎</a></h2><section class="without-header-inside" level="subsub">
 <p>On the robot edit the file</p>
 <pre class="console"><code>duckiebot <span class="console_sign">$</span> nano  /duckietown/catkin_ws/src/duckietown/machines
