@@ -892,6 +892,9 @@ code.rvalue span.RcompUnit {
 .CatalogueRes span.RcompUnit {
   color: darkred !important;
 }
+li p {
+  display: inline;
+}
 p,
 div.latex_env,
 div.minipage,
@@ -1545,9 +1548,6 @@ pre code {
 }
 pre + p {
   margin-top: 1.5em;
-}
-li p {
-  display: inline;
 }
 @page {
   size: 6.125in 9.250in;
@@ -2893,6 +2893,13 @@ duckiebot <span class="console_sign">$</span> source set_ros_master.sh
 </code></pre>
 <p>Install PrinceXML from <a href="https://www.princexml.com/download/">this page</a>.</p>
 <div class="todo-wrap"><p class="todo">instructions for fonts</p></div>
+<p>Download STIX fonts from <a href="https://sourceforge.net/projects/stixfonts/files/latest/download">this site</a>.</p>
+<p>Unzip and copy the ttf to <code>/.fonts</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span> cp <span class="program_option">-R</span> STIXv2.0.0  /.fonts
+</code></pre>
+<p>and then rebuild the font cache using:</p>
+<pre class="console"><code><span class="console_sign">$</span> fc-cache <span class="program_option">-fv</span>
+</code></pre>
 </section></section><section class="with-header-inside" id="troubleshooting-installation-problems:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'troubleshooting-installation-problems' for h2.--><h2 counter-sec="32" counter-sub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/60_contributing_to_docs.md" id="sub:troubleshooting-installation-problems" label-name="Troubleshooting installation problems" label-number="32.5" label-self="" label-what="Section" label-what-number="Section 32.5" label-what-number-name="Section 32.5 - Troubleshooting installation problems">Troubleshooting installation problems<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/60_contributing_to_docs.md"> ✎</a></h2><section class="with-header-inside" id="installing-nodejs-packages:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'installing-nodejs-packages' for h3.--><h3 counter-sec="32" counter-sub="5" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/60_contributing_to_docs.md" id="subsub:installing-nodejs-packages" label-name="Installing &lt;code&gt;nodejs&lt;/code&gt; packages" label-number="32.5.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 32.5.1" label-what-number-name="Subsection 32.5.1 - Installing &lt;code&gt;nodejs&lt;/code&gt; packages">Installing <code>nodejs</code> packages<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/60_contributing_to_docs.md"> ✎</a></h3>
 <p>The only pain point  in the installation procedure has been the installation of <code>nodejs</code> packages using <code>npm</code>. For some reason, they cannot be installated globally (<code>npm install -g</code>).</p>
 <p>Do not use <code>sudo</code> for installation. It will cause problems.</p>
