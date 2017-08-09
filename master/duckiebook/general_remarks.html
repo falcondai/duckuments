@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -1675,7 +1693,7 @@ div#tocdiv .toc_a_for_part {
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc"><p><a href="index.html">Home</a></p>
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc contains-link-same-file"><p><a href="index.html">Home</a></p>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
@@ -2089,35 +2107,35 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-0 toc_li_for_unknown">
-<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_fall_2017.html#part:fall-2017"><span class="toc_what">Part</span> <span class="toc_number">8</span><span class="toc_sep"> - </span><span class="toc_name">Fall 2017</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
-<li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:general-remarks"><span class="toc_what">Chapter</span> <span class="toc_number">42</span><span class="toc_sep"> - </span><span class="toc_name">General remarks</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-0 toc_li_for_unknown contains-link-same-file">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_fall_2017.html#part:fall-2017"><span class="toc_what">Part</span> <span class="toc_number">8</span><span class="toc_sep"> - </span><span class="toc_name">Fall 2017</span></a><ul class="toc_ul-depth-1 toc_ul_for_part contains-link-same-file">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:general-remarks"><span class="toc_what">Chapter</span> <span class="toc_number">42</span><span class="toc_sep"> - </span><span class="toc_name">General remarks</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec contains-link-same-file">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:the-rules-of-duckietown"><span class="toc_what">Section</span> <span class="toc_number">42.1</span><span class="toc_sep"> - </span><span class="toc_name">The rules of Duckietown</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:synchronization-between-classes"><span class="toc_what">Section</span> <span class="toc_number">42.2</span><span class="toc_sep"> - </span><span class="toc_name">Synchronization between classes</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:accounts-for-students"><span class="toc_what">Section</span> <span class="toc_number">42.3</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for students</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:accounts-for-all-instructors-and-tas"><span class="toc_what">Section</span> <span class="toc_number">42.4</span><span class="toc_sep"> - </span><span class="toc_name">Accounts for all instructors and TAs</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:other-accounts-for-organizers"><span class="toc_what">Section</span> <span class="toc_number">42.5</span><span class="toc_sep"> - </span><span class="toc_name">Other accounts for organizers</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:additional-information-for-eth-zurich-students"><span class="toc_what">Section</span> <span class="toc_number">42.6</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for ETH Z&amp;uuml;rich students</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:additional-information-for-udem-students"><span class="toc_what">Section</span> <span class="toc_number">42.7</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for UdeM students</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:additional-information-for-tti-students"><span class="toc_what">Section</span> <span class="toc_number">42.8</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for TTI students</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:additional-information-for-nctu-students"><span class="toc_what">Section</span> <span class="toc_number">42.9</span><span class="toc_sep"> - </span><span class="toc_name">Additional information for NCTU students</span></a>
 </li>
 </ul>
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="part_fall_2017.html#part:fall-2017:section">prev</a><section class="with-header-inside main-section-for-page" id="general-remarks:section" level="sec" next="template-of-a-project:section" prev="part:fall-2017:section"><!--Warning: Adding prefix 'sec' to current id 'general-remarks' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md"> ✎</a><h1 counter-sec="42" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/80_fall2017_info/10_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md" id="sec:general-remarks" label-name="General remarks" label-number="42" label-self="" label-what="Chapter" label-what-number="Chapter 42" label-what-number-name="Chapter 42 - General remarks">General remarks</h1><section class="with-header-inside" id="the-rules-of-duckietown:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'the-rules-of-duckietown' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md"> ✎</a><h2 counter-sec="42" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/80_fall2017_info/10_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md" id="sub:the-rules-of-duckietown" label-name="The rules of Duckietown" label-number="42.1" label-self="" label-what="Section" label-what-number="Section 42.1" label-what-number-name="Section 42.1 - The rules of Duckietown">The rules of Duckietown</h2><section class="with-header-inside" id="the-first-rule-of-duckietown:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'the-first-rule-of-duckietown' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md"> ✎</a><h3 counter-sec="42" counter-sub="1" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/80_fall2017_info/10_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md" id="subsub:the-first-rule-of-duckietown" label-name="The first rule of Duckietown" label-number="42.1.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 42.1.1" label-what-number-name="Subsection 42.1.1 - The first rule of Duckietown">The first rule of Duckietown</h3>
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="part_fall_2017.html#part:fall-2017:section">prev</a><section class="with-header-inside main-section-for-page" id="general-remarks:section" level="sec" next="template-of-a-project:section" prev="part:fall-2017:section"><!--Warning: Adding prefix 'sec' to current id 'general-remarks' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md"> ✎</a><h1 counter-sec="42" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/80_fall2017_info/10_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md" id="sec:general-remarks" label-name="General remarks" label-number="42" label-self="" label-what="Chapter" label-what-number="Chapter 42" label-what-number-name="Chapter 42 - General remarks">General remarks</h1><section class="with-header-inside" id="the-rules-of-duckietown:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'the-rules-of-duckietown' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md"> ✎</a><h2 counter-sec="42" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/80_fall2017_info/10_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md" id="sub:the-rules-of-duckietown" label-name="The rules of Duckietown" label-number="42.1" label-self="" label-what="Section" label-what-number="Section 42.1" label-what-number-name="Section 42.1 - The rules of Duckietown">The rules of Duckietown</h2><section class="with-header-inside" id="the-first-rule-of-duckietown:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'the-first-rule-of-duckietown' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md"> ✎</a><h3 counter-sec="42" counter-sub="1" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/80_fall2017_info/10_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/80_fall2017_info/10_fall2017.md" id="subsub:the-first-rule-of-duckietown" label-name="The first rule of Duckietown" label-number="42.1.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 42.1.1" label-what-number-name="Subsection 42.1.1 - The first rule of Duckietown">The first rule of Duckietown</h3>
 <p>The first rule of Duckietown is: you don’t talk about Duckietown <em>using email</em>!</p>
 <p>Instead, we use a communication platform called Slack.</p>
 <p>There is one exception: inquiries about “meta” level issues, such as course
@@ -2208,4 +2226,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>

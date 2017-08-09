@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><section class="with-header-inside main-section-for-page" id="booktitle:section" level="sec" next="toc-heading:section" prev=""><div class="remaining-material"><section class="without-header-inside" level="part"><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><section class="with-header-inside main-section-for-page" id="booktitle:section" level="sec" next="toc-heading:section" prev=""><div class="remaining-material"><section class="without-header-inside" level="part"><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub">
 <div style="display:none">Because of mathjax bug</div>
 </section></section></section><fragment>
 <style>
@@ -2252,4 +2270,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>

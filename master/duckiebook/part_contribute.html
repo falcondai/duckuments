@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -1675,7 +1693,7 @@ div#tocdiv .toc_a_for_part {
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc"><p><a href="index.html">Home</a></p>
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc contains-link-same-file"><p><a href="index.html">Home</a></p>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
@@ -2028,63 +2046,63 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-0 toc_li_for_unknown">
+<li class="toc_li-depth-0 toc_li_for_unknown link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-same-file" href="#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">7</span><span class="toc_sep"> - </span><span class="toc_name">How to contribute</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">38</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:complete-list-of-accounts"><span class="toc_what">Section</span> <span class="toc_number">38.1</span><span class="toc_sep"> - </span><span class="toc_name">Complete list of accounts</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-fall-2017"><span class="toc_what">Section</span> <span class="toc_number">38.2</span><span class="toc_sep"> - </span><span class="toc_name">For Fall 2017</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-other-contributors"><span class="toc_what">Section</span> <span class="toc_number">38.3</span><span class="toc_sep"> - </span><span class="toc_name">For other contributors</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">39</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:where-the-documentation-is"><span class="toc_what">Section</span> <span class="toc_number">39.1</span><span class="toc_sep"> - </span><span class="toc_name">Where the documentation is</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:editing-links"><span class="toc_what">Section</span> <span class="toc_number">39.2</span><span class="toc_sep"> - </span><span class="toc_name">Editing links</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:comments"><span class="toc_what">Section</span> <span class="toc_number">39.3</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:installing-docs-system"><span class="toc_what">Section</span> <span class="toc_number">39.4</span><span class="toc_sep"> - </span><span class="toc_name">Installing dependencies for compiling the documentation</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:troubleshooting-installation-problems"><span class="toc_what">Section</span> <span class="toc_number">39.5</span><span class="toc_sep"> - </span><span class="toc_name">Troubleshooting installation problems</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:compiling-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">39.6</span><span class="toc_sep"> - </span><span class="toc_name">Compiling the documentation</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_contribute_to_docs.html#sub:deploying-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">39.7</span><span class="toc_sep"> - </span><span class="toc_name">Deploying the documentation</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_documentation_manual.html#sec:documentation-manual"><span class="toc_what">Chapter</span> <span class="toc_number">40</span><span class="toc_sep"> - </span><span class="toc_name">Features of the documentation writing system</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">40.1</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:other-interesting-features"><span class="toc_what">Section</span> <span class="toc_number">40.2</span><span class="toc_sep"> - </span><span class="toc_name">Other interesting features</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:character-escapes"><span class="toc_what">Section</span> <span class="toc_number">40.3</span><span class="toc_sep"> - </span><span class="toc_name">Character escapes</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:troubleshooting-65_docs_features"><span class="toc_what">Section</span> <span class="toc_number">40.4</span><span class="toc_sep"> - </span><span class="toc_name">Troubleshooting</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="documentation_style_guide.html#sec:documentation-style-guide"><span class="toc_what">Chapter</span> <span class="toc_number">41</span><span class="toc_sep"> - </span><span class="toc_name">Documentation Style Guide</span></a>
 </li>
 </ul>
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="module_template.html#module-template:section">prev</a><section class="with-header-inside main-section-for-page" id="part:contribute:section" level="part" next="sec:accounts:section" prev="module-template:section"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/00_how.md"> ✎</a><h1 counter-part="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/00_how.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/00_how.md" id="part:contribute" label-name="How to contribute" label-number="7" label-self="" label-what="Part" label-what-number="Part 7" label-what-number-name="Part 7 - How to contribute">How to contribute</h1><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="module_template.html#module-template:section">prev</a><section class="with-header-inside main-section-for-page" id="part:contribute:section" level="part" next="sec:accounts:section" prev="module-template:section"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/00_how.md"> ✎</a><h1 counter-part="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/00_how.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/00_how.md" id="part:contribute" label-name="How to contribute" label-number="7" label-self="" label-what="Part" label-what-number="Part 7" label-what-number-name="Part 7 - How to contribute">How to contribute</h1><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="sec_accounts.html#sec:accounts:section">next</a></div><div>
 <style>
 #disqus_section {
@@ -2159,4 +2177,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>

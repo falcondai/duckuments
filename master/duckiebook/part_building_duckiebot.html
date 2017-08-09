@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -1675,7 +1693,7 @@ div#tocdiv .toc_a_for_part {
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc"><p><a href="index.html">Home</a></p>
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc contains-link-same-file"><p><a href="index.html">Home</a></p>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
@@ -1825,147 +1843,147 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-0 toc_li_for_unknown">
+<li class="toc_li-depth-0 toc_li_for_unknown link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-same-file" href="#part:building-duckiebot"><span class="toc_what">Part</span> <span class="toc_number">3</span><span class="toc_sep"> - </span><span class="toc_name">Setup instructions</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="acquiring_the_parts_for_the_duckiebot.html#sec:acquiring-the-parts-for-the-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">14</span><span class="toc_sep"> - </span><span class="toc_name">Acquiring the parts for the Duckiebot</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="acquiring_the_parts_for_the_duckiebot.html#sub:duckiebot-configurations"><span class="toc_what">Section</span> <span class="toc_number">14.1</span><span class="toc_sep"> - </span><span class="toc_name">Duckiebot configurations</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="acquiring_the_parts_for_the_duckiebot.html#sub:bill-of-materials"><span class="toc_what">Section</span> <span class="toc_number">14.2</span><span class="toc_sep"> - </span><span class="toc_name">Bill of materials</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="acquiring_the_parts_for_the_duckiebot.html#sub:chassis"><span class="toc_what">Section</span> <span class="toc_number">14.3</span><span class="toc_sep"> - </span><span class="toc_name">Chassis</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="acquiring_the_parts_for_the_duckiebot.html#sub:raspberry-pi-3"><span class="toc_what">Section</span> <span class="toc_number">14.4</span><span class="toc_sep"> - </span><span class="toc_name">Raspberry PI 3</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="acquiring_the_parts_for_the_duckiebot.html#sub:camera"><span class="toc_what">Section</span> <span class="toc_number">14.5</span><span class="toc_sep"> - </span><span class="toc_name">Camera</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="soldering_boards.html#sec:soldering-boards"><span class="toc_what">Chapter</span> <span class="toc_number">15</span><span class="toc_sep"> - </span><span class="toc_name">Soldering boards</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="assembling_the_duckiebot.html#sec:assembling-the-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">16</span><span class="toc_sep"> - </span><span class="toc_name">Assembling the Duckiebot</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="reproducing_the_image.html#sec:reproducing-the-image"><span class="toc_what">Chapter</span> <span class="toc_number">17</span><span class="toc_sep"> - </span><span class="toc_name">Reproducing the image</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reproducing_the_image.html#sub:step-1-from-blank-to-minimal-setup"><span class="toc_what">Section</span> <span class="toc_number">17.1</span><span class="toc_sep"> - </span><span class="toc_name">Step 1: From blank to minimal setup</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reproducing_the_image.html#sub:part-2-dependencies-and-configurations"><span class="toc_what">Section</span> <span class="toc_number">17.2</span><span class="toc_sep"> - </span><span class="toc_name">Part 2: Dependencies and Configurations</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reproducing_the_image.html#sub:sudo"><span class="toc_what">Section</span> <span class="toc_number">17.3</span><span class="toc_sep"> - </span><span class="toc_name">Sudo</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reproducing_the_image.html#sub:ubuntu-user-configuration"><span class="toc_what">Section</span> <span class="toc_number">17.4</span><span class="toc_sep"> - </span><span class="toc_name">Ubuntu user configuration</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="reproducing_the_image_for_laptops.html#sec:reproducing-the-image-for-laptops"><span class="toc_what">Chapter</span> <span class="toc_number">18</span><span class="toc_sep"> - </span><span class="toc_name">Reproducing the image for laptops</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reproducing_the_image_for_laptops.html#sub:useful-software"><span class="toc_what">Section</span> <span class="toc_number">18.1</span><span class="toc_sep"> - </span><span class="toc_name">Useful software</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="reproducing_the_image_for_laptops.html#sub:installation-of-the-documentation-system"><span class="toc_what">Section</span> <span class="toc_number">18.2</span><span class="toc_sep"> - </span><span class="toc_name">Installation of the documentation system</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="burn_the_duckiebot_image.html#sec:burn-the-duckiebot-image"><span class="toc_what">Chapter</span> <span class="toc_number">19</span><span class="toc_sep"> - </span><span class="toc_name">Burn the Duckiebot image</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="duckiebot_initialization.html#sec:duckiebot-initialization"><span class="toc_what">Chapter</span> <span class="toc_number">20</span><span class="toc_sep"> - </span><span class="toc_name">Duckiebot Initialization</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="duckiebot_initialization.html#sub:login-and-update-base-system"><span class="toc_what">Section</span> <span class="toc_number">20.1</span><span class="toc_sep"> - </span><span class="toc_name">Login and update base system</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="duckiebot_initialization.html#sub:learn-to-love-byobu"><span class="toc_what">Section</span> <span class="toc_number">20.2</span><span class="toc_sep"> - </span><span class="toc_name">Learn to love Byobu</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="duckiebot_initialization.html#sub:wireless-network-configuration"><span class="toc_what">Section</span> <span class="toc_number">20.3</span><span class="toc_sep"> - </span><span class="toc_name">Wireless network configuration</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="duckiebot_initialization.html#sub:update-basic-system"><span class="toc_what">Section</span> <span class="toc_number">20.4</span><span class="toc_sep"> - </span><span class="toc_name">Update basic system</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="duckiebot_initialization.html#sub:camera-test"><span class="toc_what">Section</span> <span class="toc_number">20.5</span><span class="toc_sep"> - </span><span class="toc_name">Camera Test</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="duckiebot_initialization.html#sub:do-not-change-the-default-shell"><span class="toc_what">Section</span> <span class="toc_number">20.6</span><span class="toc_sep"> - </span><span class="toc_name">Do not change the default shell</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="duckiebot_initialization.html#sub:set-hostname"><span class="toc_what">Section</span> <span class="toc_number">20.7</span><span class="toc_sep"> - </span><span class="toc_name">Set hostname</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="setup_the_laptops.html#sec:setup-the-laptops"><span class="toc_what">Chapter</span> <span class="toc_number">21</span><span class="toc_sep"> - </span><span class="toc_name">Setup the laptops</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="setup_the_laptops.html#sub:setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">21.1</span><span class="toc_sep"> - </span><span class="toc_name">Setup an Ubuntu laptop to ssh to the Duckiebot</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_github_access.html#sec:github-access"><span class="toc_what">Chapter</span> <span class="toc_number">22</span><span class="toc_sep"> - </span><span class="toc_name">Setup Github access</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_github_access.html#sub:create-an-ssh-key-on-your-machine"><span class="toc_what">Section</span> <span class="toc_number">22.1</span><span class="toc_sep"> - </span><span class="toc_name">Create an SSH key on your machine</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_github_access.html#sub:create-a-github-account"><span class="toc_what">Section</span> <span class="toc_number">22.2</span><span class="toc_sep"> - </span><span class="toc_name">Create a Github account</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_github_access.html#sub:creation-of-ssh-config-file-for-your-machine"><span class="toc_what">Section</span> <span class="toc_number">22.3</span><span class="toc_sep"> - </span><span class="toc_name">Creation of SSH config file for your machine</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_github_access.html#sub:setting-up-global-configurations-for-git"><span class="toc_what">Section</span> <span class="toc_number">22.4</span><span class="toc_sep"> - </span><span class="toc_name">Setting up global configurations for Git</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="software_setup_and_rc_remote_control.html#sec:software-setup-and-rc-remote-control"><span class="toc_what">Chapter</span> <span class="toc_number">23</span><span class="toc_sep"> - </span><span class="toc_name">Software setup and RC remote control</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:clone-the-duckietown-repository"><span class="toc_what">Section</span> <span class="toc_number">23.1</span><span class="toc_sep"> - </span><span class="toc_name">Clone the Duckietown repository</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:set-up-ros-environment-on-the-duckiebot"><span class="toc_what">Section</span> <span class="toc_number">23.2</span><span class="toc_sep"> - </span><span class="toc_name">Set up ROS environment on the Duckiebot</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:add-your-vehicle-to-the-machines-file"><span class="toc_what">Section</span> <span class="toc_number">23.3</span><span class="toc_sep"> - </span><span class="toc_name">Add your vehicle to the machines file</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:run-the-joystick-demo"><span class="toc_what">Section</span> <span class="toc_number">23.4</span><span class="toc_sep"> - </span><span class="toc_name">Run the joystick demo</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="software_setup_and_rc_remote_control.html#sub:proper-shutdown-procedure-for-the-pi"><span class="toc_what">Section</span> <span class="toc_number">23.5</span><span class="toc_sep"> - </span><span class="toc_name">Proper shutdown procedure for the PI</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="joystick_plus_camera_output.html#sec:joystick-plus-camera-output"><span class="toc_what">Chapter</span> <span class="toc_number">24</span><span class="toc_sep"> - </span><span class="toc_name">Joystick plus camera output</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="wheel_calibration.html#sec:wheel-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">25</span><span class="toc_sep"> - </span><span class="toc_name">Wheel calibration</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="camera_calibration.html#sec:camera-calibration"><span class="toc_what">Chapter</span> <span class="toc_number">26</span><span class="toc_sep"> - </span><span class="toc_name">Camera calibration</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="taking_a_log.html#sec:taking-a-log"><span class="toc_what">Chapter</span> <span class="toc_number">27</span><span class="toc_sep"> - </span><span class="toc_name">Taking a log</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="configuration_d17_1_assembly_and_setup.html#sec:configuration-d17-1-assembly-and-setup"><span class="toc_what">Chapter</span> <span class="toc_number">28</span><span class="toc_sep"> - </span><fragment>Configuration <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>D17-1</code> assembly and setup</fragment></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="configuration_d17_1_assembly_and_setup.html#sub:assembly"><span class="toc_what">Section</span> <span class="toc_number">28.1</span><span class="toc_sep"> - </span><span class="toc_name">Assembly</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="configuration_d17_1_assembly_and_setup.html#sub:setup"><span class="toc_what">Section</span> <span class="toc_number">28.2</span><span class="toc_sep"> - </span><span class="toc_name">Setup</span></a>
 </li>
 </ul>
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="other_things_to_know.html#other-things-to-know:section">prev</a><section class="with-header-inside main-section-for-page" id="part:building-duckiebot:section" level="part" next="acquiring-the-parts-for-the-duckiebot:section" prev="other-things-to-know:section"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_0_setup.md"> ✎</a><h1 counter-part="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/0_0_0_setup.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_0_setup.md" id="part:building-duckiebot" label-name="Setup instructions" label-number="3" label-self="" label-what="Part" label-what-number="Part 3" label-what-number-name="Part 3 - Setup instructions">Setup instructions</h1><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="other_things_to_know.html#other-things-to-know:section">prev</a><section class="with-header-inside main-section-for-page" id="part:building-duckiebot:section" level="part" next="acquiring-the-parts-for-the-duckiebot:section" prev="other-things-to-know:section"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_0_setup.md"> ✎</a><h1 counter-part="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/0_0_0_setup.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_0_setup.md" id="part:building-duckiebot" label-name="Setup instructions" label-number="3" label-self="" label-what="Part" label-what-number="Part 3" label-what-number-name="Part 3 - Setup instructions">Setup instructions</h1><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="acquiring_the_parts_for_the_duckiebot.html#acquiring-the-parts-for-the-duckiebot:section">next</a></div><div>
 <style>
 #disqus_section {
@@ -2159,4 +2177,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>

@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -1675,9 +1693,9 @@ div#tocdiv .toc_a_for_part {
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc"><p><a href="index.html">Home</a></p>
-<li class="toc_li-depth-0 toc_li_for_unknown">
-<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc contains-link-same-file"><p><a href="index.html">Home</a></p>
+<li class="toc_li-depth-0 toc_li_for_unknown contains-link-same-file">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part contains-link-same-file">
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="what_is_duckietown.html#sec:what-is-duckietown"><span class="toc_what">Chapter</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">What is Duckietown?</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
@@ -1700,15 +1718,15 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:duckietown-history-and-future"><span class="toc_what">Chapter</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown history and future</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:duckietown-history-and-future"><span class="toc_what">Chapter</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown history and future</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec contains-link-same-file">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:the-beginnings-of-duckietown"><span class="toc_what">Section</span> <span class="toc_number">2.1</span><span class="toc_sep"> - </span><span class="toc_name">The beginnings of Duckietown</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:duckietown-around-the-world"><span class="toc_what">Section</span> <span class="toc_number">2.2</span><span class="toc_sep"> - </span><span class="toc_name">Duckietown around the world</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:coming-up"><span class="toc_what">Section</span> <span class="toc_number">2.3</span><span class="toc_sep"> - </span><span class="toc_name">Coming up</span></a>
 </li>
 </ul>
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="what_is_duckietown.html#what-is-duckietown:section">prev</a><section class="with-header-inside main-section-for-page" id="duckietown-history-and-future:section" level="sec" next="sec:first-steps:section" prev="what-is-duckietown:section"><!--Warning: Adding prefix 'sec' to current id 'duckietown-history-and-future' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md"> ✎</a><h1 counter-sec="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/10_intro_to_project/10_intro.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md" id="sec:duckietown-history-and-future" label-name="Duckietown history and future" label-number="2" label-self="" label-what="Chapter" label-what-number="Chapter 2" label-what-number-name="Chapter 2 - Duckietown history and future">Duckietown history and future</h1><section class="with-header-inside" id="the-beginnings-of-duckietown:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'the-beginnings-of-duckietown' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md"> ✎</a><h2 counter-sec="2" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/10_intro_to_project/10_intro.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md" id="sub:the-beginnings-of-duckietown" label-name="The beginnings of Duckietown" label-number="2.1" label-self="" label-what="Section" label-what-number="Section 2.1" label-what-number-name="Section 2.1 - The beginnings of Duckietown">The beginnings of Duckietown</h2><section class="without-header-inside" level="subsub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="what_is_duckietown.html#what-is-duckietown:section">prev</a><section class="with-header-inside main-section-for-page" id="duckietown-history-and-future:section" level="sec" next="sec:first-steps:section" prev="what-is-duckietown:section"><!--Warning: Adding prefix 'sec' to current id 'duckietown-history-and-future' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md"> ✎</a><h1 counter-sec="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/10_intro_to_project/10_intro.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md" id="sec:duckietown-history-and-future" label-name="Duckietown history and future" label-number="2" label-self="" label-what="Chapter" label-what-number="Chapter 2" label-what-number-name="Chapter 2 - Duckietown history and future">Duckietown history and future</h1><section class="with-header-inside" id="the-beginnings-of-duckietown:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'the-beginnings-of-duckietown' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md"> ✎</a><h2 counter-sec="2" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/10_intro_to_project/10_intro.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md" id="sub:the-beginnings-of-duckietown" label-name="The beginnings of Duckietown" label-number="2.1" label-self="" label-what="Section" label-what-number="Section 2.1" label-what-number-name="Section 2.1 - The beginnings of Duckietown">The beginnings of Duckietown</h2><section class="without-header-inside" level="subsub">
 <p>Duckietown started as an MIT class during Spring 2016.</p>
 </section></section><section class="with-header-inside" id="duckietown-around-the-world:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'duckietown-around-the-world' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md"> ✎</a><h2 counter-sec="2" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/10_intro_to_project/10_intro.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md" id="sub:duckietown-around-the-world" label-name="Duckietown around the world" label-number="2.2" label-self="" label-what="Section" label-what-number="Section 2.2" label-what-number-name="Section 2.2 - Duckietown around the world">Duckietown around the world</h2><section class="with-header-inside" id="duckietown-high-school:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'duckietown-high-school' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md"> ✎</a><h3 counter-sec="2" counter-sub="2" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/10_intro_to_project/10_intro.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md" id="subsub:duckietown-high-school" label-name="Duckietown High School" label-number="2.2.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 2.2.1" label-what-number-name="Subsection 2.2.1 - Duckietown High School">Duckietown High School</h3>
 </section></section><section class="with-header-inside" id="coming-up:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'coming-up' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md"> ✎</a><h2 counter-sec="2" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/10_intro_to_project/10_intro.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/10_intro_to_project/10_intro.md" id="sub:coming-up" label-name="Coming up" label-number="2.3" label-self="" label-what="Section" label-what-number="Section 2.3" label-what-number-name="Section 2.3 - Coming up">Coming up</h2><section class="without-header-inside" level="subsub">
@@ -2170,4 +2188,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>

@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -1675,7 +1693,7 @@ div#tocdiv .toc_a_for_part {
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc"><p><a href="index.html">Home</a></p>
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc contains-link-same-file"><p><a href="index.html">Home</a></p>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
@@ -1825,23 +1843,23 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-0 toc_li_for_unknown">
-<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_building_duckiebot.html#part:building-duckiebot"><span class="toc_what">Part</span> <span class="toc_number">3</span><span class="toc_sep"> - </span><span class="toc_name">Setup instructions</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
-<li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:acquiring-the-parts-for-the-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">14</span><span class="toc_sep"> - </span><span class="toc_name">Acquiring the parts for the Duckiebot</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-0 toc_li_for_unknown contains-link-same-file">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_building_duckiebot.html#part:building-duckiebot"><span class="toc_what">Part</span> <span class="toc_number">3</span><span class="toc_sep"> - </span><span class="toc_name">Setup instructions</span></a><ul class="toc_ul-depth-1 toc_ul_for_part contains-link-same-file">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:acquiring-the-parts-for-the-duckiebot"><span class="toc_what">Chapter</span> <span class="toc_number">14</span><span class="toc_sep"> - </span><span class="toc_name">Acquiring the parts for the Duckiebot</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec contains-link-same-file">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:duckiebot-configurations"><span class="toc_what">Section</span> <span class="toc_number">14.1</span><span class="toc_sep"> - </span><span class="toc_name">Duckiebot configurations</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:bill-of-materials"><span class="toc_what">Section</span> <span class="toc_number">14.2</span><span class="toc_sep"> - </span><span class="toc_name">Bill of materials</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:chassis"><span class="toc_what">Section</span> <span class="toc_number">14.3</span><span class="toc_sep"> - </span><span class="toc_name">Chassis</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:raspberry-pi-3"><span class="toc_what">Section</span> <span class="toc_number">14.4</span><span class="toc_sep"> - </span><span class="toc_name">Raspberry PI 3</span></a>
 </li>
-<li class="toc_li-depth-3 toc_li_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:camera"><span class="toc_what">Section</span> <span class="toc_number">14.5</span><span class="toc_sep"> - </span><span class="toc_name">Camera</span></a>
 </li>
 </ul>
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="part_building_duckiebot.html#part:building-duckiebot:section">prev</a><section class="with-header-inside main-section-for-page" id="acquiring-the-parts-for-the-duckiebot:section" level="part" next="soldering-boards:section" prev="part:building-duckiebot:section"><!--Warning: Adding prefix 'sec' to current id 'acquiring-the-parts-for-the-duckiebot' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_buying_parts.md"> ✎</a><h1 counter-sec="14" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/0_0_buying_parts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_buying_parts.md" id="sec:acquiring-the-parts-for-the-duckiebot" label-name="Acquiring the parts for the Duckiebot" label-number="14" label-self="" label-what="Chapter" label-what-number="Chapter 14" label-what-number-name="Chapter 14 - Acquiring the parts for the Duckiebot">Acquiring the parts for the Duckiebot</h1><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="part_building_duckiebot.html#part:building-duckiebot:section">prev</a><section class="with-header-inside main-section-for-page" id="acquiring-the-parts-for-the-duckiebot:section" level="part" next="soldering-boards:section" prev="part:building-duckiebot:section"><!--Warning: Adding prefix 'sec' to current id 'acquiring-the-parts-for-the-duckiebot' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_buying_parts.md"> ✎</a><h1 counter-sec="14" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/0_0_buying_parts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/0_0_buying_parts.md" id="sec:acquiring-the-parts-for-the-duckiebot" label-name="Acquiring the parts for the Duckiebot" label-number="14" label-self="" label-what="Chapter" label-what-number="Chapter 14" label-what-number-name="Chapter 14 - Acquiring the parts for the Duckiebot">Acquiring the parts for the Duckiebot</h1><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub">
 <p>The trip begins with acquiring the parts. Here, we provide a link to all bits and pieces that are needed to build a Duckiebot.</p>
 <p>In general, keep in mind that:</p>
 <ul>
@@ -2209,4 +2227,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>

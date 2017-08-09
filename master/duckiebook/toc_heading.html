@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="index.html#booktitle:section">prev</a><section class="with-header-inside main-section-for-page" id="toc-heading:section" level="sec" next="part:duckietown-project:section" prev="booktitle:section"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/01_title.md"> ✎</a><h1 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/01_title.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/01_title.md" id="toc-heading" nonumber="1" notoc="1">Table of contents</h1><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="index.html#booktitle:section">prev</a><section class="with-header-inside main-section-for-page" id="toc-heading:section" level="sec" next="part:duckietown-project:section" prev="booktitle:section"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/01_title.md"> ✎</a><h1 github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/01_title.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/01_title.md" id="toc-heading" nonumber="1" notoc="1">Table of contents</h1><section class="without-header-inside" level="sub">
 <ul class="toc" id="main_toc"><p><a href="index.html">Home</a></p>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
@@ -2619,4 +2637,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>

@@ -325,10 +325,6 @@ ul#main_toc li {
 .toc_a_for_app .toc_name {
   font-weight: bold;
 }
-.toc_a_for_sub > .toc_what,
-.toc_a_for_appsub > .toc_what {
-  display: None;
-}
 /** two-column format */
 /** add page numbers for the first two */
 .toc_a_for_part::after,
@@ -1607,9 +1603,6 @@ div#tocdiv .link-same-file {
   background-color: #ddd !important;
   color: darkblue;
 }
-div#tocdiv .toc_li_for_sec {
-  display: none;
-}
 div#tocdiv .toc_a_for_part {
   text-align: left !important;
   font-weight: bold;
@@ -1633,6 +1626,31 @@ div#tocdiv .toc_a_for_part {
 }
 .main-section-for-page {
   min-height: 65vh;
+}
+html {
+  background-color: white;
+}
+/* We cannot have tocdiv: fixed if we tranform the body */
+#tocdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body {
+  transform: none;
+}
+#not-toc {
+  transform-origin: top center;
+  transform: scale(1.5);
+}
+/* hide the other parts of the TOC */
+ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
+  outline: solid 1px red;
+  color: red !important;
+  display: none;
+}
+.toc_a_for_sub .toc_what {
+  display: none;
 }
 /*
 
@@ -1675,7 +1693,7 @@ div#tocdiv .toc_a_for_part {
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc"><p><a href="index.html">Home</a></p>
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></head><body><div id="tocdiv"><ul class="toc contains-link-same-file"><p><a href="index.html">Home</a></p>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
@@ -1992,8 +2010,8 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-0 toc_li_for_unknown">
-<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_development.html#part:development"><span class="toc_what">Part</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Developing software</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
+<li class="toc_li-depth-0 toc_li_for_unknown contains-link-same-file">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_development.html#part:development"><span class="toc_what">Part</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Developing software</span></a><ul class="toc_ul-depth-1 toc_ul_for_part contains-link-same-file">
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="python.html#sec:python"><span class="toc_what">Chapter</span> <span class="toc_number">32</span><span class="toc_sep"> - </span><span class="toc_name">Python</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
@@ -2016,7 +2034,7 @@ div#tocdiv .toc_a_for_part {
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="integrate_package_in_the_architecture.html#sec:integrate-package-in-the-architecture"><span class="toc_what">Chapter</span> <span class="toc_number">35</span><span class="toc_sep"> - </span><span class="toc_name">Integrate package in the architecture</span></a>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part">
+<li class="toc_li-depth-1 toc_li_for_part link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:creating-unit-tests"><span class="toc_what">Chapter</span> <span class="toc_number">36</span><span class="toc_sep"> - </span><span class="toc_name">Creating unit tests</span></a>
 </li>
 </ul>
@@ -2130,7 +2148,7 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="integrate_package_in_the_architecture.html#integrate-package-in-the-architecture:section">prev</a><section class="with-header-inside main-section-for-page" id="creating-unit-tests:section" level="sec" next="part:modules:section" prev="integrate-package-in-the-architecture:section"><!--Warning: Adding prefix 'sec' to current id 'creating-unit-tests' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/25_development/90_unit_tests.md"> ✎</a><h1 counter-sec="36" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_development/90_unit_tests.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_development/90_unit_tests.md" id="sec:creating-unit-tests" label-name="Creating unit tests" label-number="36" label-self="" label-what="Chapter" label-what-number="Chapter 36" label-what-number-name="Chapter 36 - Creating unit tests">Creating unit tests</h1><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="integrate_package_in_the_architecture.html#integrate-package-in-the-architecture:section">prev</a><section class="with-header-inside main-section-for-page" id="creating-unit-tests:section" level="sec" next="part:modules:section" prev="integrate-package-in-the-architecture:section"><!--Warning: Adding prefix 'sec' to current id 'creating-unit-tests' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/25_development/90_unit_tests.md"> ✎</a><h1 counter-sec="36" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/25_development/90_unit_tests.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/25_development/90_unit_tests.md" id="sec:creating-unit-tests" label-name="Creating unit tests" label-number="36" label-self="" label-what="Chapter" label-what-number="Chapter 36" label-what-number-name="Chapter 36 - Creating unit tests">Creating unit tests</h1><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
 </section></section><a class="link_next link-different-file" href="part_modules.html#part:modules:section">next</a></div><div>
 <style>
 #disqus_section {
@@ -2159,4 +2177,4 @@ margin-top: 1em;
     })();
 </script>
 <script async="" id="dsq-count-scr" src="https://duckuments.disqus.com/count.js"></script>
-</div></body></html>
+</div></div></body></html>
