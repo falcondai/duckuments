@@ -224,6 +224,18 @@ h2.draft,
 h3.draft {
   color: red !important;
 }
+span.placeholder {
+  color: orange;
+  font-weight: bold;
+}
+span.placeholder:before {
+  content: '\3008';
+  font-family: Times;
+}
+span.placeholder:after {
+  content: '\3009';
+  font-family: Times;
+}
 .figcontent {
   margin: 0;
   padding: 0;
@@ -2093,10 +2105,10 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="software_setup_and_rc_remote_control.html#software-setup-and-rc-remote-control:section">prev</a><section class="with-header-inside main-section-for-page" id="proper-shutdown-procedure-for-the-pi:section" level="sec" next="joystick-plus-camera-output:section" prev="software-setup-and-rc-remote-control:section"><!--Warning: Adding prefix 'sec' to current id 'proper-shutdown-procedure-for-the-pi' for h1.--><h1 counter-sec="26" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_5_rc_control_remote.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control_remote.md" id="sec:proper-shutdown-procedure-for-the-pi" label-name="Proper shutdown procedure for the PI" label-number="26" label-self="" label-what="Chapter" label-what-number="Chapter 26" label-what-number-name="Chapter 26 - Proper shutdown procedure for the PI">Proper shutdown procedure for the PI<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control_remote.md"> ✎</a></h1><section class="without-header-inside" level="sub">
+</ul></div><div class="super"><a class="link_prev link-different-file" href="software_setup_and_rc_remote_control.html#software-setup-and-rc-remote-control:section">prev</a><section class="with-header-inside main-section-for-page" id="proper-shutdown-procedure-for-the-pi:section" level="sec" next="joystick-plus-camera-output:section" prev="software-setup-and-rc-remote-control:section"><!--Warning: Adding prefix 'sec' to current id 'proper-shutdown-procedure-for-the-pi' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control_remote.md"> ✎</a><h1 counter-sec="26" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_5_rc_control_remote.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control_remote.md" id="sec:proper-shutdown-procedure-for-the-pi" label-name="Proper shutdown procedure for the PI" label-number="26" label-self="" label-what="Chapter" label-what-number="Chapter 26" label-what-number-name="Chapter 26 - Proper shutdown procedure for the PI">Proper shutdown procedure for the PI</h1><section class="without-header-inside" level="sub">
 <p>Ctrl-C in the terminal of joystick.launch when you’re done.</p>
 <p><strong>To shutdown: DO NOT DISCONNECT THE POWER - the system might get corrupted. </strong>Instead, issue the following command:</p>
-<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> shutdown <span class="program_option">-h</span> now
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="shutdown program">shutdown</span> <span class="program_option">-h</span> now
 </code></pre>
 <p>and then wait 30 seconds before disconnecting the power.</p>
 <p><strong>Also: Disconnect the battery end of the cable,</strong> not the one close to the PI, because you might damage it.</p><div style="display:none">Because of mathjax bug</div>

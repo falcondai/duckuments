@@ -224,6 +224,18 @@ h2.draft,
 h3.draft {
   color: red !important;
 }
+span.placeholder {
+  color: orange;
+  font-weight: bold;
+}
+span.placeholder:before {
+  content: '\3008';
+  font-family: Times;
+}
+span.placeholder:after {
+  content: '\3009';
+  font-family: Times;
+}
 .figcontent {
   margin: 0;
   padding: 0;
@@ -2093,16 +2105,16 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="networking.html#networking:section">prev</a><section class="with-header-inside main-section-for-page" id="wireless-networks:section" level="sec" next="accessing-computers-over-the-network:section" prev="networking:section"><!--Warning: Adding prefix 'sec' to current id 'wireless-networks' for h1.--><h1 counter-sec="10" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/23_networking.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md" id="sec:wireless-networks" label-name="Wireless networks" label-number="10" label-self="" label-what="Chapter" label-what-number="Chapter 10" label-what-number-name="Chapter 10 - Wireless networks">Wireless networks<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md"> ✎</a></h1><section class="without-header-inside" level="sub">
-<!--Warning: Adding prefix 'subsub' to current id 'iwlist' for h3.--><h3 counter-sec="10" counter-sub="0" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/23_networking.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md" id="subsub:iwlist" label-name="&lt;code&gt;iwlist&lt;/code&gt;" label-number="10.0.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 10.0.1" label-what-number-name="Subsection 10.0.1 - &lt;code&gt;iwlist&lt;/code&gt;"><code>iwlist</code><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md"> ✎</a></h3>
+</ul></div><div class="super"><a class="link_prev link-different-file" href="networking.html#networking:section">prev</a><section class="with-header-inside main-section-for-page" id="wireless-networks:section" level="sec" next="accessing-computers-over-the-network:section" prev="networking:section"><!--Warning: Adding prefix 'sec' to current id 'wireless-networks' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md"> ✎</a><h1 counter-sec="10" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/23_networking.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md" id="sec:wireless-networks" label-name="Wireless networks" label-number="10" label-self="" label-what="Chapter" label-what-number="Chapter 10" label-what-number-name="Chapter 10 - Wireless networks">Wireless networks</h1><section class="without-header-inside" level="sub">
+<!--Warning: Adding prefix 'subsub' to current id 'iwlist' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md"> ✎</a><h3 counter-sec="10" counter-sub="0" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/23_networking.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/23_networking.md" id="subsub:iwlist" label-name="&lt;code oncopy='alert(&quot;Do not copy and paste. I guarantee, only trouble will come from it.&quot;);return false;'&gt;iwlist&lt;/code&gt;" label-number="10.0.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 10.0.1" label-what-number-name="Subsection 10.0.1 - &lt;code oncopy='alert(&quot;Do not copy and paste. I guarantee, only trouble will come from it.&quot;);return false;'&gt;iwlist&lt;/code&gt;"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>iwlist</code></h3>
 <p>What wireless networks do I have around?</p>
-<pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> iwlist ![interface] scan | grep SSID
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="iwlist program">iwlist</span> <span class="placeholder">interface</span> scan <span class="| program">|</span> grep SSID
 </code></pre>
 <p>Does the interface support 5 GHz channels?</p>
-<pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> iwlist ![interface] freq
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="iwlist program">iwlist</span> <span class="placeholder">interface</span> freq
 </code></pre>
 <p>Example output:</p>
-<pre><code>wlx74da38c9caa0  20 channels in total; available frequencies :
+<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>wlx74da38c9caa0  20 channels in total; available frequencies :
   Channel 01 : 2.412 GHz
   Channel 02 : 2.417 GHz
   Channel 03 : 2.422 GHz

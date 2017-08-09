@@ -224,6 +224,18 @@ h2.draft,
 h3.draft {
   color: red !important;
 }
+span.placeholder {
+  color: orange;
+  font-weight: bold;
+}
+span.placeholder:before {
+  content: '\3008';
+  font-family: Times;
+}
+span.placeholder:after {
+  content: '\3009';
+  font-family: Times;
+}
 .figcontent {
   margin: 0;
   padding: 0;
@@ -2093,10 +2105,10 @@ div#tocdiv .toc_a_for_part {
 </li>
 </ul>
 </li>
-</ul></div><div class="super"><a class="link_prev link-different-file" href="duckiebot_initialization.html#duckiebot-initialization:section">prev</a><section class="with-header-inside main-section-for-page" id="setup-the-laptops:section" level="sec" next="setup-github-access:section" prev="duckiebot-initialization:section"><!--Warning: Adding prefix 'sec' to current id 'setup-the-laptops' for h1.--><h1 counter-sec="23" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_8_ubuntu_laptops.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md" id="sec:setup-the-laptops" label-name="Setup the laptops" label-number="23" label-self="" label-what="Chapter" label-what-number="Chapter 23" label-what-number-name="Chapter 23 - Setup the laptops">Setup the laptops<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md"> ✎</a></h1><section class="with-header-inside" id="setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot' for h2.--><h2 counter-sec="23" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_8_ubuntu_laptops.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md" id="sub:setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot" label-name="Setup an Ubuntu laptop to ssh to the duckiebot" label-number="23.1" label-self="" label-what="Section" label-what-number="Section 23.1" label-what-number-name="Section 23.1 - Setup an Ubuntu laptop to ssh to the duckiebot">Setup an Ubuntu laptop to ssh to the duckiebot<a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md"> ✎</a></h2><section class="without-header-inside" level="subsub">
+</ul></div><div class="super"><a class="link_prev link-different-file" href="duckiebot_initialization.html#duckiebot-initialization:section">prev</a><section class="with-header-inside main-section-for-page" id="setup-the-laptops:section" level="sec" next="setup-github-access:section" prev="duckiebot-initialization:section"><!--Warning: Adding prefix 'sec' to current id 'setup-the-laptops' for h1.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md"> ✎</a><h1 counter-sec="23" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_8_ubuntu_laptops.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md" id="sec:setup-the-laptops" label-name="Setup the laptops" label-number="23" label-self="" label-what="Chapter" label-what-number="Chapter 23" label-what-number-name="Chapter 23 - Setup the laptops">Setup the laptops</h1><section class="with-header-inside" id="setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md"> ✎</a><h2 counter-sec="23" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_8_ubuntu_laptops.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_8_ubuntu_laptops.md" id="sub:setup-an-ubuntu-laptop-to-ssh-to-the-duckiebot" label-name="Setup an Ubuntu laptop to ssh to the duckiebot" label-number="23.1" label-self="" label-what="Section" label-what-number="Section 23.1" label-what-number-name="Section 23.1 - Setup an Ubuntu laptop to ssh to the duckiebot">Setup an Ubuntu laptop to ssh to the duckiebot</h2><section class="without-header-inside" level="subsub">
 <p>Connect your laptop to the same network as the robot.</p>
 <p>From your laptop, now you should be able to ping the duckiebot:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> ping ROBOTNAME.local
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="ping program">ping</span> ROBOTNAME.local
 </code></pre>
 <p>(or if you have not changed your hostname then ROBOTNAME=duckiebot)</p>
 <p>Do not continue if you cannot do this successfully.</p>
@@ -2117,50 +2129,50 @@ div#tocdiv .toc_a_for_part {
 </ul>
 <p>it means you should learn more about Linux and networks, and you are setting yourself up for failure. Yes, you “can do without”, but with an additional 30 seconds of your time. The 30 seconds you are not saving every time are the difference between being productive roboticists and going crazy. Really, it is impossible to do robotics when you have to think about IPs and passwords…</p>
 <p>Verify that you can ssh to the PI:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> ssh ubuntu@duckiebot.local
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="ssh program">ssh</span> ubuntu@duckiebot.local
 </code></pre>
 <p>Say “yes” if you get asked whether you want to add it to a list of known hosts.</p>
 <p><strong>Offending key error:</strong> If you get something like this:</p>
 <p>Warning: the ECDSA host key for … differs from the key for the IP address ‘10.0.1.17’</p>
-<pre><code>Offending key for IP in /Users/&lt;user&gt;/.ssh/known_hosts:&lt;line&gt;
+<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>Offending key for IP in /Users/&lt;user&gt;/.ssh/known_hosts:&lt;line&gt;
 </code></pre>
-<p>then remove line &lt;line&gt; in  /.ssh/known_hosts</p>
+<p>then remove line &lt;line&gt; in ~/.ssh/known_hosts</p>
 <p>Now, let’s set up <strong>passwordless ssh.</strong></p>
 <p>On the laptop, create the .ssh directory:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> mkdir <span class="program_option">-p</span>  /.ssh
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="mkdir program">mkdir</span> <span class="program_option">-p</span> ~/.ssh
 </code></pre>
 <p>Install the duckietown_key1 by downloading it:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> wget <span class="program_option">-O</span>  /.ssh/duckietown_key1 "https://www.dropbox.com/s/q23qptu01u7ur3y/duckietown_key1?dl=1"
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="wget program">wget</span> <span class="program_option">-O</span> ~/.ssh/duckietown_key1 "https://www.dropbox.com/s/q23qptu01u7ur3y/duckietown_key1?dl=1"
 </code></pre>
 <p><strong>Changing Key Permission </strong></p>
 <p>Edit the permission of the file to make ssh happy. The key file must not be readable or writable from other users or groups.</p>
 <p><strong>1</strong></p>
-<pre><code>laptop $
+<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop $
 
-chmod 600  /.ssh/duckietown_key1
+chmod 600 ~/.ssh/duckietown_key1
 
-chmod 600  /.ssh/duckietown_key1
+chmod 600 ~/.ssh/duckietown_key1
 </code></pre>
 <p>Regenerate the public key according to:za</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> ssh-keygen <span class="program_option">-f</span>  /.ssh/duckietown_key1 <span class="program_option">-y</span> &gt;  /.ssh/duckietown_key1.pub
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="ssh-keygen program">ssh-keygen</span> <span class="program_option">-f</span> ~/.ssh/duckietown_key1 <span class="program_option">-y</span> &gt; ~/.ssh/duckietown_key1.pub
 </code></pre>
 <p><strong>Troubleshooting</strong></p>
-<p>If there are issues such as “scheme missing” and the file duckietown_key1 does not exist in  /.ssh/ folder but instead downloaded a file named duckietown_key1?dl=1 in the current folder simply rename duckietown_key1?dl=1 to duckietown_key1 and copy it over to the directory  /.ssh/.</p>
+<p>If there are issues such as “scheme missing” and the file duckietown_key1 does not exist in ~/.ssh/ folder but instead downloaded a file named duckietown_key1?dl=1 in the current folder simply rename duckietown_key1?dl=1 to duckietown_key1 and copy it over to the directory ~/.ssh/.</p>
 <p>To move the mislabeled file:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> mv "duckietown_key1?dl=1"   /.ssh/duckietown_key1
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="mv program">mv</span> "duckietown_key1?dl=1"  ~/.ssh/duckietown_key1
 </code></pre>
-<p>On the laptop, now edit   /.ssh/config:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> nano  /.ssh/config
+<p>On the laptop, now edit  ~/.ssh/config:</p>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> nano ~/.ssh/config
 </code></pre>
 <p>and add the following lines:</p>
-<pre><code>Host **ROBOTNAME**
+<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>Host **ROBOTNAME**
 Hostname ROBOTNAME.local
 User ubuntu
-IdentityFile  /.ssh/duckietown_key1
+IdentityFile ~/.ssh/duckietown_key1
 HostKeyAlgorithms ssh-rsa
 </code></pre>
 <p>Now you should be able to ssh passwordlessly from your laptop:</p>
-<pre class="console"><code>laptop <span class="console_sign">$</span> ssh **duckiebot**
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="ssh program">ssh</span> **duckiebot**
 </code></pre>
 <p>This should succeed. Do not continue unless it does.</p>
 <p>Note that you can actually auto-complete with tab after ssh.</p><div style="display:none">Because of mathjax bug</div>
