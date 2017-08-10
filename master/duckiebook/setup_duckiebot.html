@@ -2081,7 +2081,7 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="taking_a_log.html#sec:taking-a-log"><span class="toc_what">Chapter</span> <span class="toc_number">22</span><span class="toc_sep"> - </span><span class="toc_name">Taking a log</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="configuration_d17_1_assembly_and_setup.html#sec:configuration-d17-1-assembly-and-setup"><span class="toc_what">Chapter</span> <span class="toc_number">23</span><span class="toc_sep"> - </span><fragment>Configuration <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>D17-1</code> assembly and setup</fragment></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="configuration_d17_1_assembly_and_setup.html#sec:configuration-d17-1-assembly-and-setup"><span class="toc_what">Chapter</span> <span class="toc_number">23</span><span class="toc_sep"> - </span><fragment>Configuration <code>D17-1</code> assembly and setup</fragment></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="configuration_d17_1_assembly_and_setup.html#sub:assembly"><span class="toc_what">Section</span> <span class="toc_number">23.1</span><span class="toc_sep"> - </span><span class="toc_name">Assembly</span></a>
 </li>
@@ -2277,7 +2277,7 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="laptop_setup.html#sec:laptop-setup"><span class="toc_what">Chapter</span> <span class="toc_number">40</span><span class="toc_sep"> - </span><span class="toc_name">Laptop setup</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="laptop_setup.html#sub:setup-passwordless-ssh-to-log-in-using-the-ubuntu-user"><span class="toc_what">Section</span> <span class="toc_number">40.1</span><span class="toc_sep"> - </span><fragment>Setup passwordless SSH to log in using the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code> user</fragment></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="laptop_setup.html#sub:setup-passwordless-ssh-to-log-in-using-the-ubuntu-user"><span class="toc_what">Section</span> <span class="toc_number">40.1</span><span class="toc_sep"> - </span><fragment>Setup passwordless SSH to log in using the <code>ubuntu</code> user</fragment></a>
 </li>
 </ul>
 </li>
@@ -2289,7 +2289,7 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 <ul>
 <li>An SD card of dimensions at least 32 GB.</li>
 <li>A computer with an internet connection, an SD card reader, and 35 GB of free space.</li>
-<li>A mounted Duckiebot in configuration <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>D17-C0</code>.</li>
+<li>A mounted Duckiebot in configuration <code>D17-C0</code>.</li>
 </ul>
 <div class="special-par-see-wrap"><p class="special-par-see">This is the result of <a class="link-different-file" href="assembling_duckiebot.html#sec:assembling-duckiebot"><span class="reflabel">Chapter 13</span></a>.</p></div>
 <p>Result:</p>
@@ -2308,12 +2308,12 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="curl program">curl</span> <span class="program_option">-o</span> duckiebot-RPI3-AC-aug10.img.xz <span class="placeholder">URL above</span>
 </code></pre>
 <p>Uncompress the file:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="xz program">xz</span> <span class="program_option">-d</span> <span class="program_option">-k</span> duckiebot-RPI3-AC-aug10.img.xz
+<pre class="console"><code><span class="console_sign">$</span> <span class="xz program">xz</span> <span class="program_option">-d</span> <span class="program_option">-k</span> duckiebot-RPI3-AC-aug10.img.xz
 </code></pre>
 <p>This will create a file of 32 GB in size.</p>
 <p>To make sure that the image is downloaded correctly, compute its hash
-using the program <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>sha256sum</code>:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sha256sum program">sha256sum</span> duckiebot-RPI3-AC-aug10.img
+using the program <code>sha256sum</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="sha256sum program">sha256sum</span> duckiebot-RPI3-AC-aug10.img
 2ea79b0fc6353361063c89977417fc5e8fde70611e8afa5cbf2d3a166d57e8cf  duckiebot-ac-aug10.img
 </code></pre>
 <p>Compare the hash that you obtain with the hash above. If they are different,
@@ -2328,7 +2328,7 @@ there was some problem in downloading the image.</p>
 <p>You can login to the Duckiebot in two ways:</p>
 <ol>
 <li>Through an Ethernet cable.</li>
-<li>Through a <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckietown</code> WiFi network.</li>
+<li>Through a <code>duckietown</code> WiFi network.</li>
 </ol>
 <p>In the worst case, you can use an HDMI monitor and a USB keyboard.</p>
 </section><section class="with-header-inside" id="option-1-ethernet-cable:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'option-1-ethernet-cable' for h3.--><h3 counter-sec="17" counter-sub="3" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="subsub:option-1-ethernet-cable" label-name="Option 1: Ethernet cable" label-number="17.3.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 17.3.1" label-what-number-name="Subsection 17.3.1 - Option 1: Ethernet cable">Option 1: Ethernet cable</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a>
@@ -2337,12 +2337,12 @@ switch.</p>
 <p>Allow 30 s - 1 minute for the DHCP to work.</p>
 </section><section class="with-header-inside" id="option-2-duckietown-network:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'option-2-duckietown-network' for h3.--><h3 counter-sec="17" counter-sub="3" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="subsub:option-2-duckietown-network" label-name="Option 2: Duckietown network" label-number="17.3.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 17.3.2" label-what-number-name="Subsection 17.3.2 - Option 2: Duckietown network">Option 2: Duckietown network</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a>
 <p>The Duckiebot connects automatically to a 2.4 GHz network
-called “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckietown</code>” and password “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>quackquack</code>”.</p>
+called “<code>duckietown</code>” and password “<code>quackquack</code>”.</p>
 <p>Connect your laptop to the same wireless network.</p>
 </section></section><section class="with-header-inside" id="ping-the-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'ping-the-duckiebot' for h2.--><h2 counter-sec="17" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:ping-the-duckiebot" label-name="Ping the Duckiebot" label-number="17.4" label-self="" label-what="Section" label-what-number="Section 17.4" label-what-number-name="Section 17.4 - Ping the Duckiebot">Ping the Duckiebot</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>To test that the Duckiebot is connected, try to ping it.</p>
-<p>The hostname of a freshly-installed duckiebot is <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot-not-configured</code>:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="ping program">ping</span> duckiebot-not-configured.local
+<p>The hostname of a freshly-installed duckiebot is <code>duckiebot-not-configured</code>:</p>
+<pre class="console"><code>laptop <span class="console_sign">$</span> <span class="ping program">ping</span> duckiebot-not-configured.local
 </code></pre>
 <p>You should see output similar to the following:</p>
 <pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>PING duckiebot-not-configured.local (<span class="placeholder">X.X.X.X</span>): 56 data bytes
@@ -2351,19 +2351,19 @@ called “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble 
 <span class="placeholder">...</span>
 </code></pre>
 </section></section><section class="with-header-inside" id="ssh-to-the-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'ssh-to-the-duckiebot' for h2.--><h2 counter-sec="17" counter-sub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:ssh-to-the-duckiebot" label-name="SSH to the Duckiebot" label-number="17.5" label-self="" label-what="Section" label-what-number="Section 17.5" label-what-number-name="Section 17.5 - SSH to the Duckiebot">SSH to the Duckiebot</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>Next, try to log in using SSH, with account <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code>:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="ssh program">ssh</span> ubuntu@duckiebot-not-configured.local
+<p>Next, try to log in using SSH, with account <code>ubuntu</code>:</p>
+<pre class="console"><code>laptop <span class="console_sign">$</span> <span class="ssh program">ssh</span> ubuntu@duckiebot-not-configured.local
 </code></pre>
-<p>The password is <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code>.</p>
+<p>The password is <code>ubuntu</code>.</p>
 <p>By default, the robot boots into Byobu.</p>
 <p>Please see <a class="link-different-file" href="linux.html#sub:byobu"><span class="reflabel">Section 5.6</span></a> for an introduction to Byobu.</p>
 <p class="status-XXX"> Not sure it’s a good idea to boot into Byobu.</p>
 </section></section><section class="with-header-inside" id="for-d17-c1-configure-the-robot-generated-network:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'for-d17-c1-configure-the-robot-generated-network' for h2.--><h2 counter-sec="17" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:for-d17-c1-configure-the-robot-generated-network" label-name="(For D17-C1) Configure the robot-generated network" label-number="17.6" label-self="" label-what="Section" label-what-number="Section 17.6" label-what-number-name="Section 17.6 - (For D17-C1) Configure the robot-generated network">(For D17-C1) Configure the robot-generated network</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>The Duckiebot in configuration <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>D17-C0+w</code> can create a WiFi network.</p>
+<p>The Duckiebot in configuration <code>D17-C0+w</code> can create a WiFi network.</p>
 <p>It is a 5 GHz network; this means that you need to have a 5 GHz
 WiFi adapter in your laptop.</p>
 <p>First, make sure that the Edimax is correctly installed.
-Using <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>iwconfig</code>, you should see four interfaces:</p>
+Using <code>iwconfig</code>, you should see four interfaces:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="iwconfig program">iwconfig</span>
 wlx<span class="placeholder">AABBCCDDEEFFGG</span>  unassociated  Nickname:"rtl8822bu"
 
@@ -2383,29 +2383,29 @@ wlan1     IEEE 802.11bgn  ESSID:"duckietown"
 wlx74da38c9caa0 Link encap:Ethernet  HWaddr <span class="placeholder">AA:BB:CC:DD:EE:FF:GG</span>
 </code></pre>
 <p>Then, edit the connection file</p>
-<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/etc/NetworkManager/system-connections/create-5ghz-network
+<pre><code>/etc/NetworkManager/system-connections/create-5ghz-network
 </code></pre>
 <p>Make the following changes:</p>
 <ul>
 <li>Where it says <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>interface-name=<span class="placeholder">...</span></code>, put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>wlx<span class="placeholder">AABBCCDDEEFFGG</span></code>”.</li>
 <li>Where it says <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>mac-address=<span class="placeholder">...</span></code>, put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">AA:BB:CC:DD:EE:FF:GG</span></code>”.</li>
-<li>Where it says <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ssid=duckiebot-not-configured</code>, put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ssid=<span class="placeholder">robot name</span></code>”.</li>
+<li>Where it says <code>ssid=duckiebot-not-configured</code>, put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ssid=<span class="placeholder">robot name</span></code>”.</li>
 </ul>
 <p>Reboot.</p>
 <p>At this point you should see a new network being created named “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>”.</p>
 <p>You can connect with the laptop to that network.</p>
-<p>If the Raspberry PI’s network interface is connected to the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckietown</code> network
+<p>If the Raspberry PI’s network interface is connected to the <code>duckietown</code> network
 and to the internet, the Raspberry PI will act as a bridge to the internet.</p>
 </section></section><section class="with-header-inside" id="setting-up-wireless-network-configuration:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'setting-up-wireless-network-configuration' for h2.--><h2 counter-sec="17" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:setting-up-wireless-network-configuration" label-name="Setting up wireless network configuration" label-number="17.7" label-self="" label-what="Section" label-what-number="Section 17.7" label-what-number-name="Section 17.7 - Setting up wireless network configuration">Setting up wireless network configuration</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p class="status-XXX"> This part is to be tested</p>
 <p>The Duckiebot is configured by default to connect to a wireless network with
-SSID <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckietown</code>. If that is not your SSID then you will need to change the
+SSID <code>duckietown</code>. If that is not your SSID then you will need to change the
 configuration.</p>
 <p>You can add a new network by editing the file:</p>
-<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/etc/wpa_supplicant/wpa_supplicant.conf
+<pre><code>/etc/wpa_supplicant/wpa_supplicant.conf
 </code></pre>
 <p>You will see a block like the following:</p>
-<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>network={
+<pre><code>network={
  ssid="duckietown"
  scan_ssid=1
  psk="quackquack"
@@ -2418,69 +2418,69 @@ you might need to change some of the other attributes.</p>
 </section></section><section class="with-header-inside" id="update-the-system:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'update-the-system' for h2.--><h2 counter-sec="17" counter-sub="8" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:update-the-system" label-name="Update the system" label-number="17.8" label-self="" label-what="Section" label-what-number="Section 17.8" label-what-number-name="Section 17.8 - Update the system">Update the system</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>Next, we need to update to bring the system up to date.</p>
 <p>Use these commands</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> update
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> update
 duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> dist-upgrade
 </code></pre>
 </section></section><section class="with-header-inside" id="give-a-name-to-the-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'give-a-name-to-the-duckiebot' for h2.--><h2 counter-sec="17" counter-sub="9" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:give-a-name-to-the-duckiebot" label-name="Give a name to the Duckiebot" label-number="17.9" label-self="" label-what="Section" label-what-number="Section 17.9" label-what-number-name="Section 17.9 - Give a name to the Duckiebot">Give a name to the Duckiebot</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>It is now time to give a name to the Duckiebot.</p>
 <p>These are the criteria:</p>
 <ul>
-<li>It should be a simple alphabetic string (no numbers or other characters like “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>-</code>”, “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>_</code>”, etc.) .</li>
+<li>It should be a simple alphabetic string (no numbers or other characters like “<code>-</code>”, “<code>_</code>”, etc.) .</li>
 <li>It will always appear lowercase.</li>
 </ul>
 <p>From here on, we will refer to this string as “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>”.
 Every time you see <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>, you should substitute the name that you chose.</p>
 </section></section><section class="with-header-inside" id="change-the-hostname:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'change-the-hostname' for h2.--><h2 counter-sec="17" counter-sub="10" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:change-the-hostname" label-name="Change the hostname" label-number="17.10" label-self="" label-what="Section" label-what-number="Section 17.10" label-what-number-name="Section 17.10 - Change the hostname">Change the hostname</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>We will put the robot name in configuration files.</p>
-<div class="special-par-note-wrap"><p class="special-par-note">Files in <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/etc</code> are only writable by <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>root</code>,
-so you need to use <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>sudo</code> to edit them. For example:</p></div>
+<div class="special-par-note-wrap"><p class="special-par-note">Files in <code>/etc</code> are only writable by <code>root</code>,
+so you need to use <code>sudo</code> to edit them. For example:</p></div>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="vi program">vi</span> <span class="placeholder">filename</span>
 </code></pre>
 <p>Edit the file</p>
-<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/etc/hostname
+<pre><code>/etc/hostname
 </code></pre>
-<p>and put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>” instead of <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot-not-configured</code>.</p>
+<p>and put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>” instead of <code>duckiebot-not-configured</code>.</p>
 <p>Also edit the file</p>
-<pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/etc/hosts
+<pre><code>/etc/hosts
 </code></pre>
-<p>and put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>” where <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot-not-configured</code> appears.</p>
-<p>The first two lines of <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/etc/hosts</code> should be:</p>
+<p>and put “<code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>” where <code>duckiebot-not-configured</code> appears.</p>
+<p>The first two lines of <code>/etc/hosts</code> should be:</p>
 <pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>127.0.0.1   localhost
 127.0.1.1   <span class="placeholder">robot name</span>
 </code></pre>
-<div class="special-par-note-wrap"><p class="special-par-note">there is a command <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>hostname</code> that promises to change the hostname.
+<div class="special-par-note-wrap"><p class="special-par-note">there is a command <code>hostname</code> that promises to change the hostname.
 However, the change given by that command does not persist across reboots. You
 need to edit the files above for the changes to persist.</p></div>
-<div class="special-par-note-wrap"><p class="special-par-note">Never add other hostnames in <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/etc/hosts</code>. It is a tempting
+<div class="special-par-note-wrap"><p class="special-par-note">Never add other hostnames in <code>/etc/hosts</code>. It is a tempting
 fix when DNS does not work, but it will cause other problems
 subsequently.</p></div>
 <p>Then reboot the Raspberry PI using the command</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="reboot program">reboot</span>
+<pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="reboot program">reboot</span>
 </code></pre>
-<p>After reboot, log in again, and run the command <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>hostname</code> to check that the
+<p>After reboot, log in again, and run the command <code>hostname</code> to check that the
 change has persisted:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="hostname program">hostname</span>
 <span class="placeholder">robot name</span>
 </code></pre>
 </section></section><section class="with-header-inside" id="create-user-on-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'create-user-on-duckiebot' for h2.--><h2 counter-sec="17" counter-sub="11" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:create-user-on-duckiebot" label-name="Create your user" label-number="17.11" label-self="" label-what="Section" label-what-number="Section 17.11" label-what-number-name="Section 17.11 - Create your user">Create your user</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>You must not use the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code> user for development.
+<p>You must not use the <code>ubuntu</code> user for development.
 Instead, you need to create a new user.</p>
 <p>Choose a user name, which we will refer to as <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">username</span></code>.</p>
 <p>To create a new user:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> useradd <span class="program_option">-m</span> <span class="placeholder">username</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="useradd program">useradd</span> <span class="program_option">-m</span> <span class="placeholder">username</span>
 </code></pre>
-<p>Make the user an administrator by adding it to the group <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>sudo</code>:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> adduser <span class="placeholder">username</span> <span class="sudo program">sudo</span>
+<p>Make the user an administrator by adding it to the group <code>sudo</code>:</p>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="adduser program">adduser</span> <span class="placeholder">username</span> <span class="sudo program">sudo</span>
 </code></pre>
-<p>Make the user a member of the group <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>input</code> and <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>i2c</code></p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> adduser <span class="placeholder">username</span> input
-duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> adduser <span class="placeholder">username</span> i2c
+<p>Make the user a member of the group <code>input</code> and <code>i2c</code></p>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="adduser program">adduser</span> <span class="placeholder">username</span> input
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="adduser program">adduser</span> <span class="placeholder">username</span> i2c
 </code></pre>
-<p>Set the shell <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>bash</code>:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> chsh <span class="program_option">-s</span> /bin/bash andrea
+<p>Set the shell <code>bash</code>:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="chsh program">chsh</span> <span class="program_option">-s</span> /bin/bash andrea
 </code></pre>
 <p>To set a password, use:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> passwd <span class="placeholder">username</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="passwd program">passwd</span> <span class="placeholder">username</span>
 </code></pre>
 <p>At this point, you should be able to login to the new user from the laptop
 using the password:</p>
@@ -2494,7 +2494,7 @@ using the password:</p>
 <p>Add the public key to your Github account.</p>
 <div class="special-par-see-wrap"><p class="special-par-see">The procedure is documented in <a class="link-different-file" href="github_access.html#sub:howto-add-pubkey-to-github"><span class="reflabel">Section 16.3</span></a>.</p></div>
 <p>If the step is done correctly, this command should succeed:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="program_option">-T</span> git@github.com
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="program_option">-T</span> git@github.com
 </code></pre>
 </section><section class="with-header-inside" id="local-git-configuration:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'local-git-configuration' for h3.--><h3 counter-sec="17" counter-sub="11" counter-subsub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="subsub:local-git-configuration" label-name="Local Git configuration" label-number="17.11.3" label-self="3) " label-what="Subsection" label-what-number="Subsection 17.11.3" label-what-number-name="Subsection 17.11.3 - Local Git configuration">Local Git configuration</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a>
 <div class="special-par-see-wrap"><p class="special-par-see">Do the procedure in {#howto-git-local-config} on the Duckiebot.</p></div>
@@ -2526,23 +2526,23 @@ passwords…</p>
 <p>If you know what you are doing, you are welcome to install and use additional
 shells, but please keep Bash as be the default shell. This is
 important for ROS installation.</p>
-<p>For the record, our favorite shell is ZSH with <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>oh-my-zsh</code>.</p>
+<p>For the record, our favorite shell is ZSH with <code>oh-my-zsh</code>.</p>
 </section></section><section class="with-header-inside" id="hardware-check-camera:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'hardware-check-camera' for h2.--><h2 counter-sec="17" counter-sub="13" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:hardware-check-camera" label-name="Hardware check: camera" label-number="17.13" label-self="" label-what="Section" label-what-number="Section 17.13" label-what-number-name="Section 17.13 - Hardware check: camera">Hardware check: camera</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>Check that the camera is connected using this command:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="vcgencmd program">vcgencmd</span> get_camera
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="vcgencmd program">vcgencmd</span> get_camera
 supported=1 detected=1
 </code></pre>
-<p>If you see <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>detected=0</code>, it means that the hardware connection is not working.</p>
+<p>If you see <code>detected=0</code>, it means that the hardware connection is not working.</p>
 <p>You can test the camera right away using a command-line utility
-called <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>raspistill</code>.</p>
-<p>Use the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>raspistill</code> command to capture the file <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>out.jpg</code>:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="raspistill program">raspistill</span> <span class="program_option">-t</span> 1 <span class="program_option">-o</span> out.jpg
+called <code>raspistill</code>.</p>
+<p>Use the <code>raspistill</code> command to capture the file <code>out.jpg</code>:</p>
+<pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="raspistill program">raspistill</span> <span class="program_option">-t</span> 1 <span class="program_option">-o</span> out.jpg
 </code></pre>
-<p>Then download <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>out.jpg</code> to your computer using <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>scp</code> for inspection.</p>
+<p>Then download <code>out.jpg</code> to your computer using <code>scp</code> for inspection.</p>
 <p>See <a class="link-different-file" href="accessing_computers_using_ssh.html#subsub:howto-download-file-with-scp"><span class="reflabel">Subsection 8.7.1</span></a></p>
 </section><section class="with-header-inside" id="troubleshooting-1_6_duckiebot_initialization:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting-1_6_duckiebot_initialization' for h3.--><h3 counter-sec="17" counter-sub="13" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="subsub:troubleshooting-1_6_duckiebot_initialization" label-name="Troubleshooting" label-number="17.13.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 17.13.1" label-what-number-name="Subsection 17.13.1 - Troubleshooting">Troubleshooting</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a>
-<div class="special-par-symptom-wrap"><p class="special-par-symptom"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>detected=0</code></p></div>
-<div class="special-par-resolution-wrap"><p class="special-par-resolution">If you see <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>detected=0</code>, it is likely that the camera is not connected correctly.</p></div>
+<div class="special-par-symptom-wrap"><p class="special-par-symptom"><code>detected=0</code></p></div>
+<div class="special-par-resolution-wrap"><p class="special-par-resolution">If you see <code>detected=0</code>, it is likely that the camera is not connected correctly.</p></div>
 <p>If you see an error that starts like this:</p>
 <pre><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>mmal: Cannot read camera info, keeping the defaults for OV5647
 <span class="placeholder">...</span>
