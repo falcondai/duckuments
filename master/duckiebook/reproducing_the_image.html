@@ -346,7 +346,7 @@ span.PlaceholderLabel {
   font-family: "Cambria Math" !important;
 }
 body {
-  font-family: STIX, STIXMath, monospace;
+  font-family: STIX, STIXMath, Times, monospace;
   font-variant: prince-opentype(kern, liga, dlig, clig, calt);
   font-kerning: normal;
 }
@@ -1073,9 +1073,6 @@ pre + br + pre {
   /*border: solid 1px red;*/
   /*float: left; clear: left;*/
 }
-div.todo-wrap {
-  text-align: center;
-}
 p.todo {
   display: inline-block;
   background-color: #fdd;
@@ -1087,6 +1084,61 @@ p.todo::before {
 p.special-par-note::before {
   content: 'Note: ';
   font-weight: bold;
+  color: darkred;
+}
+p.special-par-note {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-see::before {
+  content: '\027A1';
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+p.special-par-symptom::before {
+  content: 'Symptom: ';
+  font-weight: bold;
+  color: darkred;
+}
+p.special-par-symptom {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-resolution::before {
+  content: 'Resolution: ';
+  font-weight: bold;
+  color: darkgren;
+}
+p.special-par-bad::before {
+  content: '\2716';
+  margin-right: 0.5em;
+  color: darkred;
+  font-size: 80%;
+}
+p.special-par-bad {
+  color: darkred;
+}
+p.special-par-better::before {
+  content: '\2714';
+  margin-right: 0.5em;
+  color: darkgreen;
+  font-size: 80%;
+}
+p.special-par-better {
+  color: darkgreen;
+}
+p.special-par-warning::before {
+  content: 'Warning';
+  margin-right: 0.5em;
+  font-size: 80%;
+}
+p.special-par-warning {
+  border-left: solid 3px yellow;
+  padding-left: 0.5em;
+}
+div.requirements {
+  border-left: solid 3px lightgrey;
+  padding-left: 0.5em;
 }
 p.special-par-task::before {
   content: 'Task: ';
@@ -1119,6 +1171,12 @@ p.special-par-task::before {
 }
 .status-XXX {
   background-color: pink;
+  padding-left: 0.5em;
+  border-left: solid 2px red;
+}
+p.special-par-remark {
+  padding-left: 0.5em;
+  border-left: solid 2px gray;
 }
 p.special-par-remark::before {
   content: 'Remark: ';
@@ -2172,7 +2230,7 @@ Delete the file and try again.</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="xz program">xz</span> <span class="program_option">-d</span> ubuntu-mate-16.04.2-desktop-armhf-raspberry-pi.img.xz
 </code></pre>
 </section><section class="with-header-inside" id="finding-your-device-name-for-the-sd-card-an-unmount-it:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'finding-your-device-name-for-the-sd-card-an-unmount-it' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a><h3 counter-sec="17" counter-sub="1" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:finding-your-device-name-for-the-sd-card-an-unmount-it" label-name="Finding your device name for the SD card an unmount it" label-number="17.1.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 17.1.2" label-what-number-name="Subsection 17.1.2 - Finding your device name for the SD card an unmount it">Finding your device name for the SD card an unmount it</h3>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> df <span class="program_option">-h</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>laptop <span class="console_sign">$</span> <span class="df program">df</span> <span class="program_option">-h</span>
 </code></pre>
 <p>Inspect the output for something like <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/dev/mmcblk0</code>.  You may see
 <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>/dev/mmcblk0pX</code> or a couple of similar entries for each partition on the card,
@@ -2222,27 +2280,27 @@ and enable SSH, camera, and I2C.</p>
 </section><section class="with-header-inside" id="install-packages:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'install-packages' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a><h3 counter-sec="17" counter-sub="2" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:install-packages" label-name="Install packages" label-number="17.2.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 17.2.2" label-what-number-name="Subsection 17.2.2 - Install packages">Install packages</h3>
 <p>Install these packages.</p>
 <p>Editors / shells:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="program_option">-y</span> emacs <span class="vim program">vim</span> byobu
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="program_option">-y</span> emacs <span class="vim program">vim</span> byobu
 </code></pre>
 <p>Git:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="program_option">-y</span> git git-extras
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="program_option">-y</span> git git-extras
 </code></pre>
 <p>Etckeeper:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> etckeeper
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install etckeeper
 </code></pre>
 <p>Other:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="htop program">htop</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="htop program">htop</span>
 </code></pre>
 <p>Development:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="program_option">-y</span> build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="program_option">-y</span> build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev
 </code></pre>
 <p>Python:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="program_option">-y</span> python-dev ipython python-sklearn python-smbus
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="program_option">-y</span> python-dev ipython python-sklearn python-smbus
 
-duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="pip program">pip</span> <span class="install program_command">install</span> scipy <span class="program_option">--upgrade</span>
+duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="pip program">pip</span> install scipy <span class="program_option">--upgrade</span>
 </code></pre>
 <p>I2C:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="program_option">-y</span> i2c-tools
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="program_option">-y</span> i2c-tools
 </code></pre>
 <p>You may need to do the following (but might be done already through <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>raspi-config</code>):</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="usermod program">usermod</span> <span class="program_option">-a</span> <span class="program_option">-G</span> i2c ubuntu
@@ -2260,10 +2318,10 @@ duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</s
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> update
 </code></pre>
 <p>Now install the mega-package <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ros-kinetic-desktop-full</code>.</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> ros-kinetic-desktop-full
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install ros-kinetic-desktop-full
 </code></pre>
 <p>There’s more to install:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed-image-transport,phidgets-drivers,imu-complementary-filter,imu-filter-madgwick}
 </code></pre>
 <p class="status-XXX"> Do we need Phidgets if we are not using the IMU this year?</p>
 </section><section class="with-header-inside" id="wireless-configuration:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'wireless-configuration' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a><h3 counter-sec="17" counter-sub="2" counter-subsub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:wireless-configuration" label-name="Wireless configuration" label-number="17.2.4" label-self="4) " label-what="Subsection" label-what-number="Subsection 17.2.4" label-what-number-name="Subsection 17.2.4 - Wireless configuration">Wireless configuration</h3>

@@ -346,7 +346,7 @@ span.PlaceholderLabel {
   font-family: "Cambria Math" !important;
 }
 body {
-  font-family: STIX, STIXMath, monospace;
+  font-family: STIX, STIXMath, Times, monospace;
   font-variant: prince-opentype(kern, liga, dlig, clig, calt);
   font-kerning: normal;
 }
@@ -1073,9 +1073,6 @@ pre + br + pre {
   /*border: solid 1px red;*/
   /*float: left; clear: left;*/
 }
-div.todo-wrap {
-  text-align: center;
-}
 p.todo {
   display: inline-block;
   background-color: #fdd;
@@ -1087,6 +1084,61 @@ p.todo::before {
 p.special-par-note::before {
   content: 'Note: ';
   font-weight: bold;
+  color: darkred;
+}
+p.special-par-note {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-see::before {
+  content: '\027A1';
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+p.special-par-symptom::before {
+  content: 'Symptom: ';
+  font-weight: bold;
+  color: darkred;
+}
+p.special-par-symptom {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-resolution::before {
+  content: 'Resolution: ';
+  font-weight: bold;
+  color: darkgren;
+}
+p.special-par-bad::before {
+  content: '\2716';
+  margin-right: 0.5em;
+  color: darkred;
+  font-size: 80%;
+}
+p.special-par-bad {
+  color: darkred;
+}
+p.special-par-better::before {
+  content: '\2714';
+  margin-right: 0.5em;
+  color: darkgreen;
+  font-size: 80%;
+}
+p.special-par-better {
+  color: darkgreen;
+}
+p.special-par-warning::before {
+  content: 'Warning';
+  margin-right: 0.5em;
+  font-size: 80%;
+}
+p.special-par-warning {
+  border-left: solid 3px yellow;
+  padding-left: 0.5em;
+}
+div.requirements {
+  border-left: solid 3px lightgrey;
+  padding-left: 0.5em;
 }
 p.special-par-task::before {
   content: 'Task: ';
@@ -1119,6 +1171,12 @@ p.special-par-task::before {
 }
 .status-XXX {
   background-color: pink;
+  padding-left: 0.5em;
+  border-left: solid 2px red;
+}
+p.special-par-remark {
+  padding-left: 0.5em;
+  border-left: solid 2px gray;
 }
 p.special-par-remark::before {
   content: 'Remark: ';
@@ -2148,7 +2206,7 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 </section></section><section class="with-header-inside" id="installing-docs-system:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'installing-docs-system' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/60_contributing_to_docs.md"> ✎</a><h2 counter-sec="39" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/60_contributing_to_docs.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/60_contributing_to_docs.md" id="sub:installing-docs-system" label-name="Installing dependencies for compiling the documentation" label-number="39.4" label-self="" label-what="Section" label-what-number="Section 39.4" label-what-number-name="Section 39.4 - Installing dependencies for compiling the documentation">Installing dependencies for compiling the documentation</h2><section class="without-header-inside" level="subsub">
 <p>Let <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>DUCKUMENTS</code> be the base directory for the documentation.</p>
 <p>Download the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>duckuments</code> repo in that directory:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="git program">git</span> <span class="clone program_command">clone</span> git@github.com:duckietown/duckuments.git $DUCKUMENTS
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="git program">git</span> clone git@github.com:duckietown/duckuments.git $DUCKUMENTS
 </code></pre>
 <p>Cd into directory:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
@@ -2164,23 +2222,23 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="source program">source</span> $DUCKUMENTS/deploy/bin/activate
 </code></pre>
 <p>Install some dependencies:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> libxml2-dev libxslt1-dev
-<span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> libffi6 libffi-dev
-<span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> python-dev python-numpy python-matplotlib
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install libxml2-dev libxslt1-dev
+<span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install libffi6 libffi-dev
+<span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install python-dev python-numpy python-matplotlib
 </code></pre>
 <p>Clone the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>mcdp</code> external repository:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
-<span class="console_sign">$</span> <span class="git program">git</span> <span class="clone program_command">clone</span> <span class="program_option">-b</span> duckuments git@github.com:AndreaCensi/mcdp.git
+<span class="console_sign">$</span> <span class="git program">git</span> clone <span class="program_option">-b</span> duckuments git@github.com:AndreaCensi/mcdp.git
 </code></pre>
 <p>Install it and its dependencies:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS/mcdp
-<span class="console_sign">$</span> <span class="python program">python</span> setup.py <span class="develop program_command">develop</span>
+<span class="console_sign">$</span> <span class="python program">python</span> setup.py develop
 </code></pre>
 <p>(If you get a permission error here, it means you have not properly activated the virtualenv)</p>
 <p>Depending on your system, you might need to install these other dependencies:
 (It should not be necessary on Ubuntu 16 given the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>apt</code> commands above.)</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
-<span class="console_sign">$</span> <span class="pip program">pip</span> <span class="install program_command">install</span> numpy matplotlib
+<span class="console_sign">$</span> <span class="pip program">pip</span> install numpy matplotlib
 </code></pre>
 <p>Ensure the latest version (&gt;6) of <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>nodejs</code> is installed.</p>
 <p>Run:</p>
@@ -2193,7 +2251,7 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 <p>Install <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>nodejs</code> using <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">the instructions at this page</a>.</p>
 <p>Next, install the necessary Javascript libraries using <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>npm</code>:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="cd program">cd</span> $DUCKUMENTS
-<span class="console_sign">$</span> <span class="npm program">npm</span> <span class="install program_command">install</span> MathJax-node jsdom@9.3 less
+<span class="console_sign">$</span> <span class="npm program">npm</span> install MathJax-node jsdom@9.3 less
 </code></pre>
 <p>Install PrinceXML from <a href="https://www.princexml.com/download/">this page</a>.</p>
 <p>Download STIX fonts from <a href="https://sourceforge.net/projects/stixfonts/files/latest/download">this site</a>.</p>

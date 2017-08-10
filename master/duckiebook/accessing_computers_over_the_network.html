@@ -346,7 +346,7 @@ span.PlaceholderLabel {
   font-family: "Cambria Math" !important;
 }
 body {
-  font-family: STIX, STIXMath, monospace;
+  font-family: STIX, STIXMath, Times, monospace;
   font-variant: prince-opentype(kern, liga, dlig, clig, calt);
   font-kerning: normal;
 }
@@ -1073,9 +1073,6 @@ pre + br + pre {
   /*border: solid 1px red;*/
   /*float: left; clear: left;*/
 }
-div.todo-wrap {
-  text-align: center;
-}
 p.todo {
   display: inline-block;
   background-color: #fdd;
@@ -1087,6 +1084,61 @@ p.todo::before {
 p.special-par-note::before {
   content: 'Note: ';
   font-weight: bold;
+  color: darkred;
+}
+p.special-par-note {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-see::before {
+  content: '\027A1';
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+p.special-par-symptom::before {
+  content: 'Symptom: ';
+  font-weight: bold;
+  color: darkred;
+}
+p.special-par-symptom {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-resolution::before {
+  content: 'Resolution: ';
+  font-weight: bold;
+  color: darkgren;
+}
+p.special-par-bad::before {
+  content: '\2716';
+  margin-right: 0.5em;
+  color: darkred;
+  font-size: 80%;
+}
+p.special-par-bad {
+  color: darkred;
+}
+p.special-par-better::before {
+  content: '\2714';
+  margin-right: 0.5em;
+  color: darkgreen;
+  font-size: 80%;
+}
+p.special-par-better {
+  color: darkgreen;
+}
+p.special-par-warning::before {
+  content: 'Warning';
+  margin-right: 0.5em;
+  font-size: 80%;
+}
+p.special-par-warning {
+  border-left: solid 3px yellow;
+  padding-left: 0.5em;
+}
+div.requirements {
+  border-left: solid 3px lightgrey;
+  padding-left: 0.5em;
 }
 p.special-par-task::before {
   content: 'Task: ';
@@ -1119,6 +1171,12 @@ p.special-par-task::before {
 }
 .status-XXX {
   background-color: pink;
+  padding-left: 0.5em;
+  border-left: solid 2px red;
+}
+p.special-par-remark {
+  padding-left: 0.5em;
+  border-left: solid 2px gray;
 }
 p.special-par-remark::before {
   content: 'Remark: ';
@@ -2140,7 +2198,7 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 </ul>
 </section></section><section class="with-header-inside" id="ssh:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'ssh' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md"> ✎</a><h2 counter-sec="11" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md" id="sub:ssh" label-name="SSH" label-number="11.2" label-self="" label-what="Section" label-what-number="Section 11.2" label-what-number-name="Section 11.2 - SSH">SSH</h2><section class="without-header-inside" level="subsub">
 <div class="todo-wrap"><p class="todo">to write</p></div>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="ssh program">ssh</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="ssh program">ssh</span>
 </code></pre>
 </section><section class="with-header-inside" id="permissions:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'permissions' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md"> ✎</a><h3 counter-sec="11" counter-sub="2" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md" id="subsub:permissions" label-name="Permissions" label-number="11.2.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 11.2.1" label-what-number-name="Subsection 11.2.1 - Permissions">Permissions</h3>
 </section></section><section class="with-header-inside" id="ssh-server:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'ssh-server' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md"> ✎</a><h2 counter-sec="11" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md" id="sub:ssh-server" label-name="SSH server" label-number="11.3" label-self="" label-what="Section" label-what-number="Section 11.3" label-what-number-name="Section 11.3 - SSH server">SSH server</h2><section class="without-header-inside" level="subsub">
@@ -2158,7 +2216,7 @@ that’s fine as well.</p>
 <li><a href="http://byobu.co/">http://byobu.co/</a></li>
 </ul>
 <p>Install using:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> byobu
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install byobu
 </code></pre>
 </section><section class="with-header-inside" id="advantages-of-using-byobu:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'advantages-of-using-byobu' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md"> ✎</a><h3 counter-sec="11" counter-sub="6" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/24_ssh.md" id="subsub:advantages-of-using-byobu" label-name="Advantages of using Byobu" label-number="11.6.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 11.6.1" label-what-number-name="Subsection 11.6.1 - Advantages of using Byobu">Advantages of using Byobu</h3>
 <div class="todo-wrap"><p class="todo">To write</p></div>

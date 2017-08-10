@@ -346,7 +346,7 @@ span.PlaceholderLabel {
   font-family: "Cambria Math" !important;
 }
 body {
-  font-family: STIX, STIXMath, monospace;
+  font-family: STIX, STIXMath, Times, monospace;
   font-variant: prince-opentype(kern, liga, dlig, clig, calt);
   font-kerning: normal;
 }
@@ -1073,9 +1073,6 @@ pre + br + pre {
   /*border: solid 1px red;*/
   /*float: left; clear: left;*/
 }
-div.todo-wrap {
-  text-align: center;
-}
 p.todo {
   display: inline-block;
   background-color: #fdd;
@@ -1087,6 +1084,61 @@ p.todo::before {
 p.special-par-note::before {
   content: 'Note: ';
   font-weight: bold;
+  color: darkred;
+}
+p.special-par-note {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-see::before {
+  content: '\027A1';
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+p.special-par-symptom::before {
+  content: 'Symptom: ';
+  font-weight: bold;
+  color: darkred;
+}
+p.special-par-symptom {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-resolution::before {
+  content: 'Resolution: ';
+  font-weight: bold;
+  color: darkgren;
+}
+p.special-par-bad::before {
+  content: '\2716';
+  margin-right: 0.5em;
+  color: darkred;
+  font-size: 80%;
+}
+p.special-par-bad {
+  color: darkred;
+}
+p.special-par-better::before {
+  content: '\2714';
+  margin-right: 0.5em;
+  color: darkgreen;
+  font-size: 80%;
+}
+p.special-par-better {
+  color: darkgreen;
+}
+p.special-par-warning::before {
+  content: 'Warning';
+  margin-right: 0.5em;
+  font-size: 80%;
+}
+p.special-par-warning {
+  border-left: solid 3px yellow;
+  padding-left: 0.5em;
+}
+div.requirements {
+  border-left: solid 3px lightgrey;
+  padding-left: 0.5em;
 }
 p.special-par-task::before {
   content: 'Task: ';
@@ -1119,6 +1171,12 @@ p.special-par-task::before {
 }
 .status-XXX {
   background-color: pink;
+  padding-left: 0.5em;
+  border-left: solid 2px red;
+}
+p.special-par-remark {
+  padding-left: 0.5em;
+  border-left: solid 2px gray;
 }
 p.special-par-remark::before {
   content: 'Remark: ';
@@ -2142,22 +2200,22 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 </li>
 </ul>
 <blockquote>
-<p>Bad: “Edit the ~/.ssh/config file using vi.”</p>
-<p>Better: “Edit the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>~/.ssh/config</code> file using <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>vi</code>.”</p>
+<div class="special-par-bad-wrap"><p class="special-par-bad"> “Edit the ~/.ssh/config file using vi.”</p></div>
+<div class="special-par-better-wrap"><p class="special-par-better"> “Edit the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>~/.ssh/config</code> file using <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>vi</code>.”</p></div>
 </blockquote>
 <ul>
 <li><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>Ctrl-C</code>, <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ssh</code> etc. are not verbs.</li>
 </ul>
 <blockquote>
-<p>Bad: “Ctrl-C from the command line”.</p>
-<p>Better: “Use Ctrl-C from the command line”.</p>
+<div class="special-par-bad-wrap"><p class="special-par-bad"> “Ctrl-C from the command line”.</p></div>
+<div class="special-par-better-wrap"><p class="special-par-better"> “Use Ctrl-C from the command line”.</p></div>
 </blockquote>
 <ul>
 <li>Use full English words:</li>
 </ul>
 <blockquote>
-<p>Bad: “The pwd is <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code>.”</p>
-<p>Better: “The password is <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code>.”</p>
+<div class="special-par-bad-wrap"><p class="special-par-bad"> “The pwd is <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code>.”</p></div>
+<div class="special-par-better-wrap"><p class="special-par-better"> “The password is <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>ubuntu</code>.”</p></div>
 </blockquote><div style="display:none">Because of mathjax bug</div>
 </section></section><a class="link_next link-different-file" href="part_fall_2017.html#part:fall-2017:section">next</a></div><div>
 <style>

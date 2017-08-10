@@ -346,7 +346,7 @@ span.PlaceholderLabel {
   font-family: "Cambria Math" !important;
 }
 body {
-  font-family: STIX, STIXMath, monospace;
+  font-family: STIX, STIXMath, Times, monospace;
   font-variant: prince-opentype(kern, liga, dlig, clig, calt);
   font-kerning: normal;
 }
@@ -1073,9 +1073,6 @@ pre + br + pre {
   /*border: solid 1px red;*/
   /*float: left; clear: left;*/
 }
-div.todo-wrap {
-  text-align: center;
-}
 p.todo {
   display: inline-block;
   background-color: #fdd;
@@ -1087,6 +1084,61 @@ p.todo::before {
 p.special-par-note::before {
   content: 'Note: ';
   font-weight: bold;
+  color: darkred;
+}
+p.special-par-note {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-see::before {
+  content: '\027A1';
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+p.special-par-symptom::before {
+  content: 'Symptom: ';
+  font-weight: bold;
+  color: darkred;
+}
+p.special-par-symptom {
+  border-left: solid 3px darkred;
+  padding-left: 0.5em;
+}
+p.special-par-resolution::before {
+  content: 'Resolution: ';
+  font-weight: bold;
+  color: darkgren;
+}
+p.special-par-bad::before {
+  content: '\2716';
+  margin-right: 0.5em;
+  color: darkred;
+  font-size: 80%;
+}
+p.special-par-bad {
+  color: darkred;
+}
+p.special-par-better::before {
+  content: '\2714';
+  margin-right: 0.5em;
+  color: darkgreen;
+  font-size: 80%;
+}
+p.special-par-better {
+  color: darkgreen;
+}
+p.special-par-warning::before {
+  content: 'Warning';
+  margin-right: 0.5em;
+  font-size: 80%;
+}
+p.special-par-warning {
+  border-left: solid 3px yellow;
+  padding-left: 0.5em;
+}
+div.requirements {
+  border-left: solid 3px lightgrey;
+  padding-left: 0.5em;
 }
 p.special-par-task::before {
   content: 'Task: ';
@@ -1119,6 +1171,12 @@ p.special-par-task::before {
 }
 .status-XXX {
   background-color: pink;
+  padding-left: 0.5em;
+  border-left: solid 2px red;
+}
+p.special-par-remark {
+  padding-left: 0.5em;
+  border-left: solid 2px gray;
 }
 p.special-par-remark::before {
   content: 'Remark: ';
@@ -2141,7 +2199,7 @@ ul.toc ul:not(.contains-link-same-file) li:not(.link-same-file-inside) {
 </section></section><section class="with-header-inside" id="vim:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'vim' for h2.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/20_linux.md"> ✎</a><h2 counter-sec="8" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/20_linux.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/20_linux.md" id="sub:vim" label-name="VIM" label-number="8.2" label-self="" label-what="Section" label-what-number="Section 8.2" label-what-number-name="Section 8.2 - VIM">VIM</h2><section class="without-header-inside" level="subsub">
 <p>The editor to choose is VI, or more precisely, <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>vim</code> (improved vi).</p>
 <p>Install like this:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="vim program">vim</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="vim program">vim</span>
 </code></pre>
 <p>Documentation:</p>
 <ul>
@@ -2155,7 +2213,7 @@ which write to a file called <code oncopy='alert("Do not copy and paste. I guara
 <span class="console_sign">$</span> <span class="sync program">sync</span>
 <span class="console_sign">$</span> <span class="echo program">echo</span> 3 <span class="| program">|</span> <span class="sudo program">sudo</span> <span class="tee program">tee</span> /proc/sys/vm/drop_caches
 <span class="console_sign">$</span> <span class="dd program">dd</span> if=<span class="placeholder">filename</span> of=/dev/null bs=500K count=1024
-<span class="console_sign">$</span> rm <span class="placeholder">filename</span>
+<span class="console_sign">$</span> <span class="rm program">rm</span> <span class="placeholder">filename</span>
 </code></pre>
 <p>Note the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>sync</code> and the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>echo</code> command are very important.</p>
 <p>Example results:</p>
@@ -2165,10 +2223,10 @@ which write to a file called <code oncopy='alert("Do not copy and paste. I guara
 <p>That is write 17.4 MB/s, read 22 MB/s.</p>
 </section><section class="with-header-inside" id="measuring-cpu-usage-using-htop:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'measuring-cpu-usage-using-htop' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/20_linux.md"> ✎</a><h3 counter-sec="8" counter-sub="4" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/20_linux.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/20_linux.md" id="subsub:measuring-cpu-usage-using-htop" label-name="Measuring CPU usage using &lt;code oncopy='alert(&quot;Do not copy and paste. I guarantee, only trouble will come from it.&quot;);return false;'&gt;htop&lt;/code&gt;" label-number="8.4.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 8.4.2" label-what-number-name="Subsection 8.4.2 - Measuring CPU usage using &lt;code oncopy='alert(&quot;Do not copy and paste. I guarantee, only trouble will come from it.&quot;);return false;'&gt;htop&lt;/code&gt;">Measuring CPU usage using <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>htop</code></h3>
 <p>You can use <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>htop</code> to monitor CPU usage.</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="htop program">htop</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="htop program">htop</span>
 </code></pre>
 </section><section class="with-header-inside" id="measuring-io-usage-using-iotop:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'measuring-io-usage-using-iotop' for h3.--><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/20_linux.md"> ✎</a><h3 counter-sec="8" counter-sub="4" counter-subsub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_things_to_know/20_linux.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_things_to_know/20_linux.md" id="subsub:measuring-io-usage-using-iotop" label-name="Measuring I/O usage using &lt;code oncopy='alert(&quot;Do not copy and paste. I guarantee, only trouble will come from it.&quot;);return false;'&gt;iotop&lt;/code&gt;" label-number="8.4.3" label-self="3) " label-what="Subsection" label-what-number="Subsection 8.4.3" label-what-number-name="Subsection 8.4.3 - Measuring I/O usage using &lt;code oncopy='alert(&quot;Do not copy and paste. I guarantee, only trouble will come from it.&quot;);return false;'&gt;iotop&lt;/code&gt;">Measuring I/O usage using <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>iotop</code></h3>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> <span class="install program_command">install</span> <span class="iotop program">iotop</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="iotop program">iotop</span>
 </code></pre><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="networking.html#networking:section">next</a></div><div>
 <style>
