@@ -3092,14 +3092,32 @@ files.</p>
 </section></section></section><section class="with-header-inside" id="editors:section" level="sec"><!--Warning: Adding prefix 'sec' to current id 'editors' for h1.--><h1 counter-sec="9" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="sec:editors" label-name="Editors" label-number="9" label-self="" label-what="Chapter" label-what-number="Chapter 9" label-what-number-name="Chapter 9 - Editors">Editors</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a><section class="without-header-inside" level="sub">
 <div class="special-par-assigned-wrap"><p class="special-par-assigned">Andrea</p></div>
 </section><section class="with-header-inside" id="vim:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'vim' for h2.--><h2 counter-sec="9" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="sub:vim" label-name="VIM" label-number="9.1" label-self="" label-what="Section" label-what-number="Section 9.1" label-what-number-name="Section 9.1 - VIM">VIM</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>The editor to choose is <code>vi</code>, or more precisely, <code>vim</code> (improved vi).</p>
+<p>The editor to choose is VI, or more precisely, VIM (improved vi).</p>
 <p>Install like this:</p>
 <pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="vim program">vim</span>
 </code></pre>
 <p>Documentation:</p>
 <ul>
 <li><a href="http://www.openvim.com/">A VIM tutorial</a></li>
-</ul><div style="display:none">Because of mathjax bug</div>
+</ul>
+<p>Suggested <code>~/.vimrc</code>:</p>
+<pre><code>syntax on
+set number
+filetype plugin indent on
+highlight Comment ctermfg=Gray
+autocmd FileType python set complete isk+=.,(
+</code></pre>
+</section><section class="with-header-inside" id="visual-mode:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'visual-mode' for h3.--><h3 counter-sec="9" counter-sub="1" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="subsub:visual-mode" label-name="Visual mode" label-number="9.1.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 9.1.1" label-what-number-name="Subsection 9.1.1 - Visual mode">Visual mode</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a>
+<div class="todo-wrap"><p class="todo">to write</p></div>
+</section><section class="with-header-inside" id="indenting-using-vim:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'indenting-using-vim' for h3.--><h3 counter-sec="9" counter-sub="1" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="subsub:indenting-using-vim" label-name="Indenting using VIM" label-number="9.1.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 9.1.2" label-what-number-name="Subsection 9.1.2 - Indenting using VIM">Indenting using VIM</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a>
+<p>Use the <kbd>&gt;</kbd> command to indent.</p>
+<p>To indent 5 lines,  use
+ <kbd>5</kbd>
+<kbd>&gt;</kbd>
+<kbd>&gt;</kbd>.</p>
+<p>To mark a block of lines and indent it, use <kbd>V</kbd>.</p>
+<p>For example, use <kbd>V</kbd><kbd>j</kbd><kbd>j</kbd><kbd>&gt;</kbd> to indent 3 lines.</p>
+<p>Use <kbd>&lt;</kbd> to dedent.</p><div style="display:none">Because of mathjax bug</div>
 </section></section></section><section class="with-header-inside" id="source-code-control-with-git:section" level="sec"><!--Warning: Adding prefix 'sec' to current id 'source-code-control-with-git' for h1.--><h1 counter-sec="10" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/40_git_ref.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/40_git_ref.md" id="sec:source-code-control-with-git" label-name="Source code control with Git" label-number="10" label-self="" label-what="Chapter" label-what-number="Chapter 10" label-what-number-name="Chapter 10 - Source code control with Git">Source code control with Git</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/40_git_ref.md"> ✎</a><section class="without-header-inside" level="sub">
 <div class="special-par-assigned-wrap"><p class="special-par-assigned">Andrea</p></div>
 </section><section class="with-header-inside" id="background-reading-40_git_ref:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'background-reading-40_git_ref' for h2.--><h2 counter-sec="10" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/40_git_ref.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/40_git_ref.md" id="sub:background-reading-40_git_ref" label-name="Background reading" label-number="10.1" label-self="" label-what="Section" label-what-number="Section 10.1" label-what-number-name="Section 10.1 - Background reading">Background reading</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/40_git_ref.md"> ✎</a><section class="without-header-inside" level="subsub">
@@ -4102,7 +4120,7 @@ knob controls throttle - right controls steering.</p>
 </div>
 <p>It is possible you will have to unplug and replug the joystick or just push lots of buttons on your joystick until it wakes up. Also make sure that the mode switch on the top of your joystick is set to “X”, not “D”.</p>
 <p class="status-XXX"> Is all of the above valid with the new joystick?</p>
-<p>Close the program using Ctrl-C.</p>
+<p>Close the program using <kbd>Ctrl</kbd>-<kbd>C</kbd>.</p>
 </section><section class="with-header-inside" id="troubleshooting_1:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting_1' for h3.--><h3 counter-sec="23" counter-sub="5" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_5_rc_control.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control.md" id="subsub:troubleshooting_1" label-name="Troubleshooting" label-number="23.5.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 23.5.1" label-what-number-name="Subsection 23.5.1 - Troubleshooting">Troubleshooting</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control.md"> ✎</a>
 <div class="special-par-symptom-wrap"><p class="special-par-symptom">The robot moves weirdly (e.g. forward instead of backward).</p></div>
 <div class="special-par-resolution-wrap"><p class="special-par-resolution">The cables are not correctly inserted.
@@ -4116,7 +4134,7 @@ Try swapping cables until you obtain the expected behavior.</p></div>
 <div class="special-par-resolution-wrap"><p class="special-par-resolution">The program assumes that the joystick is at <code>/dev/input/js0</code>.
 In doubt, see <a href="#sub:test-joystick"><span class="reflabel">Section 23.4</span></a>.</p></div>
 </section></section><section class="with-header-inside" id="the-proper-shutdown-procedure-for-the-raspberry-pi:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'the-proper-shutdown-procedure-for-the-raspberry-pi' for h2.--><h2 counter-sec="23" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_5_rc_control.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control.md" id="sub:the-proper-shutdown-procedure-for-the-raspberry-pi" label-name="The proper shutdown procedure for the Raspberry PI" label-number="23.6" label-self="" label-what="Section" label-what-number="Section 23.6" label-what-number-name="Section 23.6 - The proper shutdown procedure for the Raspberry PI">The proper shutdown procedure for the Raspberry PI</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_5_rc_control.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>Generally speaking, you can terminate any <code>roslaunch</code> command with <code>Ctrl-C</code>.</p>
+<p>Generally speaking, you can terminate any <code>roslaunch</code> command with <kbd>Ctrl</kbd>-<kbd>C</kbd>.</p>
 <p>To completely shutdown the robot, issue the following command:</p>
 <pre class="console"><code>duckiebot <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="shutdown program">shutdown</span> <span class="program_option">-h</span> now
 </code></pre>
@@ -4202,7 +4220,7 @@ windows. However, using Byobu is the best practice to learn.</p></div>
 <p>You should see a large sequence of numbers being printed to your terminal.</p>
 <p>That’s the “image” — as seen by a machine.</p>
 <p>If you are Neo, then this already makes sense.</p>
-<p>If you are not Neo, use <code>Ctrl-C</code> to stop <code>rostopic</code>.</p>
+<p>If you are not Neo, use <kbd>Ctrl</kbd>-<kbd>C</kbd> to stop <code>rostopic</code>.</p>
 <p>Later, in <a href="#sec:rc-cam-launched-remotely"><span class="reflabel">Chapter 26</span></a>, you will learn how to visualize the image stream
 on the laptop  using <code>rviz</code>.</p><div style="display:none">Because of mathjax bug</div>
 </section></section></section><section class="with-header-inside" id="rc-launched-remotely:section" level="sec"><!--Warning: Adding prefix 'sec' to current id 'rc-launched-remotely' for h1.--><h1 counter-sec="25" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_7_rc_control_from_remote.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_7_rc_control_from_remote.md" id="sec:rc-launched-remotely" label-name="RC control launched remotely" label-number="25" label-self="" label-what="Chapter" label-what-number="Chapter 25" label-what-number-name="Chapter 25 - RC control launched remotely">RC control launched remotely</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_7_rc_control_from_remote.md"> ✎</a><section class="without-header-inside" level="sub">
@@ -4268,7 +4286,7 @@ laptop <span class="console_sign">$</span> <span class="rqt_console program">rqt
 <p>You should see a nice interface listing all the printouts in real time,
 completed with filters that can help you find that message you are looking for
 in a sea of messages.</p>
-<p>You can use <code>Ctrl-C</code> at the terminal where <code>roslaunch</code> was executed to stop all the
+<p>You can use <kbd>Ctrl</kbd>-<kbd>C</kbd> at the terminal where <code>roslaunch</code> was executed to stop all the
 nodes launched by the launch file.</p>
 <div class="special-par-see-also-wrap"><p class="special-par-see-also">For more information about <code>rqt_console</code>, see <a href="#sub:rqt_console"><span class="reflabel">Section 39.2</span></a>.</p></div>
 </section></section><section class="with-header-inside" id="troubleshooting-2_0_7_rc_control_from_remote:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'troubleshooting-2_0_7_rc_control_from_remote' for h2.--><h2 counter-sec="25" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_7_rc_control_from_remote.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_7_rc_control_from_remote.md" id="sub:troubleshooting-2_0_7_rc_control_from_remote" label-name="Troubleshooting" label-number="25.7" label-self="" label-what="Section" label-what-number="Section 25.7" label-what-number-name="Section 25.7 - Troubleshooting">Troubleshooting</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_7_rc_control_from_remote.md"> ✎</a><section class="without-header-inside" level="subsub">
@@ -4306,7 +4324,7 @@ option. Delete <code>~/.ssh/known_hosts</code> and fix your configuration.</p></
 </section><section class="with-header-inside" id="assumptions:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'assumptions' for h2.--><h2 counter-sec="26" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md" id="sub:assumptions" label-name="Assumptions" label-number="26.1" label-self="" label-what="Section" label-what-number="Section 26.1" label-what-number-name="Section 26.1 - Assumptions">Assumptions</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>We are assuming that the joystick demo in <a href="#sec:rc-launched-remotely"><span class="reflabel">Chapter 25</span></a> worked.</p>
 <p>We are assuming that the procedure in <a href="#sec:read-camera-data"><span class="reflabel">Chapter 24</span></a> succeeded.</p>
-<p>We also assume that you terminated all instances of <code>roslaunch</code> with <code>Ctrl-C</code>,
+<p>We also assume that you terminated all instances of <code>roslaunch</code> with <kbd>Ctrl</kbd>-<kbd>C</kbd>,
 so that currently there is nothing running in any window.</p>
 </section></section><section class="with-header-inside" id="terminal-setup:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'terminal-setup' for h2.--><h2 counter-sec="26" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md" id="sub:terminal-setup" label-name="Terminal setup" label-number="26.2" label-self="" label-what="Section" label-what-number="Section 26.2" label-what-number-name="Section 26.2 - Terminal setup">Terminal setup</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>On the laptop, this time create <strong>four</strong> Byobu windows.</p>
@@ -4363,8 +4381,8 @@ tag, then select the “Image” topic by the name</p>
 <p>Then click “ok”. You should be able to see a live stream of the image from the
 camera.</p>
 </section></section><section class="with-header-inside" id="proper-shutdown-procedure:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'proper-shutdown-procedure' for h2.--><h2 counter-sec="26" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md" id="sub:proper-shutdown-procedure" label-name="Proper shutdown procedure" label-number="26.7" label-self="" label-what="Section" label-what-number="Section 26.7" label-what-number-name="Section 26.7 - Proper shutdown procedure">Proper shutdown procedure</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_0_joystick_plus_camera_output.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>To stop the nodes: You can stop the node by pressing <code>Ctrl-C</code> on the terminal
-where <code>roslaunch</code> was executed. In this case, you can use <code>Ctrl-C</code> in the
+<p>To stop the nodes: You can stop the node by pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> on the terminal
+where <code>roslaunch</code> was executed. In this case, you can use <kbd>Ctrl</kbd>-<kbd>C</kbd> in the
 terminal where you launched the <code>camera.launch</code>.</p>
 <p>You should see the red light on the camera turn off in a few seconds.</p>
 <p>Note that the <code>joystick.launch</code> is still up and running, so you can still drive
@@ -4840,7 +4858,16 @@ This is an example proposition: $2x = x + x$.
 <div class="todo-wrap"><p class="todo">Use <code>#[description]</code> for parameters in code</p></div>
 <p>Make sure to quote (with 4 spaces) all command lines. Otherwise, the dollar symbol
 confuses the LaTeX interpreter.</p>
-</section><section class="with-header-inside" id="shortcut-for-tables:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'shortcut-for-tables' for h3.--><h3 counter-sec="81" counter-sub="2" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md" id="subsub:shortcut-for-tables" label-name="Shortcut for tables" label-number="81.2.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 81.2.1" label-what-number-name="Subsection 81.2.1 - Shortcut for tables">Shortcut for tables</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md"> ✎</a>
+</section><section class="with-header-inside" id="keyboard:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'keyboard' for h3.--><h3 counter-sec="81" counter-sub="2" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md" id="subsub:keyboard" label-name="Keyboard" label-number="81.2.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 81.2.1" label-what-number-name="Subsection 81.2.1 - Keyboard">Keyboard</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md"> ✎</a>
+<p>Use the <code>kbd</code> element for keystrokes.</p>
+<p>Example:</p>
+<pre><code>Press &lt;kbd&gt;a&lt;/kbd&gt; then &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;C&lt;/kbd&gt;.
+</code></pre>
+<p>becomes:</p>
+<blockquote>
+<p>Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.</p>
+</blockquote>
+</section><section class="with-header-inside" id="shortcut-for-tables:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'shortcut-for-tables' for h3.--><h3 counter-sec="81" counter-sub="2" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md" id="subsub:shortcut-for-tables" label-name="Shortcut for tables" label-number="81.2.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 81.2.2" label-what-number-name="Subsection 81.2.2 - Shortcut for tables">Shortcut for tables</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md"> ✎</a>
 <p>The shortcuts <code>col2</code>, <code>col3</code>, <code>col4</code>, <code>col5</code>
 are expanded in tables with 2, 3, 4 or 5 columns.</p>
 <pre><code>&lt;div make-col2=""&gt;
@@ -4850,7 +4877,7 @@ are expanded in tables with 2, 3, 4 or 5 columns.</p>
     &lt;span&gt;D&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
-</section><section class="with-header-inside" id="creating-figures:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'creating-figures' for h3.--><h3 counter-sec="81" counter-sub="2" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md" id="subsub:creating-figures" label-name="Creating figures" label-number="81.2.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 81.2.2" label-what-number-name="Subsection 81.2.2 - Creating figures">Creating figures</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md"> ✎</a>
+</section><section class="with-header-inside" id="creating-figures:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'creating-figures' for h3.--><h3 counter-sec="81" counter-sub="2" counter-subsub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md" id="subsub:creating-figures" label-name="Creating figures" label-number="81.2.3" label-self="3) " label-what="Subsection" label-what-number="Subsection 81.2.3" label-what-number-name="Subsection 81.2.3 - Creating figures">Creating figures</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/70_contrib/65_docs_features.md"> ✎</a>
 <p>For any element, adding an attribute called <code>figure-id</code>
 with contents <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>fig:<span class="placeholder">figure ID</span></code> or <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>tab:<span class="placeholder">table ID</span></code>
 will create a figure that wraps the element.</p>
@@ -4965,11 +4992,11 @@ helpful in telling you exactly where the tabs are.</p></div>
 <div class="special-par-better-wrap"><p class="special-par-better"> “Edit the <code>~/.ssh/config</code> file using <code>vi</code>.”</p></div>
 </blockquote>
 <ul>
-<li><code>Ctrl-C</code>, <code>ssh</code> etc. are not verbs.</li>
+<li><kbd>Ctrl</kbd>-<kbd>C</kbd>, <code>ssh</code> etc. are not verbs.</li>
 </ul>
 <blockquote>
-<div class="special-par-bad-wrap"><p class="special-par-bad"> “Ctrl-C from the command line”.</p></div>
-<div class="special-par-better-wrap"><p class="special-par-better"> “Use Ctrl-C from the command line”.</p></div>
+<div class="special-par-bad-wrap"><p class="special-par-bad"> “<kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line”.</p></div>
+<div class="special-par-better-wrap"><p class="special-par-better"> “Use <kbd>Ctrl</kbd>-<kbd>C</kbd> from the command line”.</p></div>
 </blockquote>
 <ul>
 <li>Subtle humor and puns about duckies are encouraged.</li>

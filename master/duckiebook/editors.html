@@ -2682,14 +2682,32 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="ssh.html#ssh:section">prev</a><section class="with-header-inside main-section-for-page" id="editors:section" level="sec" next="source-code-control-with-git:section" prev="ssh:section"><!--Warning: Adding prefix 'sec' to current id 'editors' for h1.--><h1 counter-sec="9" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="sec:editors" label-name="Editors" label-number="9" label-self="" label-what="Chapter" label-what-number="Chapter 9" label-what-number-name="Chapter 9 - Editors">Editors</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a><section class="without-header-inside" level="sub">
 <div class="special-par-assigned-wrap"><p class="special-par-assigned">Andrea</p></div>
 </section><section class="with-header-inside" id="vim:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'vim' for h2.--><h2 counter-sec="9" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="sub:vim" label-name="VIM" label-number="9.1" label-self="" label-what="Section" label-what-number="Section 9.1" label-what-number-name="Section 9.1 - VIM">VIM</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>The editor to choose is <code>vi</code>, or more precisely, <code>vim</code> (improved vi).</p>
+<p>The editor to choose is VI, or more precisely, VIM (improved vi).</p>
 <p>Install like this:</p>
 <pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="vim program">vim</span>
 </code></pre>
 <p>Documentation:</p>
 <ul>
 <li><a href="http://www.openvim.com/">A VIM tutorial</a></li>
-</ul><div style="display:none">Because of mathjax bug</div>
+</ul>
+<p>Suggested <code>~/.vimrc</code>:</p>
+<pre><code>syntax on
+set number
+filetype plugin indent on
+highlight Comment ctermfg=Gray
+autocmd FileType python set complete isk+=.,(
+</code></pre>
+</section><section class="with-header-inside" id="visual-mode:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'visual-mode' for h3.--><h3 counter-sec="9" counter-sub="1" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="subsub:visual-mode" label-name="Visual mode" label-number="9.1.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 9.1.1" label-what-number-name="Subsection 9.1.1 - Visual mode">Visual mode</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a>
+<div class="todo-wrap"><p class="todo">to write</p></div>
+</section><section class="with-header-inside" id="indenting-using-vim:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'indenting-using-vim' for h3.--><h3 counter-sec="9" counter-sub="1" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="subsub:indenting-using-vim" label-name="Indenting using VIM" label-number="9.1.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 9.1.2" label-what-number-name="Subsection 9.1.2 - Indenting using VIM">Indenting using VIM</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a>
+<p>Use the <kbd>&gt;</kbd> command to indent.</p>
+<p>To indent 5 lines,  use
+ <kbd>5</kbd>
+<kbd>&gt;</kbd>
+<kbd>&gt;</kbd>.</p>
+<p>To mark a block of lines and indent it, use <kbd>V</kbd>.</p>
+<p>For example, use <kbd>V</kbd><kbd>j</kbd><kbd>j</kbd><kbd>&gt;</kbd> to indent 3 lines.</p>
+<p>Use <kbd>&lt;</kbd> to dedent.</p><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="source_code_control_with_git.html#source-code-control-with-git:section">next</a></div><div>
 <style>
 #disqus_section {
