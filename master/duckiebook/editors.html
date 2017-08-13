@@ -225,31 +225,13 @@ h3.draft {
   color: red !important;
 }
 span.placeholder {
-  color: orange;
-  font-weight: bold;
-}
-span.placeholder:before {
-  content: '[';
-}
-span.placeholder:after {
-  content: ']';
-}
-kbd + kbd {
-  margin-left: .1em;
-}
-kbd {
-  display: inline-block;
-  padding: .06em .4em;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 50%;
-  /* line-height: 1.4; */
-  /* color: #242729; */
-  text-shadow: 0 1px 0 #FFF;
-  background-color: #e1e3e5;
-  border: 1px solid #adb3b9;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
-  white-space: nowrap;
+  font-family: serif;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-style: italic;
+  color: white;
+  background-color: blue;
 }
 .figcontent {
   margin: 0;
@@ -1174,17 +1156,30 @@ p.special-par-better {
   color: darkgreen;
 }
 p.special-par-warning::before {
-  content: 'Warning';
+  content: 'Warning: ';
   margin-right: 0.5em;
-  font-size: 80%;
+  font-style: bold;
 }
 p.special-par-warning {
+  background-color: yellow;
   border-left: solid 3px yellow;
   padding-left: 0.5em;
 }
 div.requirements {
   border-left: solid 3px lightgrey;
   padding-left: 0.5em;
+}
+div.check::before {
+  content: "Check before you continue";
+  font-weight: bold;
+}
+div.check {
+  margin-left: 2em;
+  background-color: #fff3db;
+  box-shadow: 4px 4px 10px 0px #ebddc1;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 0.3em;
 }
 p.special-par-task::before {
   content: 'Task: ';
@@ -1591,6 +1586,23 @@ figcaption {
   color: lightgrey !important;
   float: right;
   display: block;
+}
+kbd + kbd {
+  margin-left: .1em;
+}
+kbd {
+  display: inline-block;
+  padding: .06em .4em;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 50%;
+  /* line-height: 1.4; */
+  /* color: #242729; */
+  text-shadow: 0 1px 0 #FFF;
+  background-color: #e1e3e5;
+  border: 1px solid #adb3b9;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
+  white-space: nowrap;
 }
 @media screen {
   body {
@@ -2714,7 +2726,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </section><section class="with-header-inside" id="vim:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'vim' for h2.--><h2 counter-sec="9" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/30_editors.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md" id="sub:vim" label-name="VIM" label-number="9.1" label-self="" label-what="Section" label-what-number="Section 9.1" label-what-number-name="Section 9.1 - VIM">VIM</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/30_editors.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>The editor to choose is VI, or more precisely, VIM (improved vi).</p>
 <p>Install like this:</p>
-<pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install <span class="vim program">vim</span>
+<pre class="console"><code><span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="apt program">apt</span> install vim
 </code></pre>
 <p>Documentation:</p>
 <ul>
