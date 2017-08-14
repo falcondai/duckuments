@@ -1601,6 +1601,9 @@ kbd {
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
   white-space: nowrap;
 }
+pre {
+  line-height: 1.14;
+}
 .on-duckiebot span.hostname,
 .on-laptop span.hostname {
   display: none;
@@ -1611,7 +1614,7 @@ kbd {
 }
 .on-duckiebot,
 .on-laptop {
-  margin-left: 30px !important;
+  margin-left: 25px !important;
 }
 .on-laptop:before,
 .on-duckiebot:before {
@@ -3022,7 +3025,7 @@ on each PI.</p>
 <pre><code>https://www.dropbox.com/s/pxyou3qy1p8m4d0/duckietown_key1.pub?dl=1
 </code></pre>
 <p>Download to <code>.ssh/authorized_keys</code>:</p>
-<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="curl program">curl</span><span class="space"> </span><span class="program_option">-o</span><span class="space"> </span>.ssh/authorized_keys<span class="space"> </span>![URL<span class="space"> </span>above]
+<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="curl program">curl</span> <span class="program_option">-o</span> .ssh/authorized_keys <span class="placeholder">URL above</span>
 </code></pre>
 </section><section class="with-header-inside" id="shell-prompt:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'shell-prompt' for h3.--><h3 counter-sec="19" counter-sub="12" counter-subsub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md" id="subsub:shell-prompt" label-name="Shell prompt" label-number="19.12.4" label-self="4) " label-what="Subsection" label-what-number="Subsection 19.12.4" label-what-number-name="Subsection 19.12.4 - Shell prompt">Shell prompt</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_1_reproducing_ubuntu_image.md"> ✎</a>
 <p>Add the following lines to <code>~ubuntu/.bashrc</code>:</p>

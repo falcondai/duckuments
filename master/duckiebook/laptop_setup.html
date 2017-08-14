@@ -1601,6 +1601,9 @@ kbd {
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
   white-space: nowrap;
 }
+pre {
+  line-height: 1.14;
+}
 .on-duckiebot span.hostname,
 .on-laptop span.hostname {
   display: none;
@@ -1611,7 +1614,7 @@ kbd {
 }
 .on-duckiebot,
 .on-laptop {
-  margin-left: 30px !important;
+  margin-left: 25px !important;
 }
 .on-laptop:before,
 .on-duckiebot:before {
@@ -2761,7 +2764,7 @@ a common key.</p>
 <pre><code>https://www.dropbox.com/s/q23qptu01u7ur3y/duckietown_key1?dl=1
 </code></pre>
 <p>Download the file and call it <code>~/.ssh/duckietown_key1</code></p>
-<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="curl program">curl</span><span class="space"> </span><span class="program_option">-o</span><span class="space"> </span>~/.ssh/duckietown_key1<span class="space"> </span>![URL<span class="space"> </span>above]
+<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="curl program">curl</span> <span class="program_option">-o</span> ~/.ssh/duckietown_key1 <span class="placeholder">URL above</span>
 </code></pre>
 <p>Edit the permission of the file. SSH wants the key file to be not
 readable or writable from other users or groups.</p>
@@ -2779,7 +2782,7 @@ readable or writable from other users or groups.</p>
 </code></pre>
 <p>Now you should be able to connect without using a password.</p>
 <p>The following command should connect without a password being asked:</p>
-<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="ssh program">ssh</span><span class="space"> </span>ubuntu@![robot<span class="space"> </span>name]
+<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> ubuntu@<span class="placeholder">robot name</span>
 </code></pre>
 </section><section class="with-header-inside" id="troubleshooting-1_8_ubuntu_laptops:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting-1_8_ubuntu_laptops' for h3.--><h3 counter-sec="111" counter-sub="1" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/99_drafts/1_8_ubuntu_laptops.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/99_drafts/1_8_ubuntu_laptops.md" id="subsub:troubleshooting-1_8_ubuntu_laptops" label-name="Troubleshooting" label-number="111.1.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 111.1.1" label-what-number-name="Subsection 111.1.1 - Troubleshooting">Troubleshooting</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/99_drafts/1_8_ubuntu_laptops.md"> ✎</a>
 <div class="special-par-symptom-wrap"><p class="special-par-symptom">“Scheme missing”</p></div>

@@ -1601,6 +1601,9 @@ kbd {
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
   white-space: nowrap;
 }
+pre {
+  line-height: 1.14;
+}
 .on-duckiebot span.hostname,
 .on-laptop span.hostname {
   display: none;
@@ -1611,7 +1614,7 @@ kbd {
 }
 .on-duckiebot,
 .on-laptop {
-  margin-left: 30px !important;
+  margin-left: 25px !important;
 }
 .on-laptop:before,
 .on-duckiebot:before {
@@ -2781,7 +2784,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a href="https://answers.ros.org/question/41446/a-is-not-in-your-ssh-known_hosts-file/">does not support the ECSDA keys</a>.</p>
 </section></section><section class="with-header-inside" id="howto-login:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'howto-login' for h2.--><h2 counter-sec="8" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md" id="sub:howto-login" label-name="How to login with SSH and a password" label-number="8.4" label-self="" label-what="Section" label-what-number="Section 8.4" label-what-number-name="Section 8.4 - How to login with SSH and a password">How to login with SSH and a password</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>To log in to a remote computer <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">remote</span></code> with user <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">remote-user</span></code>, use:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="ssh program">ssh</span><span class="space"> </span><span class="placeholder">remote-user</span>@<span class="placeholder">remote</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">remote-user</span>@<span class="placeholder">remote</span>
 </code></pre>
 </section><section class="with-header-inside" id="troubleshooting:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting' for h3.--><h3 counter-sec="8" counter-sub="4" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md" id="subsub:troubleshooting" label-name="Troubleshooting" label-number="8.4.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 8.4.1" label-what-number-name="Subsection 8.4.1 - Troubleshooting">Troubleshooting</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md"> ✎</a>
 <p><strong>Symptom</strong>: “Offending key error”.</p>
@@ -2855,7 +2858,7 @@ The key's randomart image is:
 <p>Check that the config file is correct:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="cat program">cat</span><span class="space"> </span>~/.ssh/config
 <span class="placeholder">...</span>
-IdentityFile<span class="space"> </span><span class="placeholder">PRIVATE_KEY_FILE</span>
+IdentityFile <span class="placeholder">PRIVATE_KEY_FILE</span>
 <span class="placeholder">...</span>
 </code></pre>
 </section></section><section class="with-header-inside" id="howto-login-without-password:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'howto-login-without-password' for h2.--><h2 counter-sec="8" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md" id="sub:howto-login-without-password" label-name="How to login without a password" label-number="8.6" label-self="" label-what="Section" label-what-number="Section 8.6" label-what-number-name="Section 8.6 - How to login without a password">How to login without a password</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md"> ✎</a><section class="without-header-inside" level="subsub">
@@ -2876,7 +2879,7 @@ IdentityFile<span class="space"> </span><span class="placeholder">PRIVATE_KEY_FI
 </div>
 <p>First, connect the two computers to the same network, and make sure that you
 can ping <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">remote</span></code> from <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">local</span></code>:</p>
-<pre class="console on-![local]"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">![local]</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="ping program">ping</span><span class="space"> </span><span class="placeholder">remote</span>.local
+<pre class="console on-![local]"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">![local]</span> <span class="console_sign">$</span> <span class="ping program">ping</span> <span class="placeholder">remote</span>.local
 </code></pre>
 <p>Do not continue if you cannot do this successfully.</p>
 <p>If you have created a keypair for <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">local-user</span></code>, you will have a public key
@@ -2893,7 +2896,7 @@ to tell it that this key is authorized.</p>
 </code></pre>
 <p>and add the entire line as above containing the public key.</p>
 <p>Now, from the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">local</span></code> computer, try to log in into the <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">remote</span></code> one:</p>
-<pre class="console on-![local]"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">![local]</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="ssh program">ssh</span><span class="space"> </span><span class="placeholder">remote-user</span>@<span class="placeholder">remote</span>
+<pre class="console on-![local]"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">![local]</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">remote-user</span>@<span class="placeholder">remote</span>
 </code></pre>
 <p>This should succeed, and you should not be asked for a password.</p>
 </section></section><section class="with-header-inside" id="howto-fix-ssh-permissions:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'howto-fix-ssh-permissions' for h2.--><h2 counter-sec="8" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md" id="sub:howto-fix-ssh-permissions" label-name="Fixing SSH Permissions" label-number="8.7" label-self="" label-what="Section" label-what-number="Section 8.7" label-what-number-name="Section 8.7 - Fixing SSH Permissions">Fixing SSH Permissions</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/12_software_carpentry/24_ssh.md"> ✎</a><section class="without-header-inside" level="subsub">

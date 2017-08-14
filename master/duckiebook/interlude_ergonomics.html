@@ -1601,6 +1601,9 @@ kbd {
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
   white-space: nowrap;
 }
+pre {
+  line-height: 1.14;
+}
 .on-duckiebot span.hostname,
 .on-laptop span.hostname {
   display: none;
@@ -1611,7 +1614,7 @@ kbd {
 }
 .on-duckiebot,
 .on-laptop {
-  margin-left: 30px !important;
+  margin-left: 25px !important;
 }
 .on-laptop:before,
 .on-duckiebot:before {
@@ -2766,15 +2769,15 @@ problems might be harder to understand if you rely blindly on the shortcuts.</p>
 </div>
 </section><section class="with-header-inside" id="set_ros_mastersh:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'set_ros_mastersh' for h2.--><h2 counter-sec="27" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_5_ergonomics.md" id="sub:set_ros_mastersh" label-name="&lt;code&gt;set_ros_master.sh&lt;/code&gt;" label-number="27.1" label-self="" label-what="Section" label-what-number="Section 27.1" label-what-number-name="Section 27.1 - &lt;code&gt;set_ros_master.sh&lt;/code&gt;"><code>set_ros_master.sh</code></h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_5_ergonomics.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>Instead of using:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="export program">export</span><span class="space"> </span>ROS_MASTER_URI=http://![robot<span class="space"> </span>name].local:11311/
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="export program">export</span> ROS_MASTER_URI=http://<span class="placeholder">robot name</span>.local:11311/
 </code></pre>
 <p>You can use the “<code>set_ros_master.sh</code>” script in the repo:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="source program">source</span><span class="space"> </span>set_ros_master.sh<span class="space"> </span>![robot<span class="space"> </span>name]
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="source program">source</span> set_ros_master.sh <span class="placeholder">robot name</span>
 </code></pre>
 <p>Note that you need to use <code>source</code>; without that, it will not work.</p>
 </section></section><section class="with-header-inside" id="ssh-aliases:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'ssh-aliases' for h2.--><h2 counter-sec="27" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_5_ergonomics.md" id="sub:ssh-aliases" label-name="SSH aliases" label-number="27.2" label-self="" label-what="Section" label-what-number="Section 27.2" label-what-number-name="Section 27.2 - SSH aliases">SSH aliases</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_1_5_ergonomics.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>Instead of using</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="ssh program">ssh</span><span class="space"> </span><span class="placeholder">username</span>@![robot<span class="space"> </span>name].local
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">username</span>@<span class="placeholder">robot name</span>.local
 </code></pre>
 <p>You can set up SSH so that you can use:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="ssh program">ssh</span><span class="space"> </span>my-robot

@@ -1601,6 +1601,9 @@ kbd {
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
   white-space: nowrap;
 }
+pre {
+  line-height: 1.14;
+}
 .on-duckiebot span.hostname,
 .on-laptop span.hostname {
   display: none;
@@ -1611,7 +1614,7 @@ kbd {
 }
 .on-duckiebot,
 .on-laptop {
-  margin-left: 30px !important;
+  margin-left: 25px !important;
 }
 .on-laptop:before,
 .on-duckiebot:before {
@@ -2773,7 +2776,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </blockquote>
 <p>The size is 2.5 GB.</p>
 <p>You can use:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="curl program">curl</span><span class="space"> </span><span class="program_option">-o</span><span class="space"> </span>duckiebot-RPI3-AC-aug10.img.xz<span class="space"> </span>![URL<span class="space"> </span>above]
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="curl program">curl</span> <span class="program_option">-o</span> duckiebot-RPI3-AC-aug10.img.xz <span class="placeholder">URL above</span>
 </code></pre>
 <p>Uncompress the file:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="xz program">xz</span><span class="space"> </span><span class="program_option">-d</span><span class="space"> </span><span class="program_option">-k</span><span class="space"> </span>duckiebot-RPI3-AC-aug10.img.xz
@@ -2834,7 +2837,7 @@ WiFi adapter in your laptop.</p>
 <p>First, make sure that the Edimax is correctly installed.
 Using <code>iwconfig</code>, you should see four interfaces:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="iwconfig program">iwconfig</span>
-wlx<span class="placeholder">AABBCCDDEEFFGG</span><span class="space"> </span><span class="space"> </span>unassociated<span class="space"> </span><span class="space"> </span>Nickname:"rtl8822bu"
+wlx<span class="placeholder">AABBCCDDEEFFGG</span>  unassociated  Nickname:"rtl8822bu"
 
 <span class="placeholder">...</span>
 
@@ -2848,8 +2851,8 @@ wlan1<span class="space"> </span><span class="space"> </span><span class="space"
 </code></pre>
 <p>Make note of the name <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'>wlx<span class="placeholder">AABBCCDDEEFFGG</span></code>.</p>
 <p>Look up the MAC address using the command:</p>
-<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="ifconfig program">ifconfig</span><span class="space"> </span>wlx<span class="placeholder">AABBCCDDEEFFGG</span>
-wlx74da38c9caa0<span class="space"> </span>Link<span class="space"> </span>encap:Ethernet<span class="space"> </span><span class="space"> </span>HWaddr<span class="space"> </span><span class="placeholder">AA:BB:CC:DD:EE:FF:GG</span>
+<pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span> <span class="ifconfig program">ifconfig</span> wlx<span class="placeholder">AABBCCDDEEFFGG</span>
+wlx74da38c9caa0 Link encap:Ethernet  HWaddr <span class="placeholder">AA:BB:CC:DD:EE:FF:GG</span>
 </code></pre>
 <p>Then, edit the connection file</p>
 <pre><code>/etc/NetworkManager/system-connections/create-5ghz-network
@@ -2904,7 +2907,7 @@ Every time you see <code oncopy='alert("Do not copy and paste. I guarantee, only
 <p>We will put the robot name in configuration files.</p>
 <div class="special-par-note-wrap"><p class="special-par-note">Files in <code>/etc</code> are only writable by <code>root</code>,
 so you need to use <code>sudo</code> to edit them. For example:</p></div>
-<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="vi program">vi</span><span class="space"> </span><span class="placeholder">filename</span>
+<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="vi program">vi</span> <span class="placeholder">filename</span>
 </code></pre>
 <p>Edit the file</p>
 <pre><code>/etc/hostname
@@ -2930,32 +2933,32 @@ subsequently.</p></div>
 <p>After reboot, log in again, and run the command <code>hostname</code> to check that the
 change has persisted:</p>
 <pre class="console"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="console_sign">$</span><span class="space"> </span><span class="hostname program">hostname</span>
-![robot<span class="space"> </span>name]
+<span class="placeholder">robot name</span>
 </code></pre>
 </section></section><section class="with-header-inside" id="create-user-on-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'create-user-on-duckiebot' for h2.--><h2 counter-sec="22" counter-sub="11" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="sub:create-user-on-duckiebot" label-name="Create your user" label-number="22.11" label-self="" label-what="Section" label-what-number="Section 22.11" label-what-number-name="Section 22.11 - Create your user">Create your user</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>You must not use the <code>ubuntu</code> user for development.
 Instead, you need to create a new user.</p>
 <p>Choose a user name, which we will refer to as <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">username</span></code>.</p>
 <p>To create a new user:</p>
-<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="useradd program">useradd</span><span class="space"> </span><span class="program_option">-m</span><span class="space"> </span><span class="placeholder">username</span>
+<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="useradd program">useradd</span> <span class="program_option">-m</span> <span class="placeholder">username</span>
 </code></pre>
 <p>Make the user an administrator by adding it to the group <code>sudo</code>:</p>
-<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="adduser program">adduser</span><span class="space"> </span><span class="placeholder">username</span><span class="space"> </span>sudo
+<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="adduser program">adduser</span> <span class="placeholder">username</span> sudo
 </code></pre>
 <p>Make the user a member of the group <code>input</code> and <code>i2c</code></p>
-<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="adduser program">adduser</span><span class="space"> </span><span class="placeholder">username</span><span class="space"> </span>input
-<span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="adduser program">adduser</span><span class="space"> </span><span class="placeholder">username</span><span class="space"> </span>video
-<span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="adduser program">adduser</span><span class="space"> </span><span class="placeholder">username</span><span class="space"> </span>i2c
+<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="adduser program">adduser</span> <span class="placeholder">username</span> input
+<span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="adduser program">adduser</span> <span class="placeholder">username</span> video
+<span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="adduser program">adduser</span> <span class="placeholder">username</span> i2c
 </code></pre>
 <p>Set the shell <code>bash</code>:</p>
 <pre class="console on-duckiebot"><code><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="chsh program">chsh</span><span class="space"> </span><span class="program_option">-s</span><span class="space"> </span>/bin/bash<span class="space"> </span>andrea
 </code></pre>
 <p>To set a password, use:</p>
-<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="passwd program">passwd</span><span class="space"> </span><span class="placeholder">username</span>
+<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="passwd program">passwd</span> <span class="placeholder">username</span>
 </code></pre>
 <p>At this point, you should be able to login to the new user from the laptop
 using the password:</p>
-<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="ssh program">ssh</span><span class="space"> </span><span class="placeholder">username</span>@![robot<span class="space"> </span>name]
+<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">username</span>@<span class="placeholder">robot name</span>
 </code></pre>
 <p>Next, you should repeat some steps that we already described.</p>
 </section><section class="with-header-inside" id="basic-ssh-config-1_6_duckiebot_initialization:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'basic-ssh-config-1_6_duckiebot_initialization' for h3.--><h3 counter-sec="22" counter-sub="11" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="subsub:basic-ssh-config-1_6_duckiebot_initialization" label-name="Basic SSH config" label-number="22.11.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 22.11.1" label-what-number-name="Subsection 22.11.1 - Basic SSH config">Basic SSH config</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a>
@@ -2980,7 +2983,7 @@ In this case, we have:
  <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">remote</span></code> = <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">robot name</span></code>, <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">remote-user</span></code> = <code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="placeholder">username</span></code>.</p></div>
 <p>If the step is done correctly, you should be able to login from the laptop to
 the robot, without typing a password:</p>
-<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="ssh program">ssh</span><span class="space"> </span><span class="placeholder">username</span>@![robot<span class="space"> </span>name]
+<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">username</span>@<span class="placeholder">robot name</span>
 </code></pre>
 </section><section class="with-header-inside" id="some-advice-on-the-importance-of-passwordless-access:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'some-advice-on-the-importance-of-passwordless-access' for h3.--><h3 counter-sec="22" counter-sub="11" counter-subsub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md" id="subsub:some-advice-on-the-importance-of-passwordless-access" label-name="Some advice on the importance of passwordless access" label-number="22.11.6" label-self="6) " label-what="Subsection" label-what-number="Subsection 22.11.6" label-what-number-name="Subsection 22.11.6 - Some advice on the importance of passwordless access">Some advice on the importance of passwordless access</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/1_6_duckiebot_initialization.md"> ✎</a>
 <p>In general, if you find yourself:</p>

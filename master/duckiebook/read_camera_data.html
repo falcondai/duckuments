@@ -1601,6 +1601,9 @@ kbd {
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2);
   white-space: nowrap;
 }
+pre {
+  line-height: 1.14;
+}
 .on-duckiebot span.hostname,
 .on-laptop span.hostname {
   display: none;
@@ -1611,7 +1614,7 @@ kbd {
 }
 .on-duckiebot,
 .on-laptop {
-  margin-left: 30px !important;
+  margin-left: 25px !important;
 }
 .on-laptop:before,
 .on-duckiebot:before {
@@ -2785,7 +2788,7 @@ windows. However, using Byobu is the best practice to learn.</p></div>
 <pre class="console on-duckiebot"><code><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="source program">source</span><span class="space"> </span>environment.sh
 </code></pre>
 <p>Run the launch file called <code>camera.launch</code>:</p>
-<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="roslaunch program">roslaunch</span><span class="space"> </span>duckietown<span class="space"> </span>camera.launch<span class="space"> </span>veh:=![robot<span class="space"> </span>name]
+<pre class="console on-duckiebot"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="roslaunch program">roslaunch</span> duckietown camera.launch veh:=<span class="placeholder">robot name</span>
 </code></pre>
 <p>At this point, you should see the red LED on the camera light up continuously.</p>
 <p>In the terminal you should not see any red message, but only happy messages like the following:</p>
@@ -2814,7 +2817,7 @@ windows. However, using Byobu is the best practice to learn.</p></div>
 </code></pre>
 </section><section class="with-header-inside" id="show-topics-frequency:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'show-topics-frequency' for h3.--><h3 counter-sec="24" counter-sub="4" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_6_camera_data.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_6_camera_data.md" id="subsub:show-topics-frequency" label-name="Show topics frequency" label-number="24.4.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 24.4.2" label-what-number-name="Subsection 24.4.2 - Show topics frequency">Show topics frequency</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_6_camera_data.md"> ✎</a>
 <p>You can use <code>rostopic hz</code> to see the statistics about the publishing frequency:</p>
-<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="rostopic program">rostopic</span><span class="space"> </span>hz<span class="space"> </span>/![robot<span class="space"> </span>name]/camera_node/image/compressed
+<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="rostopic program">rostopic</span> hz /<span class="placeholder">robot name</span>/camera_node/image/compressed
 </code></pre>
 <p>On a Raspberry PI 3, you should see a number close to 30 Hz:</p>
 <pre><code>average rate: 30.016
@@ -2822,7 +2825,7 @@ windows. However, using Byobu is the best practice to learn.</p></div>
 </code></pre>
 </section><section class="with-header-inside" id="show-topics-data:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'show-topics-data' for h3.--><h3 counter-sec="24" counter-sub="4" counter-subsub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/17_setup/2_0_6_camera_data.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_6_camera_data.md" id="subsub:show-topics-data" label-name="Show topics data" label-number="24.4.3" label-self="3) " label-what="Subsection" label-what-number="Subsection 24.4.3" label-what-number-name="Subsection 24.4.3 - Show topics data">Show topics data</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/17_setup/2_0_6_camera_data.md"> ✎</a>
 <p>You can view the messages in real time with the command <code>rostopic echo</code>:</p>
-<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="rostopic program">rostopic</span><span class="space"> </span>echo<span class="space"> </span>/![robot<span class="space"> </span>name]/camera_node/image/compressed
+<pre class="console on-laptop"><code oncopy='alert("Do not copy and paste. I guarantee, only trouble will come from it.");return false;'><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="rostopic program">rostopic</span> echo /<span class="placeholder">robot name</span>/camera_node/image/compressed
 </code></pre>
 <p>You should see a large sequence of numbers being printed to your terminal.</p>
 <p>That’s the “image” — as seen by a machine.</p>
