@@ -2841,12 +2841,12 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <div class="todo-wrap"><p class="todo">to write</p></div>
 </section><section class="with-header-inside" id="testing-sd-card-and-disk-speed:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'testing-sd-card-and-disk-speed' for h3.--><h3 counter-sec="75" counter-sub="3" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md" id="subsub:testing-sd-card-and-disk-speed" label-name="Testing SD Card and disk speed" label-number="75.3.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 75.3.2" label-what-number-name="Subsection 75.3.2 - Testing SD Card and disk speed">Testing SD Card and disk speed</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md"> ✎</a>
 <p>Test SD Card (or any disk) speed using the following commands,
-which write to a file called <code>![filename]</code>.</p>
-<pre class="console"><code><span class="console_sign">$</span> <span class="dd program">dd</span> if=/dev/zero of=![filename] bs=500K count=1024
+which write to a file called <code><span class="placeholder">filename</span></code>.</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="dd program">dd</span> if=/dev/zero of=<span class="placeholder">filename</span> bs=500K count=1024
 <span class="console_sign">$</span><span class="space"> </span><span class="sync program">sync</span>
 <span class="console_sign">$</span><span class="space"> </span><span class="echo program">echo</span><span class="space"> </span>3<span class="space"> </span>|<span class="space"> </span>sudo<span class="space"> </span><span class="tee program">tee</span><span class="space"> </span>/proc/sys/vm/drop_caches
-<span class="console_sign">$</span> <span class="dd program">dd</span> if=![filename] of=/dev/null bs=500K count=1024
-<span class="console_sign">$</span> <span class="rm program">rm</span> ![filename]
+<span class="console_sign">$</span> <span class="dd program">dd</span> if=<span class="placeholder">filename</span> of=/dev/null bs=500K count=1024
+<span class="console_sign">$</span> <span class="rm program">rm</span> <span class="placeholder">filename</span>
 </code></pre>
 <p>Note the <code>sync</code> and the <code>echo</code> command are very important.</p>
 <p>Example results:</p>
@@ -2887,24 +2887,24 @@ Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 </code></pre>
-<p>In this case, the device is <code>/dev/mmcblk0</code>. That will be the <code>![device]</code>
+<p>In this case, the device is <code>/dev/mmcblk0</code>. That will be the <code><span class="placeholder">device</span></code>
 in the next commands.</p>
 <p>You may see <code>/dev/mmcblk0pX</code> or a couple of similar entries for each partition on the card,
 where <code>X</code> is the partition number. If you don’t see anything like that, take out
 the SD card and run the command again and see what disappeared.</p>
 </section><section class="with-header-inside" id="unmount-partitions:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'unmount-partitions' for h3.--><h3 counter-sec="75" counter-sub="4" counter-subsub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md" id="subsub:unmount-partitions" label-name="Unmount partitions" label-number="75.4.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 75.4.2" label-what-number-name="Subsection 75.4.2 - Unmount partitions">Unmount partitions</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md"> ✎</a>
 <p>Before proceeding, unmount all partitions.</p>
-<p>Run <code>df -h</code>. If there are partitions like <code>/dev/mmcblk0p![n]</code>, then unmount
+<p>Run <code>df -h</code>. If there are partitions like <code>/dev/mmcblk0p<span class="placeholder">n</span></code>, then unmount
 each of them. For example:</p>
 <pre class="console on-laptop"><code><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="umount program">umount</span><span class="space"> </span>/dev/mmcblk0p1
 <span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="umount program">umount</span><span class="space"> </span>/dev/mmcblk0p2
 </code></pre>
 </section><section class="with-header-inside" id="burn-the-image:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'burn-the-image' for h3.--><h3 counter-sec="75" counter-sub="4" counter-subsub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md" id="subsub:burn-the-image" label-name="Burn the image" label-number="75.4.3" label-self="3) " label-what="Subsection" label-what-number="Subsection 75.4.3" label-what-number-name="Subsection 75.4.3 - Burn the image">Burn the image</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/20_linux.md"> ✎</a>
-<p>Now that you know that the device is <code>![device]</code>,
+<p>Now that you know that the device is <code><span class="placeholder">device</span></code>,
 you can burn the image to disk.</p>
-<p>Let the image file be <code>![image file]</code>.</p>
+<p>Let the image file be <code><span class="placeholder">image file</span></code>.</p>
 <p>Burn the image using the command <code>dd</code>:</p>
-<pre class="console on-laptop"><code><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="dd program">dd</span> of=![device] if=![image file] status=progress bs=4M
+<pre class="console on-laptop"><code><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="sudo program">sudo</span> <span class="dd program">dd</span> of=<span class="placeholder">device</span> if=<span class="placeholder">image file</span> status=progress bs=4M
 </code></pre>
 <div class="special-par-note-wrap"><p class="special-par-note">Use the name of the device, without partitions. i.e., <code>/dev/mmcblk0</code>, not
 <code>/dev/mmcblk0pX</code>.</p></div><div style="display:none">Because of mathjax bug</div>

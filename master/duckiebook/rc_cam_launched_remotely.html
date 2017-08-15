@@ -2864,43 +2864,43 @@ so that currently there is nothing running in any window.</p>
 </section></section><section class="with-header-inside" id="first-window-launch-the-joystick-demo:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'first-window-launch-the-joystick-demo' for h2.--><h2 counter-sec="20" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" id="sub:first-window-launch-the-joystick-demo" label-name="First window: launch the joystick demo" label-number="20.3" label-self="" label-what="Section" label-what-number="Section 20.3" label-what-number-name="Section 20.3 - First window: launch the joystick demo">First window: launch the joystick demo</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>In the first window, launch the joystick remotely using the same procedure in <a class="link-different-file" href="rc_launched_remotely.html#sub:roslaunch-joystick"><span class="reflabel">Section 19.4</span></a>.</p>
 <pre class="console on-laptop"><code><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="source program">source</span><span class="space"> </span>environment.sh
-<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="roslaunch program">roslaunch</span> duckietown joystick.launch veh:=![robot name]
+<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="roslaunch program">roslaunch</span> duckietown joystick.launch veh:=<span class="placeholder">robot name</span>
 </code></pre>
 <p>You should be able to drive the robot with the joystick at this point.</p>
 </section></section><section class="with-header-inside" id="second-window-launch-the-camera-nodes:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'second-window-launch-the-camera-nodes' for h2.--><h2 counter-sec="20" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" id="sub:second-window-launch-the-camera-nodes" label-name="Second window: launch the camera nodes" label-number="20.4" label-self="" label-what="Section" label-what-number="Section 20.4" label-what-number-name="Section 20.4 - Second window: launch the camera nodes">Second window: launch the camera nodes</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>In the second window, we will launch the nodes that control the camera.</p>
 <p>The launch file is called <code>camera.launch</code>:</p>
 <pre class="console on-laptop"><code><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="source program">source</span><span class="space"> </span>environment.sh
-<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="roslaunch program">roslaunch</span> duckietown camera.launch veh:=![robot name]
+<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="roslaunch program">roslaunch</span> duckietown camera.launch veh:=<span class="placeholder">robot name</span>
 </code></pre>
 <p>You should see the red led on the camera light up.</p>
 </section></section><section class="with-header-inside" id="third-window-view-data-flow:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'third-window-view-data-flow' for h2.--><h2 counter-sec="20" counter-sub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" id="sub:third-window-view-data-flow" label-name="Third window: view data flow" label-number="20.5" label-self="" label-what="Section" label-what-number="Section 20.5" label-what-number-name="Section 20.5 - Third window: view data flow">Third window: view data flow</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>Open a third terminal on the laptop.</p>
 <p>You can see a list of topics currently on the <code>ROS_MASTER</code> with the commands:</p>
 <pre class="console on-laptop"><code><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="source program">source</span><span class="space"> </span>environment.sh
-<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="export program">export</span> ROS_MASTER_URI=http://![robot name].local:11311/
+<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="export program">export</span> ROS_MASTER_URI=http://<span class="placeholder">robot name</span>.local:11311/
 <span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="rostopic program">rostopic</span><span class="space"> </span>list
 </code></pre>
 <p>You should see the following:</p>
 <pre><code>/diagnostics
-/![robot name]/camera_node/camera_info
-/![robot name]/camera_node/image/compressed
-/![robot name]/camera_node/image/raw
-/![robot name]/joy
-/![robot name]/wheels_driver_node/wheels_cmd
+/<span class="placeholder">robot name</span>/camera_node/camera_info
+/<span class="placeholder">robot name</span>/camera_node/image/compressed
+/<span class="placeholder">robot name</span>/camera_node/image/raw
+/<span class="placeholder">robot name</span>/joy
+/<span class="placeholder">robot name</span>/wheels_driver_node/wheels_cmd
 /rosout
 /rosout_agg
 </code></pre>
 </section></section><section class="with-header-inside" id="fourth-window-visualize-the-image-using-rviz:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'fourth-window-visualize-the-image-using-rviz' for h2.--><h2 counter-sec="20" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md" id="sub:fourth-window-visualize-the-image-using-rviz" label-name="Fourth window: visualize the image using &lt;code&gt;rviz&lt;/code&gt;" label-number="20.6" label-self="" label-what="Section" label-what-number="Section 20.6" label-what-number-name="Section 20.6 - Fourth window: visualize the image using &lt;code&gt;rviz&lt;/code&gt;">Fourth window: visualize the image using <code>rviz</code></h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_0_joystick_plus_camera_output.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>Launch <code>rviz</code> by using these commands:</p>
 <pre class="console on-laptop"><code><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="source program">source</span><span class="space"> </span>environment.sh
-<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="source program">source</span> set_ros_master.sh ![robot name]
+<span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="source program">source</span> set_ros_master.sh <span class="placeholder">robot name</span>
 <span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="rviz program">rviz</span>
 </code></pre>
 <div class="special-par-see-also-wrap"><p class="special-par-see-also">For more information about <code>rviz</code>, see <a class="link-different-file" href="introduction_to_ros.html#sub:rviz"><span class="reflabel">Section 84.4</span></a>.</p></div>
 <p>In the <code>rviz</code> interface, click “Add” on the lower left, then the “By topic”
 tag, then select the “Image” topic by the name</p>
-<pre><code>/![robot name]/camera_node/image/compressed
+<pre><code>/<span class="placeholder">robot name</span>/camera_node/image/compressed
 </code></pre>
 <p>Then click “ok”. You should be able to see a live stream of the image from the
 camera.</p>

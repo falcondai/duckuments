@@ -2861,7 +2861,7 @@ that they are coherent.</p>
 <p>Use the syntax “<code><span>!</span>[name]</code>” for describing the variables in the code.</p>
 <div class="example">
 <p>For example, to obtain:</p>
-<pre class="console"><code><span class="console_sign">$</span> <span class="ssh program">ssh</span> ![robot name].local
+<pre class="console"><code><span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">robot name</span>.local
 </code></pre>
 <p>Use the following:</p>
 <p></p><pre><code>
@@ -2911,38 +2911,38 @@ use “USD” to refer to U.S. dollars.</p>
 </div>
 </section></section><section class="with-header-inside" id="figures:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'figures' for h2.--><h2 counter-sec="7" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:figures" label-name="Figures" label-number="7.6" label-self="" label-what="Section" label-what-number="Section 7.6" label-what-number-name="Section 7.6 - Figures">Figures</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>For any element, adding an attribute called <code>figure-id</code>
-with value <code>fig:![figure ID]</code> or <code>tab:![table ID]</code>
+with value <code>fig:<span class="placeholder">figure ID</span></code> or <code>tab:<span class="placeholder">table ID</span></code>
 will create a figure that wraps the element.</p>
 <p>For example:</p>
-<pre><code>&lt;div figure-id="fig:![figure ID]"&gt;
-    ![figure content]
+<pre><code>&lt;div figure-id="fig:<span class="placeholder">figure ID</span>"&gt;
+    <span class="placeholder">figure content</span>
 &lt;/div&gt;
 </code></pre>
 <p>It will create HMTL of the form:</p>
 <pre><code>&lt;div id='fig:code-wrap' class='generated-figure-wrap'&gt;
-    &lt;figure id='fig:![figure ID]' class='generated-figure'&gt;
+    &lt;figure id='fig:<span class="placeholder">figure ID</span>' class='generated-figure'&gt;
         &lt;div&gt;
-            ![figure content]
+            <span class="placeholder">figure content</span>
         &lt;/div&gt;
     &lt;/figure&gt;
 &lt;/div&gt;
 </code></pre>
 <p>To add a caption, add an attribute <code>figure-caption</code>:</p>
-<pre><code>&lt;div figure-id="fig:![figure ID]" figure-caption="This is my caption"&gt;
-    ![figure content]
+<pre><code>&lt;div figure-id="fig:<span class="placeholder">figure ID</span>" figure-caption="This is my caption"&gt;
+    <span class="placeholder">figure content</span>
 &lt;/div&gt;
 </code></pre>
-<p>Alternatively, you can put anywhere an element <code>figcaption</code> with ID <code>![figure id]:caption</code>:</p>
-<pre><code>&lt;element figure-id="fig:![figure ID]"&gt;
-    ![figure content]
+<p>Alternatively, you can put anywhere an element <code>figcaption</code> with ID <code><span class="placeholder">figure id</span>:caption</code>:</p>
+<pre><code>&lt;element figure-id="fig:<span class="placeholder">figure ID</span>"&gt;
+    <span class="placeholder">figure content</span>
 &lt;/element&gt;
 
-&lt;figcaption id='fig:![figure ID]:caption'&gt;
+&lt;figcaption id='fig:<span class="placeholder">figure ID</span>:caption'&gt;
     This the caption figure.
 &lt;/figcaption&gt;
 </code></pre>
 <p>To refer to the figure, use an empty link:</p>
-<pre><code>Please see [](#fig:![figure ID]).
+<pre><code>Please see [](#fig:<span class="placeholder">figure ID</span>).
 </code></pre>
 <p>The code will put a reference to “Figure XX”.</p>
 </section></section><section class="with-header-inside" id="shortcut-for-tables:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'shortcut-for-tables' for h2.--><h2 counter-sec="7" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:shortcut-for-tables" label-name="Shortcut for tables" label-number="7.7" label-self="" label-what="Section" label-what-number="Section 7.7" label-what-number-name="Section 7.7 - Shortcut for tables">Shortcut for tables</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md"> ✎</a><section class="without-header-inside" level="subsub">

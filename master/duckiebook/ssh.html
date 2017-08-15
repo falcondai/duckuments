@@ -2853,38 +2853,38 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <p>The reason is that Paramiko, used by <code>roslaunch</code>,
 <a href="https://answers.ros.org/question/41446/a-is-not-in-your-ssh-known_hosts-file/">does not support the ECSDA keys</a>.</p>
 </section></section><section class="with-header-inside" id="howto-login:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'howto-login' for h2.--><h2 counter-sec="78" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" id="sub:howto-login" label-name="How to login with SSH and a password" label-number="78.4" label-self="" label-what="Section" label-what-number="Section 78.4" label-what-number-name="Section 78.4 - How to login with SSH and a password">How to login with SSH and a password</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md"> ✎</a><section class="without-header-inside" level="subsub">
-<p>To log in to a remote computer <code>![remote]</code> with user <code>![remote-user]</code>, use:</p>
-<pre class="console"><code><span class="console_sign">$</span> <span class="ssh program">ssh</span> ![remote-user]@![remote]
+<p>To log in to a remote computer <code><span class="placeholder">remote</span></code> with user <code><span class="placeholder">remote-user</span></code>, use:</p>
+<pre class="console"><code><span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">remote-user</span>@<span class="placeholder">remote</span>
 </code></pre>
 </section><section class="with-header-inside" id="troubleshooting-24_ssh:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting-24_ssh' for h3.--><h3 counter-sec="78" counter-sub="4" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" id="subsub:troubleshooting-24_ssh" label-name="Troubleshooting" label-number="78.4.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 78.4.1" label-what-number-name="Subsection 78.4.1 - Troubleshooting">Troubleshooting</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md"> ✎</a>
 <p><strong>Symptom</strong>: “Offending key error”.</p>
 <p>If you get something like this:</p>
-<pre><code>Warning: the ECDSA host key for ![...] differs from the key for the IP address '![...] '
+<pre><code>Warning: the ECDSA host key for <span class="placeholder">...</span> differs from the key for the IP address '<span class="placeholder">...</span> '
 
-Offending key for IP in /home/![user]/.ssh/known_hosts:![line]
+Offending key for IP in /home/<span class="placeholder">user</span>/.ssh/known_hosts:<span class="placeholder">line</span>
 </code></pre>
-<p>then remove line <code>![line]</code> in <code>~/.ssh/known_hosts</code>.</p>
+<p>then remove line <code><span class="placeholder">line</span></code> in <code>~/.ssh/known_hosts</code>.</p>
 </section></section><section class="with-header-inside" id="howto-create-key-pair:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'howto-create-key-pair' for h2.--><h2 counter-sec="78" counter-sub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" id="sub:howto-create-key-pair" label-name="Creating an SSH keypair" label-number="78.5" label-self="" label-what="Section" label-what-number="Section 78.5" label-what-number-name="Section 78.5 - Creating an SSH keypair">Creating an SSH keypair</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>This is a step that you will repeat twice: once on the Duckiebot, and once on your laptop.</p>
 <p>The program will prompt you for the filename on which to save the file.</p>
 <p>Use the convention</p>
-<pre><code>/home/![username]/.ssh/![username]@![host name]
-/home/![username]/.ssh/![username]@![host name].pub
+<pre><code>/home/<span class="placeholder">username</span>/.ssh/<span class="placeholder">username</span>@<span class="placeholder">host name</span>
+/home/<span class="placeholder">username</span>/.ssh/<span class="placeholder">username</span>@<span class="placeholder">host name</span>.pub
 </code></pre>
 <p>where:</p>
 <ul>
-<li><code>![username]</code> is the current user name that you are using (<code>ubuntu</code> or your chosen one);</li>
-<li><code>![host name]</code> is the name of the host (the Duckiebot or laptop);</li>
+<li><code><span class="placeholder">username</span></code> is the current user name that you are using (<code>ubuntu</code> or your chosen one);</li>
+<li><code><span class="placeholder">host name</span></code> is the name of the host (the Duckiebot or laptop);</li>
 </ul>
 <p>An SSH key can be generated with the command:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="ssh-keygen program">ssh-keygen</span><span class="space"> </span><span class="program_option">-h</span>
 </code></pre>
 <p>The session output will look something like this:</p>
 <pre><code>Generating public/private rsa key pair.
-Enter file in which to save the key (/home/![username]/.ssh/id_rsa):
+Enter file in which to save the key (/home/<span class="placeholder">username</span>/.ssh/id_rsa):
 </code></pre>
 <p>At this point, tell it to choose this file:</p>
-<pre><code>/home/![username]/.ssh/![username]@![host name]
+<pre><code>/home/<span class="placeholder">username</span>/.ssh/<span class="placeholder">username</span>@<span class="placeholder">host name</span>
 </code></pre>
 <p>Then:</p>
 <pre><code>Enter passphrase (empty for no passphrase):
@@ -2893,10 +2893,10 @@ Enter file in which to save the key (/home/![username]/.ssh/id_rsa):
 <pre><code>Enter same passphrase again:
 </code></pre>
 <p>Press enter.</p>
-<pre><code>Your identification has been saved in /home/![username]/.ssh/![username]@![host name]
-Your public key has been saved in /home/![username]/.ssh/![username]@![host name].pub
+<pre><code>Your identification has been saved in /home/<span class="placeholder">username</span>/.ssh/<span class="placeholder">username</span>@<span class="placeholder">host name</span>
+Your public key has been saved in /home/<span class="placeholder">username</span>/.ssh/<span class="placeholder">username</span>@<span class="placeholder">host name</span>.pub
 The key fingerprint is:
-![XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX] ![username]@![host name]
+<span class="placeholder">XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX</span> <span class="placeholder">username</span>@<span class="placeholder">host name</span>
 The key's randomart image is:
 +--[ RSA 2048]----+
 |            .    |
@@ -2912,61 +2912,61 @@ The key's randomart image is:
 </code></pre>
 <p>Note that the program created two files.</p>
 <p>The file that contains the private key is</p>
-<pre><code>/home/![username]/.ssh/![username]@![host name]
+<pre><code>/home/<span class="placeholder">username</span>/.ssh/<span class="placeholder">username</span>@<span class="placeholder">host name</span>
 </code></pre>
 <p>The file that contains the public key has extension <code>.pub</code>:</p>
-<pre><code>/home/![username]/.ssh/![username]@![host name].pub
+<pre><code>/home/<span class="placeholder">username</span>/.ssh/<span class="placeholder">username</span>@<span class="placeholder">host name</span>.pub
 </code></pre>
 <p>Next, tell SSH that you want to use this key.</p>
 <p>Make sure that the file <code>~/.ssh/config</code> exists:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="touch program">touch</span><span class="space"> </span>~/.ssh/config
 </code></pre>
 <p>Add a line containing</p>
-<pre><code>IdentityFile ![PRIVATE_KEY_FILE]
+<pre><code>IdentityFile <span class="placeholder">PRIVATE_KEY_FILE</span>
 </code></pre>
 <p>(using the filename for the private key).</p>
 <p>Check that the config file is correct:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="cat program">cat</span><span class="space"> </span>~/.ssh/config
-![...]
-IdentityFile ![PRIVATE_KEY_FILE]
-![...]
+<span class="placeholder">...</span>
+IdentityFile <span class="placeholder">PRIVATE_KEY_FILE</span>
+<span class="placeholder">...</span>
 </code></pre>
 </section></section><section class="with-header-inside" id="howto-login-without-password:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'howto-login-without-password' for h2.--><h2 counter-sec="78" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" id="sub:howto-login-without-password" label-name="How to login without a password" label-number="78.6" label-self="" label-what="Section" label-what-number="Section 78.6" label-what-number-name="Section 78.6 - How to login without a password">How to login without a password</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md"> ✎</a><section class="without-header-inside" level="subsub">
 <div class="requirements">
 <p>Assumptions:</p>
 <ul>
-<li>You have two computers, called “<code>![local]</code>” and “<code>![remote]</code>”,
-  with users “<code>![local-user]</code>” and “<code>![remote-user]</code>”.</li>
+<li>You have two computers, called “<code><span class="placeholder">local</span></code>” and “<code><span class="placeholder">remote</span></code>”,
+  with users “<code><span class="placeholder">local-user</span></code>” and “<code><span class="placeholder">remote-user</span></code>”.</li>
 <li>The two computers are on the same network.</li>
-<li>You have created a keypair for <code>![local-user]</code> on <code>![local]</code>.</li>
+<li>You have created a keypair for <code><span class="placeholder">local-user</span></code> on <code><span class="placeholder">local</span></code>.</li>
 </ul>
 <div class="special-par-see-wrap"><p class="special-par-see">This procedure is described in <a class="link-same-file" href="#sub:howto-create-key-pair"><span class="reflabel">Section 78.5</span></a>.</p></div>
 <p>Results:</p>
 <ul>
-<li>From the <code>![local]</code> computer, <code>![local-user]</code> will be able to log in to
-  <code>![remote]</code> computer without a password.</li>
+<li>From the <code><span class="placeholder">local</span></code> computer, <code><span class="placeholder">local-user</span></code> will be able to log in to
+  <code><span class="placeholder">remote</span></code> computer without a password.</li>
 </ul>
 </div>
 <p>First, connect the two computers to the same network, and make sure that you
-can ping <code>![remote]</code> from <code>![local]</code>:</p>
-<pre class="console on-![local]"><code><span class="hostname">![local]</span> <span class="console_sign">$</span> <span class="ping program">ping</span> ![remote].local
+can ping <code><span class="placeholder">remote</span></code> from <code><span class="placeholder">local</span></code>:</p>
+<pre class="console on-![local]"><code><span class="hostname">![local]</span> <span class="console_sign">$</span> <span class="ping program">ping</span> <span class="placeholder">remote</span>.local
 </code></pre>
 <p>Do not continue if you cannot do this successfully.</p>
-<p>If you have created a keypair for <code>![local-user]</code>, you will have a public key
-in this file on the <code>![local]</code> computer:</p>
-<pre><code>/home/![local-user]/.ssh/![local-user]@![local].pub
+<p>If you have created a keypair for <code><span class="placeholder">local-user</span></code>, you will have a public key
+in this file on the <code><span class="placeholder">local</span></code> computer:</p>
+<pre><code>/home/<span class="placeholder">local-user</span>/.ssh/<span class="placeholder">local-user</span>@<span class="placeholder">local</span>.pub
 </code></pre>
 <p>This file is in the form:</p>
-<pre><code>ssh-rsa ![long list of letters and numbers] ![local-user]@![local]
+<pre><code>ssh-rsa <span class="placeholder">long list of letters and numbers</span> <span class="placeholder">local-user</span>@<span class="placeholder">local</span>
 </code></pre>
-<p>You will have to copy the contents of this file on the <code>![remote]</code> computer,
+<p>You will have to copy the contents of this file on the <code><span class="placeholder">remote</span></code> computer,
 to tell it that this key is authorized.</p>
-<p>On the <code>![remote]</code> computer, edit or create the file:</p>
-<pre><code>/home/![remote-user]/.ssh/authorized_keys
+<p>On the <code><span class="placeholder">remote</span></code> computer, edit or create the file:</p>
+<pre><code>/home/<span class="placeholder">remote-user</span>/.ssh/authorized_keys
 </code></pre>
 <p>and add the entire line as above containing the public key.</p>
-<p>Now, from the <code>![local]</code> computer, try to log in into the <code>![remote]</code> one:</p>
-<pre class="console on-![local]"><code><span class="hostname">![local]</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> ![remote-user]@![remote]
+<p>Now, from the <code><span class="placeholder">local</span></code> computer, try to log in into the <code><span class="placeholder">remote</span></code> one:</p>
+<pre class="console on-![local]"><code><span class="hostname">![local]</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">remote-user</span>@<span class="placeholder">remote</span>
 </code></pre>
 <p>This should succeed, and you should not be asked for a password.</p>
 </section></section><section class="with-header-inside" id="howto-fix-ssh-permissions:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'howto-fix-ssh-permissions' for h2.--><h2 counter-sec="78" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md" id="sub:howto-fix-ssh-permissions" label-name="Fixing SSH Permissions" label-number="78.7" label-self="" label-what="Section" label-what-number="Section 78.7" label-what-number-name="Section 78.7 - Fixing SSH Permissions">Fixing SSH Permissions</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/24_ssh.md"> ✎</a><section class="without-header-inside" level="subsub">

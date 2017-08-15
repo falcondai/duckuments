@@ -2834,7 +2834,7 @@ a common key.</p>
 <pre><code>https://www.dropbox.com/s/q23qptu01u7ur3y/duckietown_key1?dl=1
 </code></pre>
 <p>Download the file and call it <code>~/.ssh/duckietown_key1</code></p>
-<pre class="console on-laptop"><code><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="curl program">curl</span> <span class="program_option">-o</span> ~/.ssh/duckietown_key1 ![URL above]
+<pre class="console on-laptop"><code><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="curl program">curl</span> <span class="program_option">-o</span> ~/.ssh/duckietown_key1 <span class="placeholder">URL above</span>
 </code></pre>
 <p>Edit the permission of the file. SSH wants the key file to be not
 readable or writable from other users or groups.</p>
@@ -2844,15 +2844,15 @@ readable or writable from other users or groups.</p>
 <pre class="console on-laptop"><code><span class="hostname">laptop</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="ssh-keygen program">ssh-keygen</span><span class="space"> </span><span class="program_option">-f</span><span class="space"> </span>~/.ssh/duckietown_key1<span class="space"> </span><span class="program_option">-y</span><span class="space"> </span>&gt;<span class="space"> </span>~/.ssh/duckietown_key1.pub
 </code></pre>
 <p>On the laptop, now edit <code>~/.ssh/config</code> and add the following lines:</p>
-<pre><code>Host ![robot name]
-  Hostname ![robot name].local
-  User ![user name]
+<pre><code>Host <span class="placeholder">robot name</span>
+  Hostname <span class="placeholder">robot name</span>.local
+  User <span class="placeholder">user name</span>
   IdentityFile ~/.ssh/duckietown_key1
   HostKeyAlgorithms ssh-rsa
 </code></pre>
 <p>Now you should be able to connect without using a password.</p>
 <p>The following command should connect without a password being asked:</p>
-<pre class="console on-laptop"><code><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> ubuntu@![robot name]
+<pre class="console on-laptop"><code><span class="hostname">laptop</span> <span class="console_sign">$</span> <span class="ssh program">ssh</span> ubuntu@<span class="placeholder">robot name</span>
 </code></pre>
 </section><section class="with-header-inside" id="troubleshooting-1_8_ubuntu_laptops:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting-1_8_ubuntu_laptops' for h3.--><h3 counter-sec="120" counter-sub="1" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_99_drafts/1_8_ubuntu_laptops.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_99_drafts/1_8_ubuntu_laptops.md" id="subsub:troubleshooting-1_8_ubuntu_laptops" label-name="Troubleshooting" label-number="120.1.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 120.1.1" label-what-number-name="Subsection 120.1.1 - Troubleshooting">Troubleshooting</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_99_drafts/1_8_ubuntu_laptops.md"> ✎</a>
 <div class="special-par-symptom-wrap"><p class="special-par-symptom">“Scheme missing”</p></div>

@@ -2882,14 +2882,14 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <pre><code>&lt;launch&gt;
     &lt;arg name="env_script_path" default="~/duckietown/environment.sh"/&gt;
 
-    &lt;machine name="![robot name]" address="![robot name].local" user="![username]"
+    &lt;machine name="<span class="placeholder">robot name</span>" address="<span class="placeholder">robot name</span>.local" user="<span class="placeholder">username</span>"
              env-loader="$(arg env_script_path)"/&gt;
         ...
     ...
 &lt;/launch&gt;
 </code></pre>
 <p>Now, duplicate a &lt;machine&gt; line between &lt;launch&gt; and &lt;/launch&gt;, and replace the name and address string with the name of your vehicle.</p>
-<p>For example, for Andrea, <code>![robot name]</code> = <code>emma</code> and <code>![username]</code> = <code>andrea</code>.
+<p>For example, for Andrea, <code><span class="placeholder">robot name</span></code> = <code>emma</code> and <code><span class="placeholder">username</span></code> = <code>andrea</code>.
 So, he would add this line:</p>
 <pre><code>&lt;machine name="emma" address="emma.local" user="andrea" env-loader="$(arg env_script_path)"/&gt;
 </code></pre>
@@ -2903,7 +2903,7 @@ So, he would add this line:</p>
 <div class="check">
 <p>Make sure that your user is in the group <code>input</code> and <code>i2c</code>:</p>
 <pre class="console on-duckiebot"><code><span class="hostname">duckiebot</span><span class="space"> </span><span class="console_sign">$</span><span class="space"> </span><span class="groups program">groups</span>
-![username] sudo input i2c
+<span class="placeholder">username</span> sudo input i2c
 </code></pre>
 <p>If <code>input</code> and <code>i2c</code> are not in the list, you missed a step. Ohi ohi!
 You are not following the instructions carefully!</p>
@@ -2923,7 +2923,7 @@ according to your actions.</p>
 commands like <code>rosrun</code> and <code>roslaunch</code>).</p>
 <p>Now make sure the motor shield is connected.</p>
 <p>Run the command:</p>
-<pre class="console on-duckiebot"><code><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="roslaunch program">roslaunch</span> duckietown joystick.launch veh:=![robot name]
+<pre class="console on-duckiebot"><code><span class="hostname">duckiebot</span> <span class="console_sign">$</span> <span class="roslaunch program">roslaunch</span> duckietown joystick.launch veh:=<span class="placeholder">robot name</span>
 </code></pre>
 <p>If there is no “red” output in the command line then pushing the left joystick
 knob controls throttle - right controls steering.</p>
