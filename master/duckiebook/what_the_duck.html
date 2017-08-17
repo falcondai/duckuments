@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,16 +2893,16 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="configuration.html#configuration:section">prev</a><section class="with-header-inside main-section-for-page" id="what-the-duck:section" level="sec" next="python:section" prev="configuration:section"><!--Warning: Adding prefix 'sec' to current id 'what-the-duck' for h1.--><h1 counter-sec="92" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sec:what-the-duck" label-name="What the duck!" label-number="92" label-self="" label-what="Chapter" label-what-number="Chapter 92" label-what-number-name="Chapter 92 - What the duck!">What the duck!</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md"> ✎</a><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="configuration.html#configuration:section">prev</a><section class="with-header-inside main-section-for-page" id="what-the-duck:section" level="sec" next="python:section" prev="configuration:section"><!--Warning: Adding prefix 'sec' to current id 'what-the-duck' for h1.--><h1 counter-sec="92" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sec:what-the-duck" label-name="What the duck!" label-number="92" label-self="" label-what="Chapter" label-what-number="Chapter 92" label-what-number-name="Chapter 92 - What the duck!">What the duck!</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/what-the-duck" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub">
 <p><code>what-the-duck</code> is a program that tests <em>dozens</em> of configuration
 inconsistencies that can happen on a Duckiebot.</p>
 <p>To use it, first compile the repository, and then run:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span>./what-the-duck
 </code></pre>
-</section><section class="with-header-inside" id="adding-more-tests-to-what-the-duck:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'adding-more-tests-to-what-the-duck' for h2.--><h2 counter-sec="92" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sub:adding-more-tests-to-what-the-duck" label-name="Adding more tests to &lt;code&gt;what-the-duck&lt;/code&gt;" label-number="92.1" label-self="" label-what="Section" label-what-number="Section 92.1" label-what-number-name="Section 92.1 - Adding more tests to &lt;code&gt;what-the-duck&lt;/code&gt;">Adding more tests to <code>what-the-duck</code></h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section><section class="with-header-inside" id="adding-more-tests-to-what-the-duck:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'adding-more-tests-to-what-the-duck' for h2.--><h2 counter-sec="92" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sub:adding-more-tests-to-what-the-duck" label-name="Adding more tests to &lt;code&gt;what-the-duck&lt;/code&gt;" label-number="92.1" label-self="" label-what="Section" label-what-number="Section 92.1" label-what-number-name="Section 92.1 - Adding more tests to &lt;code&gt;what-the-duck&lt;/code&gt;">Adding more tests to <code>what-the-duck</code></h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/adding-more-tests-to-what-the-duck" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>The idea is to add to <code>what-the-duck</code> all the tests that can be automated.</p>
 <p>The documentation about to do that is not ready yet.</p>
-</section></section><section class="with-header-inside" id="tests-already-added:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'tests-already-added' for h2.--><h2 counter-sec="92" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sub:tests-already-added" label-name="Tests already added" label-number="92.2" label-self="" label-what="Section" label-what-number="Section 92.2" label-what-number-name="Section 92.2 - Tests already added">Tests already added</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="tests-already-added:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'tests-already-added' for h2.--><h2 counter-sec="92" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sub:tests-already-added" label-name="Tests already added" label-number="92.2" label-self="" label-what="Section" label-what-number="Section 92.2" label-what-number-name="Section 92.2 - Tests already added">Tests already added</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/tests-already-added" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Here’s the list of tests already added:</p>
 <pre><code>✓  Camera is detected
 ✓  Scipy is installed
@@ -2930,7 +2945,7 @@ inconsistencies that can happen on a Duckiebot.</p>
 ✓  Python: No tab chars
 ✓  Python:  No half merges
 </code></pre>
-</section></section><section class="with-header-inside" id="list-of-tests-to-add:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'list-of-tests-to-add' for h2.--><h2 counter-sec="92" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sub:list-of-tests-to-add" label-name="List of tests to add" label-number="92.3" label-self="" label-what="Section" label-what-number="Section 92.3" label-what-number-name="Section 92.3 - List of tests to add">List of tests to add</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="list-of-tests-to-add:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'list-of-tests-to-add' for h2.--><h2 counter-sec="92" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" id="sub:list-of-tests-to-add" label-name="List of tests to add" label-number="92.3" label-self="" label-what="Section" label-what-number="Section 92.3" label-what-number-name="Section 92.3 - List of tests to add">List of tests to add</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/15_what_the_duck.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/list-of-tests-to-add" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Please add below any configuration test that can be automated:</p>
 <ul>
 <li>

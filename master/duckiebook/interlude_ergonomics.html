@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,7 +2893,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="rc_cam_launched_remotely.html#rc-cam-launched-remotely:section">prev</a><section class="with-header-inside main-section-for-page" id="interlude-ergonomics:section" level="sec" next="wheel-calibration:section" prev="rc-cam-launched-remotely:section"><!--Warning: Adding prefix 'sec' to current id 'interlude-ergonomics' for h1.--><h1 counter-sec="22" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" id="sec:interlude-ergonomics" label-name="Interlude: Ergonomics" label-number="22" label-self="" label-what="Chapter" label-what-number="Chapter 22" label-what-number-name="Chapter 22 - Interlude: Ergonomics">Interlude: Ergonomics</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md"> ✎</a><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="rc_cam_launched_remotely.html#rc-cam-launched-remotely:section">prev</a><section class="with-header-inside main-section-for-page" id="interlude-ergonomics:section" level="sec" next="wheel-calibration:section" prev="rc-cam-launched-remotely:section"><!--Warning: Adding prefix 'sec' to current id 'interlude-ergonomics' for h1.--><h1 counter-sec="22" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" id="sec:interlude-ergonomics" label-name="Interlude: Ergonomics" label-number="22" label-self="" label-what="Chapter" label-what-number="Chapter 22" label-what-number-name="Chapter 22 - Interlude: Ergonomics">Interlude: Ergonomics</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/interlude-ergonomics" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub">
 <div class="special-par-assigned-wrap"><p class="special-par-assigned">Andrea</p></div>
 <p>So far, we have been spelling out all commands for you, to make
 sure that you understand what is going on.</p>
@@ -2892,7 +2907,7 @@ problems might be harder to understand if you rely blindly on the shortcuts.</p>
 <li>You will know about some useful shortcuts.</li>
 </ul>
 </div>
-</section><section class="with-header-inside" id="set_ros_mastersh:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'set_ros_mastersh' for h2.--><h2 counter-sec="22" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" id="sub:set_ros_mastersh" label-name="&lt;code&gt;set_ros_master.sh&lt;/code&gt;" label-number="22.1" label-self="" label-what="Section" label-what-number="Section 22.1" label-what-number-name="Section 22.1 - &lt;code&gt;set_ros_master.sh&lt;/code&gt;"><code>set_ros_master.sh</code></h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section><section class="with-header-inside" id="set_ros_mastersh:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'set_ros_mastersh' for h2.--><h2 counter-sec="22" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" id="sub:set_ros_mastersh" label-name="&lt;code&gt;set_ros_master.sh&lt;/code&gt;" label-number="22.1" label-self="" label-what="Section" label-what-number="Section 22.1" label-what-number-name="Section 22.1 - &lt;code&gt;set_ros_master.sh&lt;/code&gt;"><code>set_ros_master.sh</code></h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/set_ros_mastersh" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Instead of using:</p>
 <pre class="console"><code><span class="console_sign">$</span> <span class="export program">export</span> ROS_MASTER_URI=http://<span class="placeholder">robot name</span>.local:11311/
 </code></pre>
@@ -2900,7 +2915,7 @@ problems might be harder to understand if you rely blindly on the shortcuts.</p>
 <pre class="console"><code><span class="console_sign">$</span> <span class="source program">source</span> set_ros_master.sh <span class="placeholder">robot name</span>
 </code></pre>
 <p>Note that you need to use <code>source</code>; without that, it will not work.</p>
-</section></section><section class="with-header-inside" id="ssh-aliases:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'ssh-aliases' for h2.--><h2 counter-sec="22" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" id="sub:ssh-aliases" label-name="SSH aliases" label-number="22.2" label-self="" label-what="Section" label-what-number="Section 22.2" label-what-number-name="Section 22.2 - SSH aliases">SSH aliases</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="ssh-aliases:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'ssh-aliases' for h2.--><h2 counter-sec="22" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" id="sub:ssh-aliases" label-name="SSH aliases" label-number="22.2" label-self="" label-what="Section" label-what-number="Section 22.2" label-what-number-name="Section 22.2 - SSH aliases">SSH aliases</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/2_1_5_ergonomics.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/ssh-aliases" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Instead of using</p>
 <pre class="console"><code><span class="console_sign">$</span> <span class="ssh program">ssh</span> <span class="placeholder">username</span>@<span class="placeholder">robot name</span>.local
 </code></pre>

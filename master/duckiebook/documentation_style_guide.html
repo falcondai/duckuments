@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,9 +2893,9 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="sec_documentation_manual.html#sec:documentation-manual:section">prev</a><section class="with-header-inside main-section-for-page" id="documentation-style-guide:section" level="sec" next="knowledge-graph:section" prev="sec:documentation-manual:section"><!--Warning: Adding prefix 'sec' to current id 'documentation-style-guide' for h1.--><h1 counter-sec="8" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sec:documentation-style-guide" label-name="Documentation style guide" label-number="8" label-self="" label-what="Chapter" label-what-number="Chapter 8" label-what-number-name="Chapter 8 - Documentation style guide">Documentation style guide</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="sec_documentation_manual.html#sec:documentation-manual:section">prev</a><section class="with-header-inside main-section-for-page" id="documentation-style-guide:section" level="sec" next="knowledge-graph:section" prev="sec:documentation-manual:section"><!--Warning: Adding prefix 'sec' to current id 'documentation-style-guide' for h1.--><h1 counter-sec="8" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sec:documentation-style-guide" label-name="Documentation style guide" label-number="8" label-self="" label-what="Chapter" label-what-number="Chapter 8" label-what-number-name="Chapter 8 - Documentation style guide">Documentation style guide</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/documentation-style-guide" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub">
 <p>This chapter describes the conventions for writing the technical documentation.</p>
-</section><section class="with-header-inside" id="general-guidelines-for-technical-writing:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'general-guidelines-for-technical-writing' for h2.--><h2 counter-sec="8" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:general-guidelines-for-technical-writing" label-name="General guidelines for technical writing" label-number="8.1" label-self="" label-what="Section" label-what-number="Section 8.1" label-what-number-name="Section 8.1 - General guidelines for technical writing">General guidelines for technical writing</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section><section class="with-header-inside" id="general-guidelines-for-technical-writing:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'general-guidelines-for-technical-writing' for h2.--><h2 counter-sec="8" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:general-guidelines-for-technical-writing" label-name="General guidelines for technical writing" label-number="8.1" label-self="" label-what="Section" label-what-number="Section 8.1" label-what-number-name="Section 8.1 - General guidelines for technical writing">General guidelines for technical writing</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/general-guidelines-for-technical-writing" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>The following holds for all technical writing.</p>
 <ul>
 <li>
@@ -2920,7 +2935,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <p>Do not use exclamation points.</p>
 </li>
 </ul>
-</section></section><section class="with-header-inside" id="style-guide-for-the-duckietown-documentation:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'style-guide-for-the-duckietown-documentation' for h2.--><h2 counter-sec="8" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:style-guide-for-the-duckietown-documentation" label-name="Style guide for the Duckietown documentation" label-number="8.2" label-self="" label-what="Section" label-what-number="Section 8.2" label-what-number-name="Section 8.2 - Style guide for the Duckietown documentation">Style guide for the Duckietown documentation</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="style-guide-for-the-duckietown-documentation:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'style-guide-for-the-duckietown-documentation' for h2.--><h2 counter-sec="8" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:style-guide-for-the-duckietown-documentation" label-name="Style guide for the Duckietown documentation" label-number="8.2" label-self="" label-what="Section" label-what-number="Section 8.2" label-what-number-name="Section 8.2 - Style guide for the Duckietown documentation">Style guide for the Duckietown documentation</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/style-guide-for-the-duckietown-documentation" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <ul>
 <li>
 <p>It’s ok to use “it’s” instead of “it is”, “can’t” instead of “cannot”, etc.</p>
@@ -2943,7 +2958,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <ul>
 <li>Subtle humor and puns about duckies are encouraged.</li>
 </ul>
-</section></section><section class="with-header-inside" id="writing-command-lines:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'writing-command-lines' for h2.--><h2 counter-sec="8" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:writing-command-lines" label-name="Writing command lines" label-number="8.3" label-self="" label-what="Section" label-what-number="Section 8.3" label-what-number-name="Section 8.3 - Writing command lines">Writing command lines</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="writing-command-lines:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'writing-command-lines' for h2.--><h2 counter-sec="8" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:writing-command-lines" label-name="Writing command lines" label-number="8.3" label-self="" label-what="Section" label-what-number="Section 8.3" label-what-number-name="Section 8.3 - Writing command lines">Writing command lines</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/writing-command-lines" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Use either “<code>laptop</code>” or “<code>duckiebot</code>” (not capitalized, as a hostname) as the prefix for the command line.</p>
 <p>For example, for a command that is supposed to run
 on the laptop, use:</p>
@@ -2963,7 +2978,7 @@ on the laptop, use:</p>
 <p>If the command is supposed to be run on both, omit the hostname:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="cd program">cd</span><span class="space"> </span>~/duckietown
 </code></pre>
-</section></section><section class="with-header-inside" id="frequently-misspelled-words:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'frequently-misspelled-words' for h2.--><h2 counter-sec="8" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:frequently-misspelled-words" label-name="Frequently misspelled words" label-number="8.4" label-self="" label-what="Section" label-what-number="Section 8.4" label-what-number-name="Section 8.4 - Frequently misspelled words">Frequently misspelled words</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="frequently-misspelled-words:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'frequently-misspelled-words' for h2.--><h2 counter-sec="8" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:frequently-misspelled-words" label-name="Frequently misspelled words" label-number="8.4" label-self="" label-what="Section" label-what-number="Section 8.4" label-what-number-name="Section 8.4 - Frequently misspelled words">Frequently misspelled words</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/frequently-misspelled-words" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <ul>
 <li>
 <p>“Duckiebot” is always capitalized.</p>
@@ -2977,19 +2992,19 @@ on the laptop, use:</p>
 WiFi</p>
 </li>
 </ul>
-</section></section><section class="with-header-inside" id="other-conventions:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'other-conventions' for h2.--><h2 counter-sec="8" counter-sub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:other-conventions" label-name="Other conventions" label-number="8.5" label-self="" label-what="Section" label-what-number="Section 8.5" label-what-number-name="Section 8.5 - Other conventions">Other conventions</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="other-conventions:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'other-conventions' for h2.--><h2 counter-sec="8" counter-sub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:other-conventions" label-name="Other conventions" label-number="8.5" label-self="" label-what="Section" label-what-number="Section 8.5" label-what-number-name="Section 8.5 - Other conventions">Other conventions</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/other-conventions" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>When the user must edit a file, just say: “edit <code>/this/file</code>”.</p>
 <p>Writing down the command line for editing, like the following:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="vi program">vi</span><span class="space"> </span>/this/file
 </code></pre>
 <p>is too much detail.</p>
 <p>(If people need to be told how to edit a file, Duckietown is too advanced for them.)</p>
-</section></section><section class="with-header-inside" id="troubleshooting-sections:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'troubleshooting-sections' for h2.--><h2 counter-sec="8" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:troubleshooting-sections" label-name="Troubleshooting sections" label-number="8.6" label-self="" label-what="Section" label-what-number="Section 8.6" label-what-number-name="Section 8.6 - Troubleshooting sections">Troubleshooting sections</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="troubleshooting-sections:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'troubleshooting-sections' for h2.--><h2 counter-sec="8" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="sub:troubleshooting-sections" label-name="Troubleshooting sections" label-number="8.6" label-self="" label-what="Section" label-what-number="Section 8.6" label-what-number-name="Section 8.6 - Troubleshooting sections">Troubleshooting sections</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/troubleshooting-sections" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Write the documentation as if every step succeeds.</p>
 <p>Then, at the end, make a “Troubleshooting” section.</p>
 <p>Organize the troubleshooting section as a list of symptom/resolution.</p>
 <p>The following is an example of a troubleshooting section.</p>
-</section><section class="with-header-inside" id="troubleshooting-70_style_guide:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting-70_style_guide' for h3.--><h3 counter-sec="8" counter-sub="6" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="subsub:troubleshooting-70_style_guide" label-name="Troubleshooting" label-number="8.6.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 8.6.1" label-what-number-name="Subsection 8.6.1 - Troubleshooting">Troubleshooting</h3><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md"> ✎</a>
+</section><section class="with-header-inside" id="troubleshooting-70_style_guide:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'troubleshooting-70_style_guide' for h3.--><h3 counter-sec="8" counter-sub="6" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" id="subsub:troubleshooting-70_style_guide" label-name="Troubleshooting" label-number="8.6.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 8.6.1" label-what-number-name="Subsection 8.6.1 - Troubleshooting">Troubleshooting</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/70_style_guide.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/troubleshooting-70_style_guide" title="Use this link as the permanent link to share with people.">🔗</a></span>
 <div class="special-par-symptom-wrap"><p class="special-par-symptom">This strange thing happens.</p></div>
 <div class="special-par-resolution-wrap"><p class="special-par-resolution">Maybe the camera is not inserted correctly. Remove and reconnect.</p></div>
 <div class="special-par-symptom-wrap"><p class="special-par-symptom">This other strange thing happens.</p></div>

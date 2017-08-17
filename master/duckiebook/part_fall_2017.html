@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,7 +2893,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="duckietown_software_architecture.html#duckietown-software-architecture:section">prev</a><section class="with-header-inside main-section-for-page" id="part:fall-2017:section" level="part" next="general-remarks:section" prev="duckietown-software-architecture:section"><h1 counter-part="10" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/00_part_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/00_part_fall2017.md" id="part:fall-2017" label-name="Fall 2017" label-number="10" label-self="" label-what="Part" label-what-number="Part 10" label-what-number-name="Part 10 - Fall 2017">Fall 2017</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/00_part_fall2017.md"> ✎</a><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="duckietown_software_architecture.html#duckietown-software-architecture:section">prev</a><section class="with-header-inside main-section-for-page" id="part:fall-2017:section" level="part" next="general-remarks:section" prev="duckietown-software-architecture:section"><h1 counter-part="10" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/00_part_fall2017.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/00_part_fall2017.md" id="part:fall-2017" label-name="Fall 2017" label-number="10" label-self="" label-what="Part" label-what-number="Part 10" label-what-number-name="Part 10 - Fall 2017">Fall 2017</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/00_part_fall2017.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/fall-2017" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sec"><section class="without-header-inside" level="sub">
 <p>This is the first time that a class is taught jointly across 3 continents!</p>
 <p>There are 4 universities involved in the joint teaching for the term:</p>
 <ul>

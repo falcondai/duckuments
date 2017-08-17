@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,7 +2893,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="first_steps.html#first-steps:section">prev</a><section class="with-header-inside main-section-for-page" id="faq:section" level="sec" next="sec:accounts:section" prev="first-steps:section"><!--Warning: Adding prefix 'sec' to current id 'faq' for h1.--><h1 counter-sec="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sec:faq" label-name="Frequently Asked Questions" label-number="4" label-self="" label-what="Chapter" label-what-number="Chapter 4" label-what-number-name="Chapter 4 - Frequently Asked Questions">Frequently Asked Questions</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md"> ✎</a><section class="with-header-inside" id="general-questions:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'general-questions' for h2.--><h2 counter-sec="4" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sub:general-questions" label-name="General questions" label-number="4.1" label-self="" label-what="Section" label-what-number="Section 4.1" label-what-number-name="Section 4.1 - General questions">General questions</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md"> ✎</a><section class="without-header-inside" level="subsub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="first_steps.html#first-steps:section">prev</a><section class="with-header-inside main-section-for-page" id="faq:section" level="sec" next="sec:accounts:section" prev="first-steps:section"><!--Warning: Adding prefix 'sec' to current id 'faq' for h1.--><h1 counter-sec="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sec:faq" label-name="Frequently Asked Questions" label-number="4" label-self="" label-what="Chapter" label-what-number="Chapter 4" label-what-number-name="Chapter 4 - Frequently Asked Questions">Frequently Asked Questions</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/faq" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="with-header-inside" id="general-questions:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'general-questions' for h2.--><h2 counter-sec="4" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sub:general-questions" label-name="General questions" label-number="4.1" label-self="" label-what="Section" label-what-number="Section 4.1" label-what-number-name="Section 4.1 - General questions">General questions</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/general-questions" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <div class="special-par-question-wrap"><p class="special-par-question"> What is Duckietown?</p></div>
 <p>Duckietown is a low-cost educational and research platform.</p>
 <div class="special-par-question-wrap"><p class="special-par-question"> Is Duckietown free to use?</p></div>
@@ -2890,10 +2905,10 @@ things are a bit more ready.</p>
 <p>See the next section, Getting started.</p>
 <div class="special-par-question-wrap"><p class="special-par-question"> How can I help?</p></div>
 <p>If you would like to help actively, please email <a href="mailto:duckietown@mit.edu">duckietown@mit.edu</a>.</p>
-</section></section><section class="with-header-inside" id="faq-by-students-independent-learners:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'faq-by-students-independent-learners' for h2.--><h2 counter-sec="4" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sub:faq-by-students-independent-learners" label-name="FAQ by students / independent learners" label-number="4.2" label-self="" label-what="Section" label-what-number="Section 4.2" label-what-number-name="Section 4.2 - FAQ by students / independent learners">FAQ by students / independent learners</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="faq-by-students-independent-learners:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'faq-by-students-independent-learners' for h2.--><h2 counter-sec="4" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sub:faq-by-students-independent-learners" label-name="FAQ by students / independent learners" label-number="4.2" label-self="" label-what="Section" label-what-number="Section 4.2" label-what-number-name="Section 4.2 - FAQ by students / independent learners">FAQ by students / independent learners</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/faq-by-students-independent-learners" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <div class="special-par-question-wrap"><p class="special-par-question">I want to build my own Duckiebot. How do I get started?</p></div>
 <div class="todo-wrap"><p class="todo">to write</p></div>
-</section></section><section class="with-header-inside" id="faq-by-instructors:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'faq-by-instructors' for h2.--><h2 counter-sec="4" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sub:faq-by-instructors" label-name="FAQ by instructors" label-number="4.3" label-self="" label-what="Section" label-what-number="Section 4.3" label-what-number-name="Section 4.3 - FAQ by instructors">FAQ by instructors</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="faq-by-instructors:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'faq-by-instructors' for h2.--><h2 counter-sec="4" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" id="sub:faq-by-instructors" label-name="FAQ by instructors" label-number="4.3" label-self="" label-what="Section" label-what-number="Section 4.3" label-what-number-name="Section 4.3 - FAQ by instructors">FAQ by instructors</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/80_faq.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/faq-by-instructors" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <div class="special-par-question-wrap"><p class="special-par-question"> How large a class can it be? I teach large classes.</p></div>
 <div class="todo-wrap"><p class="todo">to write</p></div>
 <div class="special-par-question-wrap"><p class="special-par-question"> What is the budget for the robot?</p></div>

@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,9 +2893,9 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="atom.html#atom:section">prev</a><section class="with-header-inside main-section-for-page" id="eclipse:section" level="sec" next="byobu:section" prev="atom:section"><!--Warning: Adding prefix 'sec' to current id 'eclipse' for h1.--><h1 counter-sec="86" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" id="sec:eclipse" label-name="Eclipse" label-number="86" label-self="" label-what="Chapter" label-what-number="Chapter 86" label-what-number-name="Chapter 86 - Eclipse">Eclipse</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md"> ✎</a><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="atom.html#atom:section">prev</a><section class="with-header-inside main-section-for-page" id="eclipse:section" level="sec" next="byobu:section" prev="atom:section"><!--Warning: Adding prefix 'sec' to current id 'eclipse' for h1.--><h1 counter-sec="86" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" id="sec:eclipse" label-name="Eclipse" label-number="86" label-self="" label-what="Chapter" label-what-number="Chapter 86" label-what-number-name="Chapter 86 - Eclipse">Eclipse</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/eclipse" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub">
 <div class="todo-wrap"><p class="todo">to write</p></div>
-</section><section class="with-header-inside" id="installing-liclipse:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'installing-liclipse' for h2.--><h2 counter-sec="86" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" id="sub:installing-liclipse" label-name="Installing LiClipse" label-number="86.1" label-self="" label-what="Section" label-what-number="Section 86.1" label-what-number-name="Section 86.1 - Installing LiClipse">Installing LiClipse</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section><section class="with-header-inside" id="installing-liclipse:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'installing-liclipse' for h2.--><h2 counter-sec="86" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" id="sub:installing-liclipse" label-name="Installing LiClipse" label-number="86.1" label-self="" label-what="Section" label-what-number="Section 86.1" label-what-number-name="Section 86.1 - Installing LiClipse">Installing LiClipse</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/32_eclipse.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/installing-liclipse" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <div class="todo-wrap"><p class="todo">to write</p></div><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="byobu.html#byobu:section">next</a></div><div>
 <style>

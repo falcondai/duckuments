@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,14 +2893,14 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="soldering_boards_for_c0.html#soldering-boards-for-c0:section">prev</a><section class="with-header-inside main-section-for-page" id="assembling-duckiebot:section" level="sec" next="reproducing-the-image:section" prev="soldering-boards-for-c0:section"><!--Warning: Adding prefix 'sec' to current id 'assembling-duckiebot' for h1.--><h1 counter-sec="14" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/1_0_assembling_duckiebot.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_0_assembling_duckiebot.md" id="sec:assembling-duckiebot" label-name="Assembling the Duckiebot &lt;code&gt;C0&lt;/code&gt;" label-number="14" label-self="" label-what="Chapter" label-what-number="Chapter 14" label-what-number-name="Chapter 14 - Assembling the Duckiebot &lt;code&gt;C0&lt;/code&gt;">Assembling the Duckiebot <code>C0</code></h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_0_assembling_duckiebot.md"> ✎</a><section class="without-header-inside" level="sub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="soldering_boards_for_c0.html#soldering-boards-for-c0:section">prev</a><section class="with-header-inside main-section-for-page" id="assembling-duckiebot:section" level="sec" next="reproducing-the-image:section" prev="soldering-boards-for-c0:section"><!--Warning: Adding prefix 'sec' to current id 'assembling-duckiebot' for h1.--><h1 counter-sec="14" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/1_0_assembling_duckiebot.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_0_assembling_duckiebot.md" id="sec:assembling-duckiebot" label-name="Assembling the Duckiebot &lt;code&gt;C0&lt;/code&gt;" label-number="14" label-self="" label-what="Chapter" label-what-number="Chapter 14" label-what-number-name="Chapter 14 - Assembling the Duckiebot &lt;code&gt;C0&lt;/code&gt;">Assembling the Duckiebot <code>C0</code></h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_0_assembling_duckiebot.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/assembling-duckiebot" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub">
 <div class="special-par-assigned-wrap"><p class="special-par-assigned">Shiying</p></div>
 <div class="requirements">
 <p>Resources necessaries:</p>
 <ul>
 <li>Duckiebot <code>D17-C0</code> parts.</li>
 </ul>
-<div class="special-par-requires-wrap"><p class="special-par-requires">The acquisition process is explained in <a class="link-different-file" href="acquiring_parts.html#sec:acquiring-parts"><span class="reflabel">Chapter 12</span></a>.</p></div>
+<div class="special-par-requires-wrap"><p class="special-par-requires">The acquisition process is explained in <a class="link-different-file" href="acquiring_parts.html#sec:acquiring-parts"><span class="reflabel" comment="LinkElement(linker=&lt;a href=&quot;#sec:acquiring-parts&quot;&gt;&lt;span class=&quot;reflabel&quot;&gt;Chapter 12&lt;/span&gt;&lt;/a&gt;, eid='sec:acquiring-parts', linked=&lt;h1 counter-sec=&quot;12&quot; github-blob-url=&quot;https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/0_0_duckiebot_parts.md&quot; github-edit-url=&quot;https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/0_0_duckiebot_parts.md&quot; id=&quot;sec:acquiring-parts&quot; label-name=&quot;Acquiring the parts for the Duckiebot &amp;lt;code&amp;gt;C0&amp;lt;/code&amp;gt;&quot; label-number=&quot;12&quot; label-self=&quot;&quot; label-what=&quot;Chapter&quot; label-what-number=&quot;Chapter 12&quot; label-what-number-name=&quot;Chapter 12 - Acquiring the parts for the Duckiebot &amp;lt;code&amp;gt;C0&amp;lt;/code&amp;gt;&quot;&gt;Acquiring the parts for the Duckiebot &lt;code&gt;C0&lt;/code&gt;&lt;/h1&gt;, query=None)">Chapter 12</span></a>.</p></div>
 <ul>
 <li>Time: about ??? minutes.</li>
 </ul>

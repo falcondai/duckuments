@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,18 +2893,18 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="linux.html#linux:section">prev</a><section class="with-header-inside main-section-for-page" id="linux-resources-usage:section" level="sec" next="sdcards:section" prev="linux:section"><!--Warning: Adding prefix 'sec' to current id 'linux-resources-usage' for h1.--><h1 counter-sec="78" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sec:linux-resources-usage" label-name="Linux resources usage" label-number="78" label-self="" label-what="Chapter" label-what-number="Chapter 78" label-what-number-name="Chapter 78 - Linux resources usage">Linux resources usage</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md"> ✎</a><section class="with-header-inside" id="measuring-cpu-usage-using-htop:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'measuring-cpu-usage-using-htop' for h2.--><h2 counter-sec="78" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sub:measuring-cpu-usage-using-htop" label-name="Measuring CPU usage using &lt;code&gt;htop&lt;/code&gt;" label-number="78.1" label-self="" label-what="Section" label-what-number="Section 78.1" label-what-number-name="Section 78.1 - Measuring CPU usage using &lt;code&gt;htop&lt;/code&gt;">Measuring CPU usage using <code>htop</code></h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md"> ✎</a><section class="without-header-inside" level="subsub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="linux.html#linux:section">prev</a><section class="with-header-inside main-section-for-page" id="linux-resources-usage:section" level="sec" next="sdcards:section" prev="linux:section"><!--Warning: Adding prefix 'sec' to current id 'linux-resources-usage' for h1.--><h1 counter-sec="78" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sec:linux-resources-usage" label-name="Linux resources usage" label-number="78" label-self="" label-what="Chapter" label-what-number="Chapter 78" label-what-number-name="Chapter 78 - Linux resources usage">Linux resources usage</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/linux-resources-usage" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="with-header-inside" id="measuring-cpu-usage-using-htop:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'measuring-cpu-usage-using-htop' for h2.--><h2 counter-sec="78" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sub:measuring-cpu-usage-using-htop" label-name="Measuring CPU usage using &lt;code&gt;htop&lt;/code&gt;" label-number="78.1" label-self="" label-what="Section" label-what-number="Section 78.1" label-what-number-name="Section 78.1 - Measuring CPU usage using &lt;code&gt;htop&lt;/code&gt;">Measuring CPU usage using <code>htop</code></h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/measuring-cpu-usage-using-htop" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>You can use <code>htop</code> to monitor CPU usage.</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="apt program">apt</span><span class="space"> </span>install<span class="space"> </span>htop
 </code></pre>
 <div class="todo-wrap"><p class="todo">to write</p></div>
-</section></section><section class="with-header-inside" id="measuring-io-usage-using-iotop:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'measuring-io-usage-using-iotop' for h2.--><h2 counter-sec="78" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sub:measuring-io-usage-using-iotop" label-name="Measuring I/O usage using &lt;code&gt;iotop&lt;/code&gt;" label-number="78.2" label-self="" label-what="Section" label-what-number="Section 78.2" label-what-number-name="Section 78.2 - Measuring I/O usage using &lt;code&gt;iotop&lt;/code&gt;">Measuring I/O usage using <code>iotop</code></h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="measuring-io-usage-using-iotop:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'measuring-io-usage-using-iotop' for h2.--><h2 counter-sec="78" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sub:measuring-io-usage-using-iotop" label-name="Measuring I/O usage using &lt;code&gt;iotop&lt;/code&gt;" label-number="78.2" label-self="" label-what="Section" label-what-number="Section 78.2" label-what-number-name="Section 78.2 - Measuring I/O usage using &lt;code&gt;iotop&lt;/code&gt;">Measuring I/O usage using <code>iotop</code></h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/measuring-io-usage-using-iotop" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Install using:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="apt program">apt</span><span class="space"> </span>install<span class="space"> </span>iotop
 </code></pre>
 <div class="todo-wrap"><p class="todo">to write</p></div>
-</section></section><section class="with-header-inside" id="how-fast-is-the-sd-card:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'how-fast-is-the-sd-card' for h2.--><h2 counter-sec="78" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sub:how-fast-is-the-sd-card" label-name="How fast is the SD card?" label-number="78.3" label-self="" label-what="Section" label-what-number="Section 78.3" label-what-number-name="Section 78.3 - How fast is the SD card?">How fast is the SD card?</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md"> ✎</a><section class="without-header-inside" level="subsub">
-<div class="special-par-see-wrap"><p class="special-par-see"><a class="link-different-file" href="sdcards.html#subsub:test-sd-card-speed"><span class="reflabel">Subsection 79.0.1</span></a>.</p></div><div style="display:none">Because of mathjax bug</div>
+</section></section><section class="with-header-inside" id="how-fast-is-the-sd-card:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'how-fast-is-the-sd-card' for h2.--><h2 counter-sec="78" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" id="sub:how-fast-is-the-sd-card" label-name="How fast is the SD card?" label-number="78.3" label-self="" label-what="Section" label-what-number="Section 78.3" label-what-number-name="Section 78.3 - How fast is the SD card?">How fast is the SD card?</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_linux_resources.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/how-fast-is-the-sd-card" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+<div class="special-par-see-wrap"><p class="special-par-see"><a class="link-different-file" href="sdcards.html#subsub:test-sd-card-speed"><span class="reflabel" comment="LinkElement(linker=&lt;a href=&quot;#subsub:test-sd-card-speed&quot;&gt;&lt;span class=&quot;reflabel&quot;&gt;Subsection 79.0.1&lt;/span&gt;&lt;/a&gt;, eid='subsub:test-sd-card-speed', linked=&lt;h3 counter-sec=&quot;79&quot; counter-sub=&quot;0&quot; counter-subsub=&quot;1&quot; github-blob-url=&quot;https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_sd_cards.md&quot; github-edit-url=&quot;https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_sd_cards.md&quot; id=&quot;subsub:test-sd-card-speed&quot; label-name=&quot;Testing SD Card and disk speed&quot; label-number=&quot;79.0.1&quot; label-self=&quot;1) &quot; label-what=&quot;Subsection&quot; label-what-number=&quot;Subsection 79.0.1&quot; label-what-number-name=&quot;Subsection 79.0.1 - Testing SD Card and disk speed&quot;&gt;Testing SD Card and disk speed&lt;/h3&gt;, query=None)">Subsection 79.0.1</span></a>.</p></div><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="sdcards.html#sdcards:section">next</a></div><div>
 <style>
 #disqus_section {

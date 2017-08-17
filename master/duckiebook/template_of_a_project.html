@@ -922,8 +922,9 @@ p {
 code {
   page-break-inside: avoid;
 }
-pre,
-code {
+pre code,
+p code,
+td code {
   font-size: 8pt;
 }
 body {
@@ -939,9 +940,6 @@ h2 {
 }
 h3 {
   font-size: 10pt;
-}
-p code {
-  font-size: 8pt;
 }
 pre {
   display: inline-block;
@@ -1553,11 +1551,28 @@ figure[id^='subfig:'] > figcaption:empty {
 figcaption {
   font-size: smaller;
 }
-.github-edit-link {
+.github-etc-links {
   font-size: 8pt !important;
   color: lightgrey !important;
+}
+h1 + .github-etc-links {
+  margin-top: -6em;
+}
+.github-etc-links {
   float: right;
   display: block;
+  background-color: white;
+  padding: 3pt;
+  outline: solid 0.5px #ebeef2;
+  margin-left: 5pt;
+  margin-top: -2em;
+}
+.purl-link {
+  font-size: 5pt;
+  margin: 3pt;
+}
+.github-etc-links .github-edit-link {
+  font-size: 6pt;
 }
 kbd + kbd {
   margin-left: .1em;
@@ -2878,14 +2893,14 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_drafts.html#part:drafts"><span class="toc_what">Part</span> <span class="toc_number">11</span><span class="toc_sep"> - </span><span class="toc_name">Drafts or pieces to remove</span></a>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="project_proposals.html#project_proposals:section">prev</a><section class="with-header-inside main-section-for-page" id="template-of-a-project:section" level="sec" next="part:drafts:section" prev="project_proposals:section"><!--Warning: Adding prefix 'sec' to current id 'template-of-a-project' for h1.--><h1 counter-sec="129" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/50_projects/projects/template/10_template_project.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/50_projects/projects/template/10_template_project.md" id="sec:template-of-a-project" label-name="Template of a project" label-number="129" label-self="" label-what="Chapter" label-what-number="Chapter 129" label-what-number-name="Chapter 129 - Template of a project">Template of a project</h1><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/50_projects/projects/template/10_template_project.md"> ✎</a><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
-</section><section class="with-header-inside" id="checklist-for-students:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'checklist-for-students' for h2.--><h2 counter-sec="129" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/checklist.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md" id="sub:checklist-for-students" label-name="Checklist for students" label-number="129.1" label-self="" label-what="Section" label-what-number="Section 129.1" label-what-number-name="Section 129.1 - Checklist for students">Checklist for students</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md"> ✎</a><section class="without-header-inside" level="subsub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="project_proposals.html#project_proposals:section">prev</a><section class="with-header-inside main-section-for-page" id="template-of-a-project:section" level="sec" next="part:drafts:section" prev="project_proposals:section"><!--Warning: Adding prefix 'sec' to current id 'template-of-a-project' for h1.--><h1 counter-sec="129" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/50_projects/projects/template/10_template_project.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/50_projects/projects/template/10_template_project.md" id="sec:template-of-a-project" label-name="Template of a project" label-number="129" label-self="" label-what="Chapter" label-what-number="Chapter 129" label-what-number-name="Chapter 129 - Template of a project">Template of a project</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/50_projects/projects/template/10_template_project.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/template-of-a-project" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub"><div style="display:none">Because of mathjax bug</div>
+</section><section class="with-header-inside" id="checklist-for-students:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'checklist-for-students' for h2.--><h2 counter-sec="129" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/checklist.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md" id="sub:checklist-for-students" label-name="Checklist for students" label-number="129.1" label-self="" label-what="Section" label-what-number="Section 129.1" label-what-number-name="Section 129.1 - Checklist for students">Checklist for students</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/checklist-for-students" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <ul>
-<li>Have a Github account. See <a class="link-different-file" href="github_access.html#sec:github-access"><span class="reflabel">Chapter 90</span></a>. See name conventions (TODO).</li>
+<li>Have a Github account. See <a class="link-different-file" href="github_access.html#sec:github-access"><span class="reflabel" comment="LinkElement(linker=&lt;a href=&quot;#sec:github-access&quot;&gt;&lt;span class=&quot;reflabel&quot;&gt;Chapter 90&lt;/span&gt;&lt;/a&gt;, eid='sec:github-access', linked=&lt;h1 counter-sec=&quot;90&quot; github-blob-url=&quot;https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/50_github_basics.md&quot; github-edit-url=&quot;https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/50_github_basics.md&quot; id=&quot;sec:github-access&quot; label-name=&quot;Setup Github access&quot; label-number=&quot;90&quot; label-self=&quot;&quot; label-what=&quot;Chapter&quot; label-what-number=&quot;Chapter 90&quot; label-what-number-name=&quot;Chapter 90 - Setup Github access&quot;&gt;Setup Github access&lt;/h1&gt;, query=None)">Chapter 90</span></a>. See name conventions (TODO).</li>
 <li>Be part of the Duckietown Github organization. You are sure only when you commit and push one change to one of our repositories.</li>
 <li>Be part of the Duckietown Slack. See name conventions (TODO).</li>
 </ul>
-</section></section><section class="with-header-inside" id="checklist-for-tas:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'checklist-for-tas' for h2.--><h2 counter-sec="129" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/checklist.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md" id="sub:checklist-for-tas" label-name="Checklist for TAs" label-number="129.2" label-self="" label-what="Section" label-what-number="Section 129.2" label-what-number-name="Section 129.2 - Checklist for TAs">Checklist for TAs</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md"> ✎</a><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="checklist-for-tas:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'checklist-for-tas' for h2.--><h2 counter-sec="129" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_80_fall2017_info/checklist.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md" id="sub:checklist-for-tas" label-name="Checklist for TAs" label-number="129.2" label-self="" label-what="Section" label-what-number="Section 129.2" label-what-number-name="Section 129.2 - Checklist for TAs">Checklist for TAs</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_80_fall2017_info/checklist.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/checklist-for-tas" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <ul>
 <li>Be signed up on</li>
 </ul><div style="display:none">Because of mathjax bug</div>
