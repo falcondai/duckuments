@@ -2932,7 +2932,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </blockquote>
 <p>The size is 2.5 GB.</p>
 <p>You can use:</p>
-<pre class="console"><code><span class="console_sign">$</span> <span class="wget program">wget</span> <span class="placeholder">URL above</span>
+<pre class="console"><code><span class="console_sign">$</span> <span class="curl program">curl</span> <span class="program_option">-o</span> duckiebot-RPI3-AC-aug10.img.xz <span class="placeholder">URL above</span>
 </code></pre>
 <p>Uncompress the file:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="xz program">xz</span><span class="space"> </span><span class="program_option">-d</span><span class="space"> </span><span class="program_option">-k</span><span class="space"> </span>duckiebot-RPI3-AC-aug10.img.xz
@@ -3114,7 +3114,7 @@ tmpfs           432M     0  432M   0% /sys/fs/cgroup
 tmpfs            87M   24K   87M   1% /run/user/1000
 /dev/sda1        29G  5.3G   24G  19% /media/ubuntu/44A7-9E91
 </code></pre>
-<p>You should see that the Size of your <code>/dev/sda1</code> partition is “close” to the side of your SD card. </p>
+<p>You should see that the Size of your <code>/dev/sda1</code> partition is “close” to the side of your SD card.</p>
 </section></section><section class="with-header-inside" id="create-user-on-duckiebot:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'create-user-on-duckiebot' for h2.--><h2 counter-sec="17" counter-sub="12" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/1_6_duckiebot_initialization.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_6_duckiebot_initialization.md" id="sub:create-user-on-duckiebot" label-name="Create your user" label-number="17.12" label-self="" label-what="Section" label-what-number="Section 17.12" label-what-number-name="Section 17.12 - Create your user">Create your user</h2><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_6_duckiebot_initialization.md"> ✎</a><section class="without-header-inside" level="subsub">
 <p>You must not use the <code>ubuntu</code> user for development.
 Instead, you need to create a new user.</p>
