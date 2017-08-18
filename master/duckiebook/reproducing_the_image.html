@@ -31,25 +31,7 @@
 
 
 
-*/.only-webpage {
-  outline: solid 0.5px red;
-}
-.only-webpage ::before {
-  content: "webpage";
-}
-.only-ebook {
-  outline: solid 0.5px green;
-}
-.only-ebook ::before {
-  content: "ebook";
-}
-.only-deadtree {
-  outline: solid 0.5px blue;
-}
-.only-deadtree ::before {
-  content: "deadtree";
-}
-.only-deadtree {
+*/.only-deadtree {
   display: none;
 }
 @media screen {
@@ -58,7 +40,7 @@
   }
 }
 @media print {
-  .only-webpage {
+  .only-web {
     display: none;
   }
 }
@@ -294,6 +276,7 @@ img.video-vimeo-thumbnail-deadtree {
 img.video-vimeo-thumbnail-ebook,
 img.video-vimeo-thumbnail-deadtree {
   max-width: 20em;
+  width: 20em;
 }
 .chapter_toc {
   display: none;
@@ -3473,7 +3456,7 @@ on each PI.</p>
 </section></section><section class="with-header-inside" id="clean-up:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'clean-up' for h2.--><h2 counter-sec="14" counter-sub="12" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_1_reproducing_ubuntu_image.md" id="sub:clean-up" label-name="Clean up" label-number="14.12" label-self="" label-what="Section" label-what-number="Section 14.12" label-what-number-name="Section 14.12 - Clean up">Clean up</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_1_reproducing_ubuntu_image.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/clean-up" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>You can use the command <code>dpigs</code> to find out which packages take
 lots of space.</p>
-<pre><code>sudo apt install wajig  debian-goodies
+<pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="apt program">apt</span><span class="space"> </span>install<span class="space"> </span>wajig<span class="space"> </span><span class="space"> </span>debian-goodies
 </code></pre>
 <p>Either:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="wajig program">wajig</span><span class="space"> </span>large
@@ -3547,9 +3530,6 @@ duplicate all of the work that you just did. Luckily this is easy. Just power do
 <div class="special-par-see-wrap"><p class="special-par-see">The procedure of how to shrink an image is explained in <a class="link-different-file" href="sdcards.html#sub:howto-shrink-image"><span class="reflabel" comment="LinkElement(linker=&lt;a href=&quot;#sub:howto-shrink-image&quot;&gt;&lt;span class=&quot;reflabel&quot;&gt;Section 78.2&lt;/span&gt;&lt;/a&gt;, eid='sub:howto-shrink-image', linked=&lt;h2 counter-sec=&quot;78&quot; counter-sub=&quot;2&quot; github-blob-url=&quot;https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/22_sd_cards.md&quot; github-edit-url=&quot;https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/22_sd_cards.md&quot; id=&quot;sub:howto-shrink-image&quot; label-name=&quot;How to shrink an image&quot; label-number=&quot;78.2&quot; label-self=&quot;&quot; label-what=&quot;Section&quot; label-what-number=&quot;Section 78.2&quot; label-what-number-name=&quot;Section 78.2 - How to shrink an image&quot;&gt;How to shrink an image&lt;/h2&gt;, query=None)">Section 78.2</span></a>.</p></div>
 </section></section><section class="with-header-inside" id="some-additions-since-last-image-to-add-in-the-next-image:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'some-additions-since-last-image-to-add-in-the-next-image' for h2.--><h2 counter-sec="14" counter-sub="16" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_20_setup_and_demo/17_setup/1_1_reproducing_ubuntu_image.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_1_reproducing_ubuntu_image.md" id="sub:some-additions-since-last-image-to-add-in-the-next-image" label-name="Some additions since last image to add in the next image" label-number="14.16" label-self="" label-what="Section" label-what-number="Section 14.16" label-what-number-name="Section 14.16 - Some additions since last image to add in the next image">Some additions since last image to add in the next image</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_20_setup_and_demo/17_setup/1_1_reproducing_ubuntu_image.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/some-additions-since-last-image-to-add-in-the-next-image" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Note here the additions since the last image was created.</p>
-<ul>
-<li><a class="link-different-file" href="git_lfs.html#sub:git-lfs-install">Install Git LFS</a>.</li>
-</ul>
 <p>Create a file</p>
 <pre><code>/etc/duckietown-image.yaml
 </code></pre>
@@ -3559,7 +3539,11 @@ date: <span class="placeholder">DATE</span>
 comments: |
     <span class="placeholder">any comments you have</span>
 </code></pre>
-<p>So that we know which image is currently in used.</p><div style="display:none">Because of mathjax bug</div>
+<p>So that we know which image is currently in used.</p>
+<p>Install <code>ntpdate</code>:</p>
+<pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><span class="sudo program">sudo</span><span class="space"> </span><span class="apt program">apt</span><span class="space"> </span>install<span class="space"> </span>ntpdate
+</code></pre>
+<div class="special-par-note-wrap"><p class="special-par-note">We should install Git LFS on the Raspberry Pi, but so far AC did not have any luck. See <a class="link-different-file" href="git_lfs.html#sub:git-lfs-install"><span class="reflabel" comment="LinkElement(linker=&lt;a href=&quot;#sub:git-lfs-install&quot;&gt;&lt;span class=&quot;reflabel&quot;&gt;Section 88.1&lt;/span&gt;&lt;/a&gt;, eid='sub:git-lfs-install', linked=&lt;h2 counter-sec=&quot;88&quot; counter-sub=&quot;1&quot; github-blob-url=&quot;https://github.com/duckietown/duckuments/blob/master/docs/atoms_60_software_reference/12_software_carpentry/45_git_lfs.md&quot; github-edit-url=&quot;https://github.com/duckietown/duckuments/edit/master/docs/atoms_60_software_reference/12_software_carpentry/45_git_lfs.md&quot; id=&quot;sub:git-lfs-install&quot; label-name=&quot;Generic installation instructions&quot; label-number=&quot;88.1&quot; label-self=&quot;&quot; label-what=&quot;Section&quot; label-what-number=&quot;Section 88.1&quot; label-what-number-name=&quot;Section 88.1 - Generic installation instructions&quot;&gt;Generic installation instructions&lt;/h2&gt;, query=None)">Section 88.1</span></a>.</p></div><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="setup_laptop.html#setup-laptop:section">next</a></div><div>
 <style>
 #disqus_section {

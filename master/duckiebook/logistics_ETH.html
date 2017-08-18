@@ -31,25 +31,7 @@
 
 
 
-*/.only-webpage {
-  outline: solid 0.5px red;
-}
-.only-webpage ::before {
-  content: "webpage";
-}
-.only-ebook {
-  outline: solid 0.5px green;
-}
-.only-ebook ::before {
-  content: "ebook";
-}
-.only-deadtree {
-  outline: solid 0.5px blue;
-}
-.only-deadtree ::before {
-  content: "deadtree";
-}
-.only-deadtree {
+*/.only-deadtree {
   display: none;
 }
 @media screen {
@@ -58,7 +40,7 @@
   }
 }
 @media print {
-  .only-webpage {
+  .only-web {
     display: none;
   }
 }
@@ -294,6 +276,7 @@ img.video-vimeo-thumbnail-deadtree {
 img.video-vimeo-thumbnail-ebook,
 img.video-vimeo-thumbnail-deadtree {
   max-width: 20em;
+  width: 20em;
 }
 .chapter_toc {
   display: none;
