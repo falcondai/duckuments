@@ -2417,7 +2417,17 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="autonomy_architectures.html#sec:autonomy_architectures"><span class="toc_what">Chapter</span> <span class="toc_number">38</span><span class="toc_sep"> - </span><span class="toc_name">Autonomy architectures</span></a>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part link-same-file-direct-parent contains-link-same-file">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:representations"><span class="toc_what">Chapter</span> <span class="toc_number">39</span><span class="toc_sep"> - </span><span class="toc_name">Representations</span></a>
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:representations"><span class="toc_what">Chapter</span> <span class="toc_number">39</span><span class="toc_sep"> - </span><span class="toc_name">Representations</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec contains-link-same-file">
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:preliminaries"><span class="toc_what">Section</span> <span class="toc_number">39.1</span><span class="toc_sep"> - </span><span class="toc_name">Preliminaries</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:robot-representations"><span class="toc_what">Section</span> <span class="toc_number">39.2</span><span class="toc_sep"> - </span><span class="toc_name">Robot Representations</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:environment-representations"><span class="toc_what">Section</span> <span class="toc_number">39.3</span><span class="toc_sep"> - </span><span class="toc_name">Environment Representations</span></a>
+</li>
+</ul>
 </li>
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="software_architectures.html#sec:software_architectures"><span class="toc_what">Chapter</span> <span class="toc_number">40</span><span class="toc_sep"> - </span><span class="toc_name">Software architectures and middlewares</span></a>
@@ -3197,8 +3207,39 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </ul>
 </li>
 </ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="autonomy_architectures.html#autonomy_architectures:section">prev</a><section class="with-header-inside main-section-for-page" id="representations:section" level="sec" next="software_architectures:section" prev="autonomy_architectures:section"><!--Warning: Adding prefix 'sec' to current id 'representations' for h1.--><h1 counter-sec="39" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" id="sec:representations" label-name="Representations" label-number="39" label-self="" label-what="Chapter" label-what-number="Chapter 39" label-what-number-name="Chapter 39 - Representations">Representations</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/representations" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub">
-<div class="special-par-assigned-wrap"><p class="special-par-assigned">Matt</p></div><div style="display:none">Because of mathjax bug</div>
-</section></section><a class="link_next link-different-file" href="software_architectures.html#software_architectures:section">next</a></div><div>
+<div class="special-par-assigned-wrap"><p class="special-par-assigned">Matt</p></div>
+<p>Discuss:</p>
+<ul>
+<li>Introduction to the notion of <em>state</em> as a sufficient statistic that represents the agent (robot) and environment.</li>
+<li>Define notion of <em>static</em> and <em>dynamic</em> states.</li>
+<li>Provide examples of robot and environment states.</li>
+</ul>
+</section><section class="with-header-inside" id="preliminaries:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'preliminaries' for h2.--><h2 counter-sec="39" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" id="sub:preliminaries" label-name="Preliminaries" label-number="39.1" label-self="" label-what="Section" label-what-number="Section 39.1" label-what-number-name="Section 39.1 - Preliminaries">Preliminaries</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/preliminaries" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+<p>Some/all of the following could be simplified or omitted and instead refer readers to reference material.</p>
+<p>Discuss basics associated with</p>
+<ul>
+<li>Coordinate systems</li>
+<li>Reference frames</li>
+<li>Transformations</li>
+</ul>
+</section></section><section class="with-header-inside" id="robot-representations:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'robot-representations' for h2.--><h2 counter-sec="39" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" id="sub:robot-representations" label-name="Robot Representations" label-number="39.2" label-self="" label-what="Section" label-what-number="Section 39.2" label-what-number-name="Section 39.2 - Robot Representations">Robot Representations</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/robot-representations" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+<p>Define the notion of:</p>
+<ul>
+<li><em>pose</em> for mobile robots;</li>
+<li><em>configuration</em> for manipulators</li>
+<li>robot and joint velocities</li>
+</ul>
+<p>Discuss specific robot state representation for Duckietown.</p>
+</section></section><section class="with-header-inside" id="environment-representations:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'environment-representations' for h2.--><h2 counter-sec="39" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" id="sub:environment-representations" label-name="Environment Representations" label-number="39.3" label-self="" label-what="Section" label-what-number="Section 39.3" label-what-number-name="Section 39.3 - Environment Representations">Environment Representations</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/environment-representations" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+<p>Discuss:</p>
+<ul>
+<li>Difference between topological and metric environment representations;</li>
+<li>Details of topological representation;</li>
+<li>Common metric representations, notably feature-based maps and gridmaps;</li>
+</ul>
+</section><section class="with-header-inside" id="duckietown-environment-representation:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'duckietown-environment-representation' for h3.--><h3 counter-sec="39" counter-sub="3" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" id="subsub:duckietown-environment-representation" label-name="Duckietown Environment Representation" label-number="39.3.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 39.3.1" label-what-number-name="Subsection 39.3.1 - Duckietown Environment Representation">Duckietown Environment Representation</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_30_learning_materials/10_autonomy/40_representations.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/duckietown-environment-representation" title="Use this link as the permanent link to share with people.">🔗</a></span>
+<p>Discuss specific environment representation for Duckietown.</p><div style="display:none">Because of mathjax bug</div>
+</section></section></section><a class="link_next link-different-file" href="software_architectures.html#software_architectures:section">next</a></div><div>
 <style>
 #disqus_section {
 margin-top: 1em;
