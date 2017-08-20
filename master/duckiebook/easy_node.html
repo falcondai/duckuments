@@ -3343,7 +3343,13 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li class="toc_li-depth-1 toc_li_for_part link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:easy_node"><span class="toc_what">Chapter</span> <span class="toc_number">150</span><span class="toc_sep"> - </span><fragment>Package <code>easy_node</code></fragment></a><ul class="toc_ul-depth-3 toc_ul_for_sec contains-link-same-file">
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:automatic-docs-generation"><span class="toc_what">Section</span> <span class="toc_number">150.1</span><span class="toc_sep"> - </span><span class="toc_name">Automatic docs generation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:transition-plan"><span class="toc_what">Section</span> <span class="toc_number">150.1</span><span class="toc_sep"> - </span><span class="toc_name">Transition plan</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:yaml-file-format"><span class="toc_what">Section</span> <span class="toc_number">150.2</span><span class="toc_sep"> - </span><span class="toc_name">YAML file format</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:automatic-docs-generation"><span class="toc_what">Section</span> <span class="toc_number">150.3</span><span class="toc_sep"> - </span><span class="toc_name">Automatic docs generation</span></a>
 </li>
 </ul>
 </li>
@@ -3626,8 +3632,95 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </li>
 </ul>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="duckietown_msgs.html#duckietown_msgs:section">prev</a><section class="with-header-inside main-section-for-page" id="easy_node:section" level="sec" next="what_the_duck:section" prev="duckietown_msgs:section"><!--Warning: Adding prefix 'sec' to current id 'easy_node' for h1.--><h1 counter-sec="150" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="sec:easy_node" label-name="Package &lt;code&gt;easy_node&lt;/code&gt;" label-number="150" label-self="" label-what="Chapter" label-what-number="Chapter 150" label-what-number-name="Chapter 150 - Package &lt;code&gt;easy_node&lt;/code&gt;">Package <code>easy_node</code></h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/easy_node" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="with-header-inside" id="automatic-docs-generation:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'automatic-docs-generation' for h2.--><h2 counter-sec="150" counter-sub="1" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="sub:automatic-docs-generation" label-name="Automatic docs generation" label-number="150.1" label-self="" label-what="Section" label-what-number="Section 150.1" label-what-number-name="Section 150.1 - Automatic docs generation">Automatic docs generation</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/automatic-docs-generation" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
-<p>Generate the docs for each node using:</p>
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="duckietown_msgs.html#duckietown_msgs:section">prev</a><section class="with-header-inside main-section-for-page" id="easy_node:section" level="sec" next="what_the_duck:section" prev="duckietown_msgs:section"><!--Warning: Adding prefix 'sec' to current id 'easy_node' for h1.--><h1 counter-sec="150" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="sec:easy_node" label-name="Package &lt;code&gt;easy_node&lt;/code&gt;" label-number="150" label-self="" label-what="Chapter" label-what-number="Chapter 150" label-what-number-name="Chapter 150 - Package &lt;code&gt;easy_node&lt;/code&gt;">Package <code>easy_node</code></h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/easy_node" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="sub">
+<p><code>easy_node</code> is a framework to make it easier to create and document ROS nodes.
+It allows a <em>declarative approach</em> to declaring subscriptions, publishers, and parameters.</p>
+<p>The user can directly describe what are the subscription, the publishers, the parameters in a YAML file. The framework then takes care of calling the necessary boilerplate ROS commands for subscribing, publishing, etc.</p>
+<p>In addition, <code>easy_node</code> can also create the Mardkown documentation from the YAML file.</p>
+<p>Using <code>easy_node</code> allows to cut 40%-50% of the code required for programming
+a node. For an example, see the package <a class="errored" href="#line_detector2"><code>line_detector2</code></a><span class="href-invalid href-invalid-missing">Not found '#line_detector2'</span>,
+which contains a re-implementation of  <code>line_detector</code> using the new framework.</p>
+</section><section class="with-header-inside" id="transition-plan:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'transition-plan' for h2.--><h2 counter-sec="150" counter-sub="1" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="sub:transition-plan" label-name="Transition plan" label-number="150.1" label-self="" label-what="Section" label-what-number="Section 150.1" label-what-number-name="Section 150.1 - Transition plan">Transition plan</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/transition-plan" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+<p>The plan is to first use <code>easy_node</code> just for documentation of the nodes; then,
+later, convert all the nodes to use it.</p>
+</section></section><section class="with-header-inside" id="yaml-file-format:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'yaml-file-format' for h2.--><h2 counter-sec="150" counter-sub="2" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="sub:yaml-file-format" label-name="YAML file format" label-number="150.2" label-self="" label-what="Section" label-what-number="Section 150.2" label-what-number-name="Section 150.2 - YAML file format">YAML file format</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/yaml-file-format" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+<p>If you have a node with the name <code><span class="placeholder">my node</span></code>, implemented in
+the file <code><span class="placeholder">my node</span>.py</code> you must create
+a file by the name <code><span class="placeholder">my node</span>.easy_node.yaml</code> somewhere in the package.</p>
+<p>The YAML file must contain 4 sections, each of which is a dictionary.</p>
+<p>This is the smallest example of an empty configuration:</p>
+<pre><code>parameters: 
+subscriptions: 
+publishers: 
+contracts:
+</code></pre>
+</section><section class="with-header-inside" id="configuring-parameters:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'configuring-parameters' for h3.--><h3 counter-sec="150" counter-sub="2" counter-subsub="1" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="subsub:configuring-parameters" label-name="Configuring parameters" label-number="150.2.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 150.2.1" label-what-number-name="Subsection 150.2.1 - Configuring parameters">Configuring parameters</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/configuring-parameters" title="Use this link as the permanent link to share with people.">🔗</a></span>
+<p>This is the syntax:</p>
+<pre><code>parameters:
+    <span class="placeholder">name parameter</span>:
+        type: <span class="placeholder">type</span>
+        desc: <span class="placeholder">description</span>
+        default: <span class="placeholder">default value</span>
+</code></pre>
+<p>where:</p>
+<ul>
+<li>![type] is one of <code>float</code>, <code>int</code>, <code>bool</code>, <code>str</code>.</li>
+<li>![description] is a description that will appear in the documentation.</li>
+<li>The optional field <code>default</code> gives a default value for the parameter.</li>
+</ul>
+<p>For example:</p>
+<pre><code>parameters:
+    k_d:
+        type: float
+        desc: The derivative gain for $\theta$.
+        default: 1.02
+</code></pre>
+</section><section class="with-header-inside" id="describing-publishers-and-subscriptions:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'describing-publishers-and-subscriptions' for h3.--><h3 counter-sec="150" counter-sub="2" counter-subsub="2" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="subsub:describing-publishers-and-subscriptions" label-name="Describing publishers and subscriptions" label-number="150.2.2" label-self="2) " label-what="Subsection" label-what-number="Subsection 150.2.2" label-what-number-name="Subsection 150.2.2 - Describing publishers and subscriptions">Describing publishers and subscriptions</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/describing-publishers-and-subscriptions" title="Use this link as the permanent link to share with people.">🔗</a></span>
+<p>The syntax for describing subscribers is:</p>
+<pre><code>subscriptions:
+    <span class="placeholder">name subscription</span>:
+        topic: <span class="placeholder">topic name</span>
+        type: <span class="placeholder">message type</span>
+        desc: <span class="placeholder">description</span>
+
+        queue_size: <span class="placeholder">queue size</span>
+        latch: <span class="placeholder">latch</span>
+</code></pre>
+<p>where:</p>
+<ul>
+<li><code><span class="placeholder">topic name</span></code> is the name of the topic to subscribe.</li>
+<li><code><span class="placeholder">message type</span></code> is a ROS message type name, such as <code>sensor_msgs/Joy</code>.</li>
+<li><code><span class="placeholder">description</span></code> is a Markdown description string.</li>
+<li><code><span class="placeholder">queue size</span></code>, <code><span class="placeholder">latch</span></code> are optional parameters for ROS publishing/subscribing functions.</li>
+</ul>
+<p>The syntax for describing publishers is similar.</p>
+<p>Example:</p>
+<pre><code>subscriptions:
+    segment_list:
+        topic: ~segment_list
+        type: duckietown_msgs/SegmentList
+        desc: Line detections
+        queue_size: 1
+
+publishers:
+    lane_pose:
+        topic: ~lane_pose
+        type: duckietown_msgs/LanePose
+        desc: Estimated pose
+        queue_size: 1
+</code></pre>
+</section><section class="with-header-inside" id="describing-contracts:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'describing-contracts' for h3.--><h3 counter-sec="150" counter-sub="2" counter-subsub="3" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="subsub:describing-contracts" label-name="Describing contracts" label-number="150.2.3" label-self="3) " label-what="Subsection" label-what-number="Subsection 150.2.3" label-what-number-name="Subsection 150.2.3 - Describing contracts">Describing contracts</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/describing-contracts" title="Use this link as the permanent link to share with people.">🔗</a></span>
+<p>This is not implemented yet. The idea is to have a place where we can describe
+constraints such as:</p>
+<ul>
+<li>“This topic must publish at least at 30 Hz.”</li>
+<li>“Panic if you didn’t receive a message for 2 seconds.”</li>
+<li>“The maximum latency for this is 0.2 s”</li>
+</ul>
+<p>Then, we can implement all these checks once and for all in a proper way,
+instead of relying on multiple broken implementations</p>
+</section></section><section class="with-header-inside" id="automatic-docs-generation:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'automatic-docs-generation' for h2.--><h2 counter-sec="150" counter-sub="3" github-blob-url="https://github.com/duckietown/Software/blob/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" github-edit-url="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" id="sub:automatic-docs-generation" label-name="Automatic docs generation" label-number="150.3" label-self="" label-what="Section" label-what-number="Section 150.3" label-what-number-name="Section 150.3 - Automatic docs generation">Automatic docs generation</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/Software/edit/andrea-test-unittests/catkin_ws/src/00-infrastructure/easy_node/README.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/automatic-docs-generation" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+<p>Generate the docs for each node using this command:</p>
 <pre class="console"><code><span class="console_sign">$</span><span class="space"> </span><a class="link-different-file" href="introduction_to_ros.html#sub:rosrun"><span class="rosrun program">rosrun</span></a><span class="space"> </span>easy_node<span class="space"> </span>generate_docs.py
 </code></pre><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="what_the_duck.html#what_the_duck:section">next</a></div><div>
