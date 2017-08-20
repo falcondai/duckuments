@@ -3739,21 +3739,21 @@ raspberrypi-kernel-headers<span class="space"> </span>set<span class="space"> </
 <p class="status-XXX"> This is the old version.</p>
 <p>There are two files that are important to edit.</p>
 <p>The file <code>/etc/network/interfaces</code> should look like this:</p>
-<pre class="console"><code>#<span class="space"> </span>interfaces(5)<span class="space"> </span>file<span class="space"> </span>used<span class="space"> </span>by<span class="space"> </span>ifup(8)<span class="space"> </span>and<span class="space"> </span>ifdown(8)
-#<span class="space"> </span>Include<span class="space"> </span>files<span class="space"> </span>from<span class="space"> </span>/etc/network/interfaces.d:
-#source-directory<span class="space"> </span>/etc/network/interfaces.d
+<pre><code># interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+#source-directory /etc/network/interfaces.d
 
-auto<span class="space"> </span>wlan0
+auto wlan0
 
-#<span class="space"> </span>The<span class="space"> </span>loopback<span class="space"> </span>network<span class="space"> </span>interface
-auto<span class="space"> </span>lo
-iface<span class="space"> </span>lo<span class="space"> </span>inet<span class="space"> </span>loopback
+# The loopback network interface
+auto lo
+iface lo inet loopback
 
-#<span class="space"> </span>Wireless<span class="space"> </span>network<span class="space"> </span>interface
-allow-hotplug<span class="space"> </span>wlan0
-iface<span class="space"> </span>wlan0<span class="space"> </span>inet<span class="space"> </span>dhcp
-wpa-conf<span class="space"> </span>/etc/wpa_supplicant/wpa_supplicant.conf
-iface<span class="space"> </span>default<span class="space"> </span>inet<span class="space"> </span>dhcp
+# Wireless network interface
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
 </code></pre>
 <p>The file <code>/etc/wpa_supplicant/wpa_supplicant.conf</code> should look like this:</p>
 <pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev

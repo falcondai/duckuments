@@ -3734,35 +3734,35 @@ Powerpoint vs Keynote, etc.</p>
 <p>Here is an example of a header with all the attributes:</p>
 <div class="generated-figure-wrap" id="code:calib-en-wrap"><figure class="code generated-figure" counter-code="2" id="code:calib-en" label-name="&lt;code&gt;calibration.en.md&lt;/code&gt;" label-number="2" label-self="" label-what="Listing" label-what-number="Listing 2" label-what-number-name="Listing 2 - &lt;code&gt;calibration.en.md&lt;/code&gt;"><div class="figcontent"><div>
 <p></p>
-<pre class="console"><code class="markdown">#<span class="space"> </span>Odometry<span class="space"> </span>calibration<span class="space"> </span>{#odometry-calibration<span class="space"> </span>lang=en-US<span class="space"> </span>type='text/theory'<span class="space"> </span>status=ready}
+<pre><code class="markdown"># Odometry calibration {#odometry-calibration lang=en-US type='text/theory' status=ready}
 
-This<span class="space"> </span>first<span class="space"> </span>paragraph<span class="space"> </span>will<span class="space"> </span>be<span class="space"> </span>used<span class="space"> </span>as<span class="space"> </span>the<span class="space"> </span>"summary"<span class="space"> </span>for<span class="space"> </span>this<span class="space"> </span>text.
+This first paragraph will be used as the "summary" for this text.
 
 </code></pre>
 </div></div><figcaption counter-code="2" label-name="&lt;code&gt;calibration.en.md&lt;/code&gt;" label-number="2" label-self="" label-what="Listing" label-what-number-name="Listing 2 - &lt;code&gt;calibration.en.md&lt;/code&gt;"><code>calibration.en.md</code></figcaption></figure></div>
 <p>And this is how the Italian translation would look like:</p>
 <div class="generated-figure-wrap" id="code:calib-it-wrap"><figure class="code generated-figure" counter-code="3" id="code:calib-it" label-name="&lt;code&gt;calibration.it.md&lt;/code&gt;" label-number="3" label-self="" label-what="Listing" label-what-number="Listing 3" label-what-number-name="Listing 3 - &lt;code&gt;calibration.it.md&lt;/code&gt;"><div class="figcontent"><div>
 <p></p>
-<pre class="console"><code class="markdown">#<span class="space"> </span>Calibrazione<span class="space"> </span>dell'odometria<span class="space"> </span>{#odometry-calibration<span class="space"> </span>lang=it<span class="space"> </span>type='text/theory'<span class="space"> </span>status=draft}
+<pre><code class="markdown"># Calibrazione dell'odometria {#odometry-calibration lang=it type='text/theory' status=draft}
 
-Questo<span class="space"> </span>paragrafo<span class="space"> </span>sarà<span class="space"> </span>usato<span class="space"> </span>come<span class="space"> </span>un<span class="space"> </span>sommario<span class="space"> </span>del<span class="space"> </span>testo.
+Questo paragrafo sarà usato come un sommario del testo.
 
 </code></pre>
 </div></div><figcaption counter-code="3" label-name="&lt;code&gt;calibration.it.md&lt;/code&gt;" label-number="3" label-self="" label-what="Listing" label-what-number-name="Listing 3 - &lt;code&gt;calibration.it.md&lt;/code&gt;"><code>calibration.it.md</code></figcaption></figure></div>
 </section></section><section class="with-header-inside" id="how-to-describe-the-semantic-graphs-of-atoms:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'how-to-describe-the-semantic-graphs-of-atoms' for h2.--><h2 counter-sec="8" counter-sub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/80_knowledge_graph.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/80_knowledge_graph.md" id="sub:how-to-describe-the-semantic-graphs-of-atoms" label-name="How to describe the semantic graphs of atoms" label-number="8.4" label-self="" label-what="Section" label-what-number="Section 8.4" label-what-number-name="Section 8.4 - How to describe the semantic graphs of atoms">How to describe the semantic graphs of atoms</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/80_knowledge_graph.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/how-to-describe-the-semantic-graphs-of-atoms" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>In the text, you describe the semantic graph using tags and IDs.</p>
 <p>In Markdown, you can give IDs to sections using the syntax:</p>
-<pre class="console"><code>#<span class="space"> </span>Setup<span class="space"> </span>step<span class="space"> </span>1<span class="space"> </span><span class="space"> </span>{#setup-step1}
+<pre><code># Setup step 1  {#setup-step1}
 
-This<span class="space"> </span>is<span class="space"> </span>the<span class="space"> </span>first<span class="space"> </span>setup<span class="space"> </span>step.
+This is the first setup step.
 </code></pre>
 <p>Then, when you write the second step, you can add a
 a semantic edge using the following.</p>
-<pre class="console"><code>#<span class="space"> </span>Setup<span class="space"> </span>step<span class="space"> </span>2<span class="space"> </span><span class="space"> </span>{#setup-step2}
+<pre><code># Setup step 2  {#setup-step2}
 
-This<span class="space"> </span>is<span class="space"> </span>the<span class="space"> </span>second<span class="space"> </span>setup<span class="space"> </span>step.
+This is the second setup step.
 
-Requires:<span class="space"> </span>You<span class="space"> </span>have<span class="space"> </span>completed<span class="space"> </span>the<span class="space"> </span>first<span class="space"> </span>step<span class="space"> </span>in<span class="space"> </span>[](#setup-step1).
+Requires: You have completed the first step in [](#setup-step1).
 </code></pre>
 <p>The following table describes the syntax for the different types
 of semantic links:</p>
