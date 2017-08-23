@@ -1089,13 +1089,28 @@ a {
 pre {
   margin-bottom: 0;
 }
-p + pre {
+p + pre,
+pre + p {
   margin-top: 0.7em;
 }
 pre + br + pre {
   margin-top: 0.3em;
   /*border: solid 1px red;*/
   /*float: left; clear: left;*/
+}
+div.example-usage {
+  margin-left: 5em;
+  background-color: #e8ffe8;
+  border-radius: 4px !important;
+  padding: 6pt;
+  margin-top: 1em ;
+  margin-bottom: 1em;
+}
+div.example-usage::before {
+  content: 'example';
+  float: left;
+  margin-left: -5em;
+  font-style: italic;
 }
 p.todo {
   display: inline-block;
@@ -1128,6 +1143,18 @@ p.special-par-question::before {
 }
 p.special-par-question {
   font-style: italic;
+}
+p.special-par-answer::before {
+  content: 'Answer: ';
+  font-weight: bold;
+}
+p.special-par-slack-channel::before {
+  content: 'Slack channel: ';
+  font-weight: bold;
+}
+p.special-par-point-of-contact::before {
+  content: 'Point of contact: ';
+  font-weight: bold;
 }
 p.special-par-assigned::before {
   content: 'Assigned to: ';
@@ -2063,7 +2090,13 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-9f643462"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-36187ad1"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:special-paragraphs"><span class="toc_what">Section</span> <span class="toc_number">7.16</span><span class="toc_sep"> - </span><span class="toc_name">Special paragraphs tags</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:div-environments"><span class="toc_what">Section</span> <span class="toc_number">7.17</span><span class="toc_sep"> - </span><span class="toc_name">Div environments</span></a>
 </li>
 </ul>
 </li>
@@ -3277,7 +3310,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:documentation-112-45-ROS-pkg_name-1fd22642"><span class="toc_what">Section</span> <span class="toc_number">115.6</span><span class="toc_sep"> - </span><span class="toc_name">Documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:guidelines"><span class="toc_what">Section</span> <span class="toc_number">115.7</span><span class="toc_sep"> - </span><span class="toc_name">Guidelines</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:guidelines-112-45-ROS-pkg_name-1fd22642"><span class="toc_what">Section</span> <span class="toc_number">115.7</span><span class="toc_sep"> - </span><span class="toc_name">Guidelines</span></a>
 </li>
 </ul>
 </li>
@@ -4028,7 +4061,7 @@ process[talker-2]: started with pid [15993]
 </code></pre>
 </section></section><section class="with-header-inside" id="documentation-112-45-ROS-pkg_name-1fd22642:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'documentation-112-45-ROS-pkg_name-1fd22642' for h2.--><h2 counter-sec="115" counter-sub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" id="sub:documentation-112-45-ROS-pkg_name-1fd22642" label-name="Documentation" label-number="115.6" label-self="" label-what="Section" label-what-number="Section 115.6" label-what-number-name="Section 115.6 - Documentation">Documentation</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/documentation-112-45-ROS-pkg_name-1fd22642" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>You should document the parameters and the publish/subscribe topic names of each node in your package. The user should not have to look at the source code to figure out how to use the nodes.</p>
-</section></section><section class="with-header-inside" id="guidelines:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'guidelines' for h2.--><h2 counter-sec="115" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" id="sub:guidelines" label-name="Guidelines" label-number="115.7" label-self="" label-what="Section" label-what-number="Section 115.7" label-what-number-name="Section 115.7 - Guidelines">Guidelines</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/guidelines" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="guidelines-112-45-ROS-pkg_name-1fd22642:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'guidelines-112-45-ROS-pkg_name-1fd22642' for h2.--><h2 counter-sec="115" counter-sub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" id="sub:guidelines-112-45-ROS-pkg_name-1fd22642" label-name="Guidelines" label-number="115.7" label-self="" label-what="Section" label-what-number="Section 115.7" label-what-number-name="Section 115.7 - Guidelines">Guidelines</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/45-ROS-pkg_name.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/guidelines-112-45-ROS-pkg_name-1fd22642" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <ul>
 <li>Make sure to put all topics (publish or subscribe) and parameters under the namespace of the node with <code>~</code>. This makes sure that the IO of the node is crystal clear.</li>
 <li>Always include the name of the node in the printouts.</li>
