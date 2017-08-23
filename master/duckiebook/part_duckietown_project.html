@@ -2,6 +2,15 @@
 <title>The Duckietown book</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="JtEkVR2TrLbne9-4YPHmzIqCeagG15FhWCnw1PUis-Q" name="google-site-verification"/>
+<script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-102179470-2', 'auto');
+          ga('send', 'pageview');
+        </script>
 <style type="text/css">/*
 
 
@@ -1105,6 +1114,14 @@ p.special-par-note {
   border-left: solid 3px darkred;
   padding-left: 0.5em;
 }
+p.special-par-maintainer::before {
+  content: 'Maintainer: ';
+  font-weight: bold;
+}
+p.special-par-author::before {
+  content: 'Author: ';
+  font-weight: bold;
+}
 p.special-par-question::before {
   content: 'Q: ';
   font-weight: bold;
@@ -1956,20 +1973,20 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </li>
 </ul>
 </li>
-<li class="toc_li-depth-1 toc_li_for_part link-same-file-inside">
-<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
-<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:complete-list-of-accounts"><span class="toc_what">Section</span> <span class="toc_number">5.1</span><span class="toc_sep"> - </span><span class="toc_name">Complete list of accounts</span></a>
-</li>
-<li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-other-contributors"><span class="toc_what">Section</span> <span class="toc_number">5.2</span><span class="toc_sep"> - </span><span class="toc_name">For other contributors</span></a>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc_li-depth-0 toc_li_for_unknown">
 <a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_contribute.html#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Duckumentation documentation</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
+<li class="toc_li-depth-1 toc_li_for_part">
+<a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:complete-list-of-accounts"><span class="toc_what">Section</span> <span class="toc_number">5.1</span><span class="toc_sep"> - </span><span class="toc_name">Complete list of accounts</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_accounts.html#sub:for-other-contributors"><span class="toc_what">Section</span> <span class="toc_number">5.2</span><span class="toc_sep"> - </span><span class="toc_name">For other contributors</span></a>
+</li>
+</ul>
+</li>
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">6</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
@@ -2010,40 +2027,43 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">7.2</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-symbols"><span class="toc_what">Section</span> <span class="toc_number">7.3</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX symbols</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-equations"><span class="toc_what">Section</span> <span class="toc_number">7.3</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX equations</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:variables-in-command-lines-and-command-output"><span class="toc_what">Section</span> <span class="toc_number">7.4</span><span class="toc_sep"> - </span><span class="toc_name">Variables in command lines and command output</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-symbols"><span class="toc_what">Section</span> <span class="toc_number">7.4</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX symbols</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:character-escapes"><span class="toc_what">Section</span> <span class="toc_number">7.5</span><span class="toc_sep"> - </span><span class="toc_name">Character escapes</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:variables-in-command-lines-and-command-output"><span class="toc_what">Section</span> <span class="toc_number">7.5</span><span class="toc_sep"> - </span><span class="toc_name">Variables in command lines and command output</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:keyboard-keys"><span class="toc_what">Section</span> <span class="toc_number">7.6</span><span class="toc_sep"> - </span><span class="toc_name">Keyboard keys</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:character-escapes"><span class="toc_what">Section</span> <span class="toc_number">7.6</span><span class="toc_sep"> - </span><span class="toc_name">Character escapes</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:figures"><span class="toc_what">Section</span> <span class="toc_number">7.7</span><span class="toc_sep"> - </span><span class="toc_name">Figures</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:keyboard-keys"><span class="toc_what">Section</span> <span class="toc_number">7.7</span><span class="toc_sep"> - </span><span class="toc_name">Keyboard keys</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:subfigures"><span class="toc_what">Section</span> <span class="toc_number">7.8</span><span class="toc_sep"> - </span><span class="toc_name">Subfigures</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:figures"><span class="toc_what">Section</span> <span class="toc_number">7.8</span><span class="toc_sep"> - </span><span class="toc_name">Figures</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:shortcut-for-tables"><span class="toc_what">Section</span> <span class="toc_number">7.9</span><span class="toc_sep"> - </span><span class="toc_name">Shortcut for tables</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:subfigures"><span class="toc_what">Section</span> <span class="toc_number">7.9</span><span class="toc_sep"> - </span><span class="toc_name">Subfigures</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:linking-to-documentation-from-inside-and-outside-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.10</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation from inside and outside the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:shortcut-for-tables"><span class="toc_what">Section</span> <span class="toc_number">7.10</span><span class="toc_sep"> - </span><span class="toc_name">Shortcut for tables</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedding-videos"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Embedding videos</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:linking-to-documentation-from-inside-and-outside-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation from inside and outside the documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:bibliography"><span class="toc_what">Section</span> <span class="toc_number">7.12</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedding-videos"><span class="toc_what">Section</span> <span class="toc_number">7.12</span><span class="toc_sep"> - </span><span class="toc_name">Embedding videos</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.13</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:bibliography"><span class="toc_what">Section</span> <span class="toc_number">7.13</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-ee627f41"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-9f643462"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
 </ul>
 </li>

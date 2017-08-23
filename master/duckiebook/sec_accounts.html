@@ -2,6 +2,15 @@
 <title>The Duckietown book</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="JtEkVR2TrLbne9-4YPHmzIqCeagG15FhWCnw1PUis-Q" name="google-site-verification"/>
+<script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-102179470-2', 'auto');
+          ga('send', 'pageview');
+        </script>
 <style type="text/css">/*
 
 
@@ -1105,6 +1114,14 @@ p.special-par-note {
   border-left: solid 3px darkred;
   padding-left: 0.5em;
 }
+p.special-par-maintainer::before {
+  content: 'Maintainer: ';
+  font-weight: bold;
+}
+p.special-par-author::before {
+  content: 'Author: ';
+  font-weight: bold;
+}
 p.special-par-question::before {
   content: 'Q: ';
   font-weight: bold;
@@ -1887,8 +1904,8 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 \newcommand{\pose}{\boldsymbol{q}} % Pose
 \newcommand{\state}{\boldsymbol{x}} % State
 \newcommand{\statesp}{\mathcal{X}} % State space$$</div><div id="tocdiv"><ul class="toc contains-link-same-file"><p><a href="index.html">Home</a></p>
-<li class="toc_li-depth-0 toc_li_for_unknown contains-link-same-file">
-<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part contains-link-same-file">
+<li class="toc_li-depth-0 toc_li_for_unknown">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_duckietown_project.html#part:duckietown-project"><span class="toc_what">Part</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">The Duckietown project</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="what_is_duckietown.html#sec:what-is-duckietown"><span class="toc_what">Chapter</span> <span class="toc_number">1</span><span class="toc_sep"> - </span><span class="toc_name">What is Duckietown?</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
@@ -1956,6 +1973,10 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc_li-depth-0 toc_li_for_unknown contains-link-same-file">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_contribute.html#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Duckumentation documentation</span></a><ul class="toc_ul-depth-1 toc_ul_for_part contains-link-same-file">
 <li class="toc_li-depth-1 toc_li_for_part link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-same-file" href="#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec contains-link-same-file">
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
@@ -1966,10 +1987,6 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc_li-depth-0 toc_li_for_unknown">
-<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_contribute.html#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Duckumentation documentation</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">6</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
@@ -2010,40 +2027,43 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">7.2</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-symbols"><span class="toc_what">Section</span> <span class="toc_number">7.3</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX symbols</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-equations"><span class="toc_what">Section</span> <span class="toc_number">7.3</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX equations</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:variables-in-command-lines-and-command-output"><span class="toc_what">Section</span> <span class="toc_number">7.4</span><span class="toc_sep"> - </span><span class="toc_name">Variables in command lines and command output</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-symbols"><span class="toc_what">Section</span> <span class="toc_number">7.4</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX symbols</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:character-escapes"><span class="toc_what">Section</span> <span class="toc_number">7.5</span><span class="toc_sep"> - </span><span class="toc_name">Character escapes</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:variables-in-command-lines-and-command-output"><span class="toc_what">Section</span> <span class="toc_number">7.5</span><span class="toc_sep"> - </span><span class="toc_name">Variables in command lines and command output</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:keyboard-keys"><span class="toc_what">Section</span> <span class="toc_number">7.6</span><span class="toc_sep"> - </span><span class="toc_name">Keyboard keys</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:character-escapes"><span class="toc_what">Section</span> <span class="toc_number">7.6</span><span class="toc_sep"> - </span><span class="toc_name">Character escapes</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:figures"><span class="toc_what">Section</span> <span class="toc_number">7.7</span><span class="toc_sep"> - </span><span class="toc_name">Figures</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:keyboard-keys"><span class="toc_what">Section</span> <span class="toc_number">7.7</span><span class="toc_sep"> - </span><span class="toc_name">Keyboard keys</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:subfigures"><span class="toc_what">Section</span> <span class="toc_number">7.8</span><span class="toc_sep"> - </span><span class="toc_name">Subfigures</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:figures"><span class="toc_what">Section</span> <span class="toc_number">7.8</span><span class="toc_sep"> - </span><span class="toc_name">Figures</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:shortcut-for-tables"><span class="toc_what">Section</span> <span class="toc_number">7.9</span><span class="toc_sep"> - </span><span class="toc_name">Shortcut for tables</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:subfigures"><span class="toc_what">Section</span> <span class="toc_number">7.9</span><span class="toc_sep"> - </span><span class="toc_name">Subfigures</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:linking-to-documentation-from-inside-and-outside-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.10</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation from inside and outside the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:shortcut-for-tables"><span class="toc_what">Section</span> <span class="toc_number">7.10</span><span class="toc_sep"> - </span><span class="toc_name">Shortcut for tables</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedding-videos"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Embedding videos</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:linking-to-documentation-from-inside-and-outside-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation from inside and outside the documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:bibliography"><span class="toc_what">Section</span> <span class="toc_number">7.12</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedding-videos"><span class="toc_what">Section</span> <span class="toc_number">7.12</span><span class="toc_sep"> - </span><span class="toc_name">Embedding videos</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.13</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:bibliography"><span class="toc_what">Section</span> <span class="toc_number">7.13</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-ee627f41"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-9f643462"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
 </ul>
 </li>
@@ -3780,7 +3800,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </li>
 </ul>
 </li>
-</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="first_steps.html#first-steps:section">prev</a><section class="with-header-inside main-section-for-page" id="sec:accounts:section" level="sec" next="part:contribute:section" prev="first-steps:section"><h1 counter-sec="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" id="sec:accounts" label-name="Accounts" label-number="5" label-self="" label-what="Chapter" label-what-number="Chapter 5" label-what-number-name="Chapter 5 - Accounts">Accounts</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/accounts" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="with-header-inside" id="complete-list-of-accounts:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'complete-list-of-accounts' for h2.--><h2 counter-sec="5" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" id="sub:complete-list-of-accounts" label-name="Complete list of accounts" label-number="5.1" label-self="" label-what="Section" label-what-number="Section 5.1" label-what-number-name="Section 5.1 - Complete list of accounts">Complete list of accounts</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/complete-list-of-accounts" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+</ul></div><div id="not-toc"><div class="super"><a class="link_prev link-different-file" href="part_contribute.html#part:contribute:section">prev</a><section class="with-header-inside main-section-for-page" id="sec:accounts:section" level="sec" next="sec:contribute-to-docs:section" prev="part:contribute:section"><h1 counter-sec="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" id="sec:accounts" label-name="Accounts" label-number="5" label-self="" label-what="Chapter" label-what-number="Chapter 5" label-what-number-name="Chapter 5 - Accounts">Accounts</h1><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/accounts" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="with-header-inside" id="complete-list-of-accounts:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'complete-list-of-accounts' for h2.--><h2 counter-sec="5" counter-sub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" id="sub:complete-list-of-accounts" label-name="Complete list of accounts" label-number="5.1" label-self="" label-what="Section" label-what-number="Section 5.1" label-what-number-name="Section 5.1 - Complete list of accounts">Complete list of accounts</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/complete-list-of-accounts" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>Currently, Duckietown has the following accounts:</p>
 <ul>
 <li>Github: for source code, and issue tracking;</li>
@@ -3793,13 +3813,13 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <li>We also have a list of addresses, of people signed up on the website, that we didn’t use yet;</li>
 <li>The Facebook page.</li>
 </ul>
-</section></section><section class="with-header-inside" id="for-other-contributors:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'for-other-contributors' for h2.--><h2 counter-sec="5" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" id="sub:for-other-contributors" label-name="For other contributors" label-number="5.2" label-self="" label-what="Section" label-what-number="Section 5.2" label-what-number-name="Section 5.2 - For other contributors">For other contributors</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/10_intro_to_project/90_accounts.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/for-other-contributors" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="for-other-contributors:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'for-other-contributors' for h2.--><h2 counter-sec="5" counter-sub="2" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" id="sub:for-other-contributors" label-name="For other contributors" label-number="5.2" label-self="" label-what="Section" label-what-number="Section 5.2" label-what-number-name="Section 5.2 - For other contributors">For other contributors</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/20_accounts.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/for-other-contributors" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>If you are an international contributor:</p>
 <ul>
 <li>Sign up on Slack, to keep up with the project.</li>
 <li>(optional) Get Github permissions if you do frequent updates to the repositories.</li>
 </ul><div style="display:none">Because of mathjax bug</div>
-</section></section></section><a class="link_next link-different-file" href="part_contribute.html#part:contribute:section">next</a></div><div>
+</section></section></section><a class="link_next link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs:section">next</a></div><div>
 <style>
 #disqus_section {
 margin-top: 1em;

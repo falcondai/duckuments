@@ -2,6 +2,15 @@
 <title>The Duckietown book</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="JtEkVR2TrLbne9-4YPHmzIqCeagG15FhWCnw1PUis-Q" name="google-site-verification"/>
+<script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-102179470-2', 'auto');
+          ga('send', 'pageview');
+        </script>
 <style type="text/css">/*
 
 
@@ -1105,6 +1114,14 @@ p.special-par-note {
   border-left: solid 3px darkred;
   padding-left: 0.5em;
 }
+p.special-par-maintainer::before {
+  content: 'Maintainer: ';
+  font-weight: bold;
+}
+p.special-par-author::before {
+  content: 'Author: ';
+  font-weight: bold;
+}
 p.special-par-question::before {
   content: 'Q: ';
   font-weight: bold;
@@ -1956,6 +1973,10 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc_li-depth-0 toc_li_for_unknown">
+<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_contribute.html#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Duckumentation documentation</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_accounts.html#sec:accounts"><span class="toc_what">Chapter</span> <span class="toc_number">5</span><span class="toc_sep"> - </span><span class="toc_name">Accounts</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
@@ -1966,10 +1987,6 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc_li-depth-0 toc_li_for_unknown">
-<a class="toc_link toc_link-depth-1 number_name toc_a_for_part link-different-file" href="part_contribute.html#part:contribute"><span class="toc_what">Part</span> <span class="toc_number">2</span><span class="toc_sep"> - </span><span class="toc_name">Duckumentation documentation</span></a><ul class="toc_ul-depth-1 toc_ul_for_part">
 <li class="toc_li-depth-1 toc_li_for_part">
 <a class="toc_link toc_link-depth-3 number_name toc_a_for_sec link-different-file" href="sec_contribute_to_docs.html#sec:contribute-to-docs"><span class="toc_what">Chapter</span> <span class="toc_number">6</span><span class="toc_sep"> - </span><span class="toc_name">Contributing to the documentation</span></a><ul class="toc_ul-depth-3 toc_ul_for_sec">
 <li class="toc_li-depth-3 toc_li_for_sec">
@@ -2010,40 +2027,43 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedded-latex"><span class="toc_what">Section</span> <span class="toc_number">7.2</span><span class="toc_sep"> - </span><span class="toc_name">Embedded LaTeX</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-symbols"><span class="toc_what">Section</span> <span class="toc_number">7.3</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX symbols</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-equations"><span class="toc_what">Section</span> <span class="toc_number">7.3</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX equations</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:variables-in-command-lines-and-command-output"><span class="toc_what">Section</span> <span class="toc_number">7.4</span><span class="toc_sep"> - </span><span class="toc_name">Variables in command lines and command output</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:latex-symbols"><span class="toc_what">Section</span> <span class="toc_number">7.4</span><span class="toc_sep"> - </span><span class="toc_name">LaTeX symbols</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:character-escapes"><span class="toc_what">Section</span> <span class="toc_number">7.5</span><span class="toc_sep"> - </span><span class="toc_name">Character escapes</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:variables-in-command-lines-and-command-output"><span class="toc_what">Section</span> <span class="toc_number">7.5</span><span class="toc_sep"> - </span><span class="toc_name">Variables in command lines and command output</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:keyboard-keys"><span class="toc_what">Section</span> <span class="toc_number">7.6</span><span class="toc_sep"> - </span><span class="toc_name">Keyboard keys</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:character-escapes"><span class="toc_what">Section</span> <span class="toc_number">7.6</span><span class="toc_sep"> - </span><span class="toc_name">Character escapes</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:figures"><span class="toc_what">Section</span> <span class="toc_number">7.7</span><span class="toc_sep"> - </span><span class="toc_name">Figures</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:keyboard-keys"><span class="toc_what">Section</span> <span class="toc_number">7.7</span><span class="toc_sep"> - </span><span class="toc_name">Keyboard keys</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:subfigures"><span class="toc_what">Section</span> <span class="toc_number">7.8</span><span class="toc_sep"> - </span><span class="toc_name">Subfigures</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:figures"><span class="toc_what">Section</span> <span class="toc_number">7.8</span><span class="toc_sep"> - </span><span class="toc_name">Figures</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:shortcut-for-tables"><span class="toc_what">Section</span> <span class="toc_number">7.9</span><span class="toc_sep"> - </span><span class="toc_name">Shortcut for tables</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:subfigures"><span class="toc_what">Section</span> <span class="toc_number">7.9</span><span class="toc_sep"> - </span><span class="toc_name">Subfigures</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:linking-to-documentation-from-inside-and-outside-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.10</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation from inside and outside the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:shortcut-for-tables"><span class="toc_what">Section</span> <span class="toc_number">7.10</span><span class="toc_sep"> - </span><span class="toc_name">Shortcut for tables</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedding-videos"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Embedding videos</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:linking-to-documentation-from-inside-and-outside-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation from inside and outside the documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:bibliography"><span class="toc_what">Section</span> <span class="toc_number">7.12</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:embedding-videos"><span class="toc_what">Section</span> <span class="toc_number">7.12</span><span class="toc_sep"> - </span><span class="toc_name">Embedding videos</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.13</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:bibliography"><span class="toc_what">Section</span> <span class="toc_number">7.13</span><span class="toc_sep"> - </span><span class="toc_name">Bibliography</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-ee627f41"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
+</li>
+<li class="toc_li-depth-3 toc_li_for_sec">
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-different-file" href="sec_documentation_manual.html#sub:comments-009-65_docs_features-9f643462"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
 </ul>
 </li>
@@ -3795,15 +3815,17 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 therefore you create programs with longer lines.</p>
 <p>Do not go and try to shorten the lines; the line length is just the symptom.
 Rather, ask somebody to take a look at the code and tell you how to make it better.</p>
-</section><section class="with-header-inside" id="encoding-lines:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'encoding-lines' for h3.--><h3 counter-sec="112" counter-sub="1" counter-subsub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:encoding-lines" label-name="Encoding lines" label-number="112.1.4" label-self="4) " label-what="Subsection" label-what-number="Subsection 112.1.4" label-what-number-name="Subsection 112.1.4 - Encoding lines">Encoding lines</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/encoding-lines" title="Use this link as the permanent link to share with people.">🔗</a></span>
-<p>All files have an encoding declared.</p>
+</section><section class="with-header-inside" id="spaces_1:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'spaces_1' for h3.--><h3 counter-sec="112" counter-sub="1" counter-subsub="4" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:spaces_1" label-name="Spaces" label-number="112.1.4" label-self="4) " label-what="Subsection" label-what-number="Subsection 112.1.4" label-what-number-name="Subsection 112.1.4 - Spaces">Spaces</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/spaces_1" title="Use this link as the permanent link to share with people.">🔗</a></span>
+<p>Indentation is 4 spaces.</p>
+</section><section class="with-header-inside" id="the-encoding-line:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'the-encoding-line' for h3.--><h3 counter-sec="112" counter-sub="1" counter-subsub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:the-encoding-line" label-name="The encoding line" label-number="112.1.5" label-self="5) " label-what="Subsection" label-what-number="Subsection 112.1.5" label-what-number-name="Subsection 112.1.5 - The encoding line">The encoding line</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/the-encoding-line" title="Use this link as the permanent link to share with people.">🔗</a></span>
+<p>All files must have an encoding declared, and this encoding must be <code>utf-8</code>:</p>
 <pre><code># -*- coding: utf-8 -*-
 </code></pre>
-</section><section class="with-header-inside" id="sha-bang-lines:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'sha-bang-lines' for h3.--><h3 counter-sec="112" counter-sub="1" counter-subsub="5" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:sha-bang-lines" label-name="Sha-bang lines" label-number="112.1.5" label-self="5) " label-what="Subsection" label-what-number="Subsection 112.1.5" label-what-number-name="Subsection 112.1.5 - Sha-bang lines">Sha-bang lines</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/sha-bang-lines" title="Use this link as the permanent link to share with people.">🔗</a></span>
+</section><section class="with-header-inside" id="sha-bang-lines:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'sha-bang-lines' for h3.--><h3 counter-sec="112" counter-sub="1" counter-subsub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:sha-bang-lines" label-name="Sha-bang lines" label-number="112.1.6" label-self="6) " label-what="Subsection" label-what-number="Subsection 112.1.6" label-what-number-name="Subsection 112.1.6 - Sha-bang lines">Sha-bang lines</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/sha-bang-lines" title="Use this link as the permanent link to share with people.">🔗</a></span>
 <p>Executable files start with:</p>
 <pre><code>#!/usr/bin/env python
 </code></pre>
-</section><section class="with-header-inside" id="comments-109-07_code_conventions-200166e3:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'comments-109-07_code_conventions-200166e3' for h3.--><h3 counter-sec="112" counter-sub="1" counter-subsub="6" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:comments-109-07_code_conventions-200166e3" label-name="Comments" label-number="112.1.6" label-self="6) " label-what="Subsection" label-what-number="Subsection 112.1.6" label-what-number-name="Subsection 112.1.6 - Comments">Comments</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/comments-109-07_code_conventions-200166e3" title="Use this link as the permanent link to share with people.">🔗</a></span>
+</section><section class="with-header-inside" id="comments-109-07_code_conventions-ba0c056a:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'comments-109-07_code_conventions-ba0c056a' for h3.--><h3 counter-sec="112" counter-sub="1" counter-subsub="7" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:comments-109-07_code_conventions-ba0c056a" label-name="Comments" label-number="112.1.7" label-self="7) " label-what="Subsection" label-what-number="Subsection 112.1.7" label-what-number-name="Subsection 112.1.7 - Comments">Comments</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/comments-109-07_code_conventions-ba0c056a" title="Use this link as the permanent link to share with people.">🔗</a></span>
 <p>Comments refer to the next line.</p>
 <p>Comments, bad:</p>
 <pre><code>from std_msgs.msg import String # This is my long comment
@@ -3829,6 +3851,10 @@ compact = True
 
 if __name__ == '__main__':
     wrap_script_entry_point(summary)
+</code></pre>
+</section><section class="with-header-inside" id="imports:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'imports' for h3.--><h3 counter-sec="112" counter-sub="4" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" id="subsub:imports" label-name="Imports" label-number="112.4.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 112.4.1" label-what-number-name="Subsection 112.4.1 - Imports">Imports</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_70_software_devel_guide/07_code_conventions.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/imports" title="Use this link as the permanent link to share with people.">🔗</a></span>
+<p>Do not do a star import, like the following:</p>
+<pre><code>from rostest_example.Quacker import *
 </code></pre><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="configuration.html#configuration:section">next</a></div><div>
 <style>
