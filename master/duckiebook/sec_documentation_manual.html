@@ -2078,7 +2078,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:shortcut-for-tables"><span class="toc_what">Section</span> <span class="toc_number">7.10</span><span class="toc_sep"> - </span><span class="toc_name">Shortcut for tables</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:linking-to-documentation-from-inside-and-outside-the-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation from inside and outside the documentation</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:linking-to-documentation"><span class="toc_what">Section</span> <span class="toc_number">7.11</span><span class="toc_sep"> - </span><span class="toc_name">Linking to documentation</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:embedding-videos"><span class="toc_what">Section</span> <span class="toc_number">7.12</span><span class="toc_sep"> - </span><span class="toc_name">Embedding videos</span></a>
@@ -2090,7 +2090,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:comments-009-65_docs_features-4b625b8d"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:comments-009-65_docs_features-e6921b62"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:special-paragraphs"><span class="toc_what">Section</span> <span class="toc_number">7.16</span><span class="toc_sep"> - </span><span class="toc_name">Special paragraphs tags</span></a>
@@ -3905,27 +3905,51 @@ and the label prefix that they need.</p>
 </tbody></table>
 </div></div></figure></div>
 <p>Examples of all environments follow.</p>
+<div class="example-usage">
+<pre><code>&lt;div id='def:lorem' class="definition latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
+</code></pre>
 <div class="definition latex_env" counter-def="1" id="def:lorem" label-name="" label-number="1" label-self="" label-what="Definition" label-what-number="Definition 1" label-what-number-name="Definition 1">
 <p>Lorem</p>
 </div>
+<pre><code>&lt;div id='prop:lorem' class="proposition latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
+</code></pre>
 <div class="proposition latex_env" counter-prop="2" id="prop:lorem" label-name="" label-number="2" label-self="" label-what="Proposition" label-what-number="Proposition 2" label-what-number-name="Proposition 2">
 <p>Lorem</p>
 </div>
+<pre><code>&lt;div id='rem:lorem' class="remark latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
+</code></pre>
 <div class="remark latex_env" counter-rem="1" id="rem:lorem" label-name="" label-number="1" label-self="" label-what="Remark" label-what-number="Remark 1" label-what-number-name="Remark 1">
 <p>Lorem</p>
 </div>
+<pre><code>&lt;div id='prob:lorem' class="problem latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
+</code></pre>
 <div class="problem latex_env" counter-prob="1" id="prob:lorem" label-name="" label-number="1" label-self="" label-what="Problem" label-what-number="Problem 1" label-what-number-name="Problem 1">
 <p>Lorem</p>
 </div>
+<pre><code>&lt;div id='exa:lorem' class="example latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
+</code></pre>
 <div class="example latex_env" counter-exa="1" id="exa:lorem" label-name="" label-number="1" label-self="" label-what="Example" label-what-number="Example 1" label-what-number-name="Example 1">
 <p>Lorem</p>
 </div>
+<pre><code>&lt;div id='thm:lorem' class="theorem latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
+</code></pre>
 <div class="theorem latex_env" counter-thm="1" id="thm:lorem" label-name="" label-number="1" label-self="" label-what="Theorem" label-what-number="Theorem 1" label-what-number-name="Theorem 1">
 <p>Lorem</p>
 </div>
+<pre><code>&lt;div id='lem:lorem' class="lemma latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
+</code></pre>
 <div class="lemma latex_env" counter-lem="1" id="lem:lorem" label-name="" label-number="1" label-self="" label-what="Lemma" label-what-number="Lemma 1" label-what-number-name="Lemma 1">
 <p>Lorem</p>
 </div>
+<pre><code>I can also refer to all of them:
+[](#def:lorem),
+[](#prop:lorem),
+[](#rem:lorem),
+[](#prob:lorem),
+[](#exa:lorem),
+[](#thm:lorem),
+[](#lem:lorem).
+</code></pre>
 <p>I can also refer to all of them:
 <a class="link-same-file" href="#def:lorem"><span class="reflabel">Definition 1</span></a>,
 <a class="link-same-file" href="#prop:lorem"><span class="reflabel">Proposition 2</span></a>,
@@ -3933,7 +3957,8 @@ and the label prefix that they need.</p>
 <a class="link-same-file" href="#prob:lorem"><span class="reflabel">Problem 1</span></a>,
 <a class="link-same-file" href="#exa:lorem"><span class="reflabel">Example 1</span></a>,
 <a class="link-same-file" href="#thm:lorem"><span class="reflabel">Theorem 1</span></a>,
-<a class="link-same-file" href="#lem:lorem"><span class="reflabel">Lemma 1</span></a>,</p>
+<a class="link-same-file" href="#lem:lorem"><span class="reflabel">Lemma 1</span></a>.</p>
+</div>
 </section></section><section class="with-header-inside" id="latex-equations:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'latex-equations' for h2.--><h2 counter-sec="7" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:latex-equations" label-name="LaTeX equations" label-number="7.3" label-self="" label-what="Section" label-what-number="Section 7.3" label-what-number-name="Section 7.3 - LaTeX equations">LaTeX equations</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/latex-equations" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>We can refer to equations, such as \eqref{eq:one}:</p>
 <p>\begin{equation}
@@ -4158,7 +4183,7 @@ are expanded in tables with 2, 3, 4 or 5 columns.</p>
 </tr>
 </tbody></table>
 </div></div></figure></div>
-</section></section><section class="with-header-inside" id="linking-to-documentation-from-inside-and-outside-the-documentation:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'linking-to-documentation-from-inside-and-outside-the-documentation' for h2.--><h2 counter-sec="7" counter-sub="11" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:linking-to-documentation-from-inside-and-outside-the-documentation" label-name="Linking to documentation from inside and outside the documentation" label-number="7.11" label-self="" label-what="Section" label-what-number="Section 7.11" label-what-number-name="Section 7.11 - Linking to documentation from inside and outside the documentation">Linking to documentation from inside and outside the documentation</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/linking-to-documentation-from-inside-and-outside-the-documentation" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="with-header-inside" id="establishing:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'establishing' for h3.--><h3 counter-sec="7" counter-sub="11" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="subsub:establishing" label-name="Establishing names of headers" label-number="7.11.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 7.11.1" label-what-number-name="Subsection 7.11.1 - Establishing names of headers">Establishing names of headers</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/establishing" title="Use this link as the permanent link to share with people.">🔗</a></span>
+</section></section><section class="with-header-inside" id="linking-to-documentation:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'linking-to-documentation' for h2.--><h2 counter-sec="7" counter-sub="11" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:linking-to-documentation" label-name="Linking to documentation" label-number="7.11" label-self="" label-what="Section" label-what-number="Section 7.11" label-what-number-name="Section 7.11 - Linking to documentation">Linking to documentation</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/linking-to-documentation" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="with-header-inside" id="establishing:section" level="subsub"><!--Warning: Adding prefix 'subsub' to current id 'establishing' for h3.--><h3 counter-sec="7" counter-sub="11" counter-subsub="1" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="subsub:establishing" label-name="Establishing names of headers" label-number="7.11.1" label-self="1) " label-what="Subsection" label-what-number="Subsection 7.11.1" label-what-number-name="Subsection 7.11.1 - Establishing names of headers">Establishing names of headers</h3><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/establishing" title="Use this link as the permanent link to share with people.">🔗</a></span>
 <p>You give IDs to headers using the format:</p>
 <pre><code>### <span class="placeholder">header title</span> {#<span class="placeholder">topic ID</span>}
 </code></pre>
@@ -4276,7 +4301,7 @@ by the <code>src</code> attribute is moved at the place of the tag.</p>
 
 &lt;move-here src='#package-node-autogenerated'&gt;
 </code></pre>
-</section></section><section class="with-header-inside" id="comments-009-65_docs_features-4b625b8d:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'comments-009-65_docs_features-4b625b8d' for h2.--><h2 counter-sec="7" counter-sub="15" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:comments-009-65_docs_features-4b625b8d" label-name="Comments" label-number="7.15" label-self="" label-what="Section" label-what-number="Section 7.15" label-what-number-name="Section 7.15 - Comments">Comments</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/comments-009-65_docs_features-4b625b8d" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="comments-009-65_docs_features-e6921b62:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'comments-009-65_docs_features-e6921b62' for h2.--><h2 counter-sec="7" counter-sub="15" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:comments-009-65_docs_features-e6921b62" label-name="Comments" label-number="7.15" label-self="" label-what="Section" label-what-number="Section 7.15" label-what-number-name="Section 7.15 - Comments">Comments</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/comments-009-65_docs_features-e6921b62" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>You can insert comments using the HTML syntax for comments:
 any text between “<code>&lt;!–</code>” and “<code>–&gt;</code>” is ignored.</p>
 <p></p><pre trim="1">
@@ -4416,7 +4441,6 @@ List of requirements at the beginning of setup chapter.
 <p>List of requirements at the beginning of setup chapter.</p>
 </div>
 </section></section><section class="with-header-inside" id="referring-to-github-files:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'referring-to-github-files' for h2.--><h2 counter-sec="7" counter-sub="18" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:referring-to-github-files" label-name="Referring to Github files" label-number="7.18" label-self="" label-what="Section" label-what-number="Section 7.18" label-what-number-name="Section 7.18 - Referring to Github files">Referring to Github files</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/referring-to-github-files" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
-<div class="special-par-note-wrap"><p class="special-par-note">This is not implemented yet.</p></div>
 <p>You can refer to files in the repository by using:</p>
 <pre><code>See [this file](github:org=<span class="placeholder">org</span>,repo=<span class="placeholder">repo</span>,path=<span class="placeholder">path</span>,branch=<span class="placeholder">branch</span>).
 </code></pre>
@@ -4428,24 +4452,24 @@ List of requirements at the beginning of setup chapter.
 <li><code>branch</code> (optional) the repository branch; defaults to <code>master</code>;</li>
 <li><code>from_text</code> (optional);</li>
 <li><code>from_line</code> (optional);</li>
-<li><code>to_text</code> (optional); </li>
+<li><code>to_text</code> (optional);</li>
 <li><code>to_line</code> (optional).</li>
 </ul>
 <p>For example, you can <a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L20">refer to this exact line</a> by using:</p>
 <pre><code>See [this file](github:org=duckietown,repo=duckuments,path=65_docs_features.md,from_text=For%20example)
 </code></pre>
-<p>You can also <a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L738-L745">refer to a range</a>.</p>
+<p>You can also <a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L763-L770">refer to a range</a>.</p>
 <p>You can copy the contents of a file by using the tag <code>display-file</code>:</p>
 <pre><code>&lt;display-file src="github:path=65_docs_features.md"/&gt;
 </code></pre>
-<p></p><div class="generated-figure-wrap" id="code:65_docs_features.md-738-745-wrap"><figure class="code generated-figure" counter-code="2" id="code:65_docs_features.md-738-745" label-name='&lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L738-L745"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;' label-number="2" label-self="" label-what="Listing" label-what-number="Listing 2" label-what-number-name='Listing 2 - &lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L738-L745"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;'><div class="figcontent"><div><pre><code>
+<p></p><div class="generated-figure-wrap" id="code:65_docs_features.md-763-770-wrap"><figure class="code generated-figure" counter-code="2" id="code:65_docs_features.md-763-770" label-name='&lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L763-L770"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;' label-number="2" label-self="" label-what="Listing" label-what-number="Listing 2" label-what-number-name='Listing 2 - &lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L763-L770"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;'><div class="figcontent"><div><pre><code>
 [line]: github:org=duckietown,path=65_docs_features.md,repo=duckuments,from_text=For%20example
 
 
     See [this file](github:org=duckietown,repo=duckuments,path=65_docs_features.md,from_text=For%20example)
 
 [interval]: github:org=duckietown,path=65_docs_features.md,repo=duckuments,from_text=exact%20line,to_text=display-file
-</code></pre></div></div><figcaption counter-code="2" label-name='&lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L738-L745"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;' label-number="2" label-self="" label-what="Listing" label-what-number-name='Listing 2 - &lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L738-L745"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;'><a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L738-L745"><code>65_docs_features.md</code></a></figcaption></figure></div><div style="display:none">Because of mathjax bug</div>
+</code></pre></div></div><figcaption counter-code="2" label-name='&lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L763-L770"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;' label-number="2" label-self="" label-what="Listing" label-what-number-name='Listing 2 - &lt;a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L763-L770"&gt;&lt;code&gt;65_docs_features.md&lt;/code&gt;&lt;/a&gt;'><a href="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md#L763-L770"><code>65_docs_features.md</code></a></figcaption></figure></div><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="documentation_style_guide.html#documentation-style-guide:section">next</a></div><div>
 <style>
 #disqus_section {
