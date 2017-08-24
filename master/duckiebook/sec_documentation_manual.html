@@ -2090,7 +2090,7 @@ We are preparing things for Fall 2017. Please pardon our dust as we prepare the 
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:move-here"><span class="toc_what">Section</span> <span class="toc_number">7.14</span><span class="toc_sep"> - </span><span class="toc_name"><code>move-here</code> tag</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
-<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:comments-009-65_docs_features-b26732ae"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
+<a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:comments-009-65_docs_features-2b51c292"><span class="toc_what">Section</span> <span class="toc_number">7.15</span><span class="toc_sep"> - </span><span class="toc_name">Comments</span></a>
 </li>
 <li class="toc_li-depth-3 toc_li_for_sec link-same-file-inside link-same-file-direct-parent contains-link-same-file">
 <a class="toc_link toc_link-depth-4 number_name toc_a_for_sub link-same-file" href="#sub:special-paragraphs"><span class="toc_what">Section</span> <span class="toc_number">7.16</span><span class="toc_sep"> - </span><span class="toc_name">Special paragraphs tags</span></a>
@@ -4180,38 +4180,45 @@ and the label prefix that they need.</p>
 </div></div></figure></div>
 <p>Examples of all environments follow.</p>
 <div class="example-usage">
-<pre><code>&lt;div id='def:lorem' class="definition latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
-</code></pre>
-<div class="definition latex_env" counter-def="1" id="def:lorem" label-name="" label-number="1" label-self="" label-what="Definition" label-what-number="Definition 1" label-what-number-name="Definition 1">
-<p>Lorem</p>
-</div>
-<pre><code>&lt;div id='prop:lorem' class="proposition latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
-</code></pre>
+<p></p><pre><code>\begin{definition}   \label{def:lorem}
+Lorem
+\end{definition}</code></pre>
+<p>\begin{definition}    \endlabel{def:lorem}
+Lorem
+\end{definition}</p>
+<p></p><pre><code>\begin{proposition}   \label{prop:lorem}
+Lorem
+\end{proposition}</code></pre>
 <div class="proposition latex_env" counter-prop="2" id="prop:lorem" label-name="" label-number="2" label-self="" label-what="Proposition" label-what-number="Proposition 2" label-what-number-name="Proposition 2">
 <p>Lorem</p>
 </div>
-<pre><code>&lt;div id='rem:lorem' class="remark latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
-</code></pre>
+<p></p><pre><code>\begin{remark}   \label{rem:lorem}
+Lorem
+\end{remark}</code></pre>
 <div class="remark latex_env" counter-rem="1" id="rem:lorem" label-name="" label-number="1" label-self="" label-what="Remark" label-what-number="Remark 1" label-what-number-name="Remark 1">
 <p>Lorem</p>
 </div>
-<pre><code>&lt;div id='prob:lorem' class="problem latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
-</code></pre>
+<p></p><pre><code>\begin{problem}    \endlabel{prob:lorem}
+Lorem
+\end{problem}</code></pre>
 <div class="problem latex_env" counter-prob="1" id="prob:lorem" label-name="" label-number="1" label-self="" label-what="Problem" label-what-number="Problem 1" label-what-number-name="Problem 1">
 <p>Lorem</p>
 </div>
-<pre><code>&lt;div id='exa:lorem' class="example latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
-</code></pre>
+<p></p><pre><code>\begin{example}   \label{exa:lorem}
+Lorem
+\end{example}</code></pre>
 <div class="example latex_env" counter-exa="1" id="exa:lorem" label-name="" label-number="1" label-self="" label-what="Example" label-what-number="Example 1" label-what-number-name="Example 1">
 <p>Lorem</p>
 </div>
-<pre><code>&lt;div id='thm:lorem' class="theorem latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
-</code></pre>
+<p></p><pre><code>\begin{theorem}   \label{thm:lorem}
+Lorem
+\end{theorem}</code></pre>
 <div class="theorem latex_env" counter-thm="1" id="thm:lorem" label-name="" label-number="1" label-self="" label-what="Theorem" label-what-number="Theorem 1" label-what-number-name="Theorem 1">
 <p>Lorem</p>
 </div>
-<pre><code>&lt;div id='lem:lorem' class="lemma latex_env" markdown="1"&gt;Lorem&lt;/div&gt;
-</code></pre>
+<p></p><pre><code>\begin{lemma}   \label{lem:lorem}
+Lorem
+\end{lemma}</code></pre>
 <div class="lemma latex_env" counter-lem="1" id="lem:lorem" label-name="" label-number="1" label-self="" label-what="Lemma" label-what-number="Lemma 1" label-what-number-name="Lemma 1">
 <p>Lorem</p>
 </div>
@@ -4225,13 +4232,13 @@ and the label prefix that they need.</p>
 [](#lem:lorem).
 </code></pre>
 <p>I can also refer to all of them:
-<a class="link-same-file" href="#def:lorem"><span class="reflabel">Definition 1</span></a>,
+<a class="errored" href="#def:lorem"></a></p><pre class="error">Cannot find def:lorem</pre><span class="href-invalid href-invalid-missing">#def:lorem not found, and multiple matches for heuristics (['rem:lorem', 'lem:lorem', 'prob:lorem', 'prop:lorem', 'exa:lorem', 'thm:lorem'])</span>,
 <a class="link-same-file" href="#prop:lorem"><span class="reflabel">Proposition 2</span></a>,
 <a class="link-same-file" href="#rem:lorem"><span class="reflabel">Remark 1</span></a>,
 <a class="link-same-file" href="#prob:lorem"><span class="reflabel">Problem 1</span></a>,
 <a class="link-same-file" href="#exa:lorem"><span class="reflabel">Example 1</span></a>,
 <a class="link-same-file" href="#thm:lorem"><span class="reflabel">Theorem 1</span></a>,
-<a class="link-same-file" href="#lem:lorem"><span class="reflabel">Lemma 1</span></a>.</p>
+<a class="link-same-file" href="#lem:lorem"><span class="reflabel">Lemma 1</span></a>.
 </div>
 </section></section><section class="with-header-inside" id="latex-equations:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'latex-equations' for h2.--><h2 counter-sec="7" counter-sub="3" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:latex-equations" label-name="LaTeX equations" label-number="7.3" label-self="" label-what="Section" label-what-number="Section 7.3" label-what-number-name="Section 7.3 - LaTeX equations">LaTeX equations</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/latex-equations" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>We can refer to equations, such as \eqref{eq:one}:</p>
@@ -4248,14 +4255,14 @@ and the label prefix that they need.</p>
 We can refer to equations, such as \eqref{eq:one}:
 
 \<span></span>begin{equation}
-    2a = a + a          \label{eq:one}
+    2a = a + a          \endlabel{eq:one}
 \<span></span>end{equation}
 
 This uses `align` and contains  \eqref{eq:two} and \eqref{eq:three}.
 
 \<span></span>begin{align}
-    a &amp;= b       \label{eq:two} \\
-      &amp;= c       \label{eq:three}
+    a &amp;= b       \endlabel{eq:two} \\
+      &amp;= c       \endlabel{eq:three}
 \<span></span>end{align}
 </code>
 </pre>
@@ -4575,7 +4582,7 @@ by the <code>src</code> attribute is moved at the place of the tag.</p>
 
 &lt;move-here src='#package-node-autogenerated'&gt;
 </code></pre>
-</section></section><section class="with-header-inside" id="comments-009-65_docs_features-b26732ae:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'comments-009-65_docs_features-b26732ae' for h2.--><h2 counter-sec="7" counter-sub="15" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:comments-009-65_docs_features-b26732ae" label-name="Comments" label-number="7.15" label-self="" label-what="Section" label-what-number="Section 7.15" label-what-number-name="Section 7.15 - Comments">Comments</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/comments-009-65_docs_features-b26732ae" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
+</section></section><section class="with-header-inside" id="comments-009-65_docs_features-2b51c292:section" level="sub"><!--Warning: Adding prefix 'sub' to current id 'comments-009-65_docs_features-2b51c292' for h2.--><h2 counter-sec="7" counter-sub="15" github-blob-url="https://github.com/duckietown/duckuments/blob/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" github-edit-url="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" id="sub:comments-009-65_docs_features-2b51c292" label-name="Comments" label-number="7.15" label-self="" label-what="Section" label-what-number="Section 7.15" label-what-number-name="Section 7.15 - Comments">Comments</h2><span class="github-etc-links"><a class="github-edit-link" href="https://github.com/duckietown/duckuments/edit/master/docs/atoms_10_duckietown_meta/70_contrib/65_docs_features.md" title="Click this link to directly edit on the repository.">✎</a><a class="purl-link" href="http://purl.org/dth/comments-009-65_docs_features-2b51c292" title="Use this link as the permanent link to share with people.">🔗</a></span><section class="without-header-inside" level="subsub">
 <p>You can insert comments using the HTML syntax for comments:
 any text between “<code>&lt;!–</code>” and “<code>–&gt;</code>” is ignored.</p>
 <p></p><pre trim="1">
@@ -4734,7 +4741,7 @@ List of requirements at the beginning of setup chapter.
 <li><code>from_text</code> (optional): reference the first line containing the text;</li>
 <li><code>from_line</code> (optional): reference the line by number;</li>
 </ul>
-<p>For example, you can refer to <a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L9">the line containing “Initialize”</a>
+<p>For example, you can refer to <a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L12">the line containing “Initialize”</a>
 of <code>pkg_name/src/subscriber_node.py</code> by using the following syntax:</p>
 <pre><code>For example, you can refer to [the line containing "Initialize"][link2]
 of `pkg_name/src/subscriber_node.py` by using the following syntax:
@@ -4748,7 +4755,7 @@ of `pkg_name/src/subscriber_node.py` by using the following syntax:
 </ul>
 <p>You cannot give <code>from_text</code> and <code>from_line</code> at the same time.
 You cannot give a <code>to_...</code> without the <code>from_...</code>.</p>
-<p>For example, <a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L9-L14">this link refers to a range of lines</a>: click it to see how Github highlights the lines from “Initialize” to “spin”.</p>
+<p>For example, <a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L12-L19">this link refers to a range of lines</a>: click it to see how Github highlights the lines from “Initialize” to “spin”.</p>
 <p>This is the source of the previous paragraph:</p>
 <pre><code>For example, [this link refers to a range of lines][interval]: click it to see how Github highlights the lines from "Initialize" to "spin".
 
@@ -4761,31 +4768,38 @@ You cannot give a <code>to_...</code> without the <code>from_...</code>.</p>
 <pre><code>&lt;display-file src="github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py"/&gt;
 </code></pre>
 <p>and the result is the following automatically generated listing:</p>
-<p></p><div class="generated-figure-wrap" id="code:subscriber_node.py-0-14-wrap"><figure class="code generated-figure" counter-code="2" id="code:subscriber_node.py-0-14" label-name='&lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;' label-number="2" label-self="" label-what="Listing" label-what-number="Listing 2" label-what-number-name='Listing 2 - &lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;'><div class="figcontent"><div><pre><code>#!/usr/bin/env python
+<p></p><div class="generated-figure-wrap" id="code:subscriber_node.py-0-19-wrap"><figure class="code generated-figure" counter-code="2" id="code:subscriber_node.py-0-19" label-name='&lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;' label-number="2" label-self="" label-what="Listing" label-what-number="Listing 2" label-what-number-name='Listing 2 - &lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;'><div class="figcontent"><div><pre><code>#!/usr/bin/env python
 import rospy
-from std_msgs.msg import String #Imports msg
+
+# Imports message type
+from std_msgs.msg import String 
 
 # Define callback function
 def callback(msg):
-    rospy.loginfo("I heard: %s" %(msg.data))
+    s = "I heard: %s" % (msg.data)
+    rospy.loginfo(s)
 
 # Initialize the node with rospy
 rospy.init_node('subscriber_node', anonymous=False)
+
 # Create subscriber
 subscriber = rospy.Subscriber("topic", String, callback)
 
-rospy.spin() #Keeps the script for exiting
+# Runs continuously until interrupted
+rospy.spin() 
 </code></pre></div></div><figcaption counter-code="2" label-name='&lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;' label-number="2" label-self="" label-what="Listing" label-what-number-name='Listing 2 - &lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;'><a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py"><code>subscriber_node.py</code></a></figcaption></figure></div>
 <p>If you use the <code>from_text</code> and <code>to_text</code> (or <code>from_line</code> and <code>to_line</code>), you can actually display part of a file. For example:</p>
 <pre><code>&lt;display-file src="github:org=duckietown,repo=Software,path=pkg_name/src/subscriber_node.py,from_text=Initialize,to_text=spin"/&gt;
 </code></pre>
 <p>creates the following automatically generated listing:</p>
-<p></p><div class="generated-figure-wrap" id="code:subscriber_node.py-8-13-wrap"><figure class="code generated-figure" counter-code="3" id="code:subscriber_node.py-8-13" label-name='&lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L9-L14"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;' label-number="3" label-self="" label-what="Listing" label-what-number="Listing 3" label-what-number-name='Listing 3 - &lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L9-L14"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;'><div class="figcontent"><div><pre><code># Initialize the node with rospy
+<p></p><div class="generated-figure-wrap" id="code:subscriber_node.py-11-18-wrap"><figure class="code generated-figure" counter-code="3" id="code:subscriber_node.py-11-18" label-name='&lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L12-L19"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;' label-number="3" label-self="" label-what="Listing" label-what-number="Listing 3" label-what-number-name='Listing 3 - &lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L12-L19"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;'><div class="figcontent"><div><pre><code># Initialize the node with rospy
 rospy.init_node('subscriber_node', anonymous=False)
+
 # Create subscriber
 subscriber = rospy.Subscriber("topic", String, callback)
 
-rospy.spin() #Keeps the script for exiting</code></pre></div></div><figcaption counter-code="3" label-name='&lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L9-L14"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;' label-number="3" label-self="" label-what="Listing" label-what-number-name='Listing 3 - &lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L9-L14"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;'><a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L9-L14"><code>subscriber_node.py</code></a></figcaption></figure></div><div style="display:none">Because of mathjax bug</div>
+# Runs continuously until interrupted
+rospy.spin() </code></pre></div></div><figcaption counter-code="3" label-name='&lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L12-L19"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;' label-number="3" label-self="" label-what="Listing" label-what-number-name='Listing 3 - &lt;a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L12-L19"&gt;&lt;code&gt;subscriber_node.py&lt;/code&gt;&lt;/a&gt;'><a href="https://github.com/duckietown/Software/blob/master/catkin_ws/src/60-templates/pkg_name/src/subscriber_node.py#L12-L19"><code>subscriber_node.py</code></a></figcaption></figure></div><div style="display:none">Because of mathjax bug</div>
 </section></section></section><a class="link_next link-different-file" href="documentation_style_guide.html#documentation-style-guide:section">next</a></div><div>
 <style>
 #disqus_section {
