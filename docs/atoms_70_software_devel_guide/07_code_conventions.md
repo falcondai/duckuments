@@ -1,11 +1,11 @@
-# Duckietown code conventions {#code-conventions}
+# Duckietown code conventions {#code-conventions status=ready}
 
 
 ## Python {#code-conventions-python}
 
 ### Tabs {#no-tabs}
 
-Never use tabs in Python file.
+Never use tabs in Python files.
 
 The tab characters are evil in Python code. Please be *very* careful in changing them.
 
@@ -64,7 +64,7 @@ For logging, import this logger:
 
     from duckietown_utils import logger
 
-## Exceptions
+## Exceptions {status=draft}
 
     DTConfigException
 
@@ -72,7 +72,7 @@ For logging, import this logger:
     compact = True
 
 
-## Scripts
+## Scripts {status=draft}
 
 
     def summary():

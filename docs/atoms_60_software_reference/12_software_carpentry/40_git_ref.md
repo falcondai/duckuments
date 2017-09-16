@@ -1,16 +1,14 @@
-# Source code control with Git {#git-reference}
+# Source code control with Git {#git-reference status=ready}
 
 Assigned: Andrea
 
 ## Background reading
 
-TODO: to write
+See: [Good book](https://git-scm.com/book/en/v2)
 
-- Git
-- GitFlow
+See: [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ## Installation
-
 
 The basic Git program is installed using
 
@@ -101,5 +99,20 @@ Solution:
 
     $ git push --set-upstream origin ![branch name]
 
-## `git` {#git}
+## `git` {#git status=draft}
+
 TODO: to write
+
+
+## `hub` {#hub}
+
+
+### Installation
+
+Install `hub` using the [instructions](https://hub.github.com/).
+
+### Creating pull requests
+
+You can create a pull request using:
+
+    $ hub pull-request -m "![description]"

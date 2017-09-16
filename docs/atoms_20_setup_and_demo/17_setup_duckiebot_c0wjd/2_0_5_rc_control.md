@@ -1,4 +1,4 @@
-# Software setup and RC remote control {#rc-control}
+# Software setup and RC remote control {#rc-control status=beta}
 
 Assigned: Andrea
 
@@ -38,8 +38,23 @@ Resolution: Probably the time is not set up correctly. Use `ntpdate` as above:
 
     $ sudo ntpdate -u us.pool.ntp.org
 
+Or see the hints in the troubleshooting section on the previous page.
 
-## Set up ROS environment on the Duckiebot {#build-repo}
+
+## Update the system
+
+If you installed the Operating System on the Duckiebot as described in [](#duckiebot-ubuntu-image),
+you can skip this section and jump to [](#build-repo).
+If you installed the Operating System on the Duckiebot by burning the image as described in
+[](#setup-duckiebot-burn-image), then you need to install the new dependencies by running the command:
+
+    duckiebot $ cd ~/duckietown
+    duckiebot $ /bin/bash ./dependencies_since_image.sh
+
+This command will install all the dependencies that are not in the image that you burned on the SD card.
+
+
+## Set up the ROS environment on the Duckiebot {#build-repo}
 
 All the following commands should be run in the `~/duckietown` directory:
 
@@ -48,6 +63,8 @@ All the following commands should be run in the `~/duckietown` directory:
 Now we are ready to make the workspace. First you need to source the baseline ROS environment:
 
     duckiebot $ source /opt/ros/kinetic/setup.bash
+
+Comment: If you are using ZSH then instead of this, you should call `source /opt/ros/kinetic/setup.bash`.
 
 Then, build the workspace using:
 
@@ -58,42 +75,34 @@ See also: For more information about `catkin_make`, see [](#catkin_make).
 Note: there is a known bug, for which it fails the first time on the Raspberry Pi. Try again; it will work.
 
 
-
-
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
-## Add your vehicle to the scuderia file {#edit-machines-file}
 
-Add your vehicle to the scuderia file.
+## Clone the duckiefleet repository (updated Sep 12) {#clone-duckiefleet status=recently-updated}
 
-See: See [](#scuderia).
+Clone the relevant `duckiefleet` repository into `~/duckiefleet`.
 
-<!--
-On the robot edit the file
+See see [](#duckiefleet-directory) to find the right `duckiefleet` repository.
 
-    ~/duckietown/catkin_ws/src/duckietown/machines
+In `~/.bashrc` set `DUCKIEFLEET_ROOT` to point to the directory:
 
-You will see something like this:
-
-    <launch>
-        <arg name="env_script_path" default="~/duckietown/environment.sh"/>
-
-        <machine name="![robot name]" address="![robot name].local" user="![username]"
-                 env-loader="$(arg env_script_path)"/>
-            ...
-        ...
-    </launch>
+    export DUCKIEFLEET_ROOT=~/duckiefleet
 
 
-Now, duplicate a &lt;machine&gt; line between &lt;launch&gt; and &lt;/launch&gt;, and replace the name and address string with the name of your vehicle.
+## Add your vehicle data to the robot database (updated Sep 12) {#edit-machines-file status=recently-updated}
 
-For example, for Andrea, `![robot name]` = `emma` and `![username]` = `andrea`.
-So, he would add this line:
+Next, you need to add your robot to the vehicles database.  This is not optional and required in order to launch any ROS scripts.
 
-    <machine name="emma" address="emma.local" user="andrea" env-loader="$(arg env_script_path)"/>
+You have already a copy of the vehicles database in the folder `robots` of `DUCKIEFLEET_ROOT`.
 
-Commit and push the new machines file. (XXX No, don't commit the machines file.) -->
+Copy the file `emma.robot.yaml` to `![robotname].robot.yaml`, where `![robotname]`
+is your robot's hostname. Then edit the copied file to represent your Duckiebot.
 
+See: For information about the format, see [](#scuderia).
+
+Finally, generate the machines file.
+
+See: The procedure is listed here: [](#machines).
 
 ## Test that the joystick is detected {#test-joystick}
 

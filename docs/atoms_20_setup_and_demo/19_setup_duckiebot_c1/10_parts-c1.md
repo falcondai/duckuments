@@ -1,4 +1,4 @@
-# Acquiring the parts for the Duckiebot `C1` {#acquiring-parts-c1}
+# Acquiring the parts for the Duckiebot `C1` {#acquiring-parts-c1 status=ready}
 
 Upgrading your `C0+wjd` configuration to `C1` starts here, with purchasing the necessary components. We provide a link to all bits and pieces that are needed to build a `C1` Duckiebot, along with their price tag. If you are wondering what is the difference between different Duckiebot configurations, read [](#duckiebot-configurations).
 
@@ -20,8 +20,7 @@ Requires: Time: 21 Days (LED board manufacturing and shipping time)
 
 Results: A kit of parts ready to be assembled in a `C1` configuration Duckiebot.
 
-Next Steps:
-- After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `C1` Duckiebot.
+Next Steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c1) before [assembling](#assembling-duckiebot-c1) your `C1` Duckiebot.
 </div>
 
 ## Bill of materials

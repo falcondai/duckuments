@@ -1,10 +1,10 @@
-# Soldering boards for `C1` {#soldering-boards-c1}
+# Soldering boards for `C1` {#soldering-boards-c1 status=draft}
+
+
 
 Assigned: Shiying
 
 <div class='requirements' markdown="1">
-
-Resources necessary:
 
 Requires: Duckiebot `C1` parts. The acquisition process is explained in [](#acquiring-parts-c1).
 The configurations are described in [](#duckiebot-configurations).
@@ -17,31 +17,72 @@ TODO: finish above
 
 </div>
 
+## General rules
+
+General rule in soldering:
+
+* soldering the components according to the height of components - from lowest to highest
+
+## 16-channel PWM/Servo HAT
+
+([alternative instructions: how to solder on the PWM/Servo HAT](https://learn.adafruit.com/adafruit-16-channel-pwm-servo-hat-for-raspberry-pi/))
+
+
+### Prepare the components
+
+Put the following components on the table according the Figure
+
+* [GPIO Stacking Header](http://adafru.it/2223) for A+/B+/Pi 2
+* [Adafruit](http://adafru.it/2327) Mini Kit of 16-Channel PWM / Servo HAT for Raspberry Pi
+    * 3x4 headers (4x)
+    * 2-pin terminal block
+    * 16-Channel PWM / Servo HAT for Raspberry Pi (1x)
+
+
+<div figure-id="fig: " figure-caption=" ">
+     <img src="image_3.jpg" style='width: 20ex; height: auto'/>
+</div>
+
+### Soldering instructions
+
+1. Solder the 2 pin terminal block next to the power cable jack
+2. Solder the four 3x4 headers onto the edge of the HAT, below the words "Servo/PWM Pi HAT!"
+3. Solder the GPIO Stacking Header at the top of the board, where the 2x20 grid of holes is located.
 
 
 ## LSD board
 
+TODO: add LSD board image, top and bottom.
+
 <img src="image_5.png" style='width: 20ex; height: auto'/>
 
-<img src="image_6.png" style='width: 20ex; height:auto'/>
+<img src="image_6.png" style='width: 20ex; height: auto'/>
 
+### Prepare the components
 
-Parts list:
+Put the following components according the figure on the table:
 
 * 1 x 40 pin female header
 * 5 x 4 pin female header
 * 2 x 16 pin male header
 * 1 x 12 pin male header
+* 1 x 3 pin male header
 * 1 x 2 pin female shunt jumper
 * 5 x 200 Ohm resistors
 * 10 x 130 Ohm resistors
 * 3 x 4 pin male header for servos
 
-Instructions:
+<div figure-id="fig: LSD_HAT_and_all_components" figure-caption="LSD HAT and all of needed components">
+     <img src="LSD_HAT.jpg" style='width: 20ex; height: auto'/>
+</div>
+
+### Soldering instructions
+
+1. Put the resistors on the top of the board according to silkscreen markings, solder it on from the bottom side.
+
+Tips:
 
 1. Solder all female headers to the bottom of the board. Alignment becomes easy if the  female headers are plugged into the PWM heat, and the LSD board rests on top.
-
-2. Solder all resistors to the top of the board according to silkscreen markings.
 
 3. Solder all male headers to the top of the board. Male header positions are outlined on the silkscreen.
 
@@ -84,9 +125,8 @@ Instructions:
 
 3. Power the PWM/Servo HAT and Pi connecting them to the battery with the cables included in the duckie box
 
-4. Power the DC/Stepper motor from the PWM/Servo HAT using the male-to-male cable in the duckie box, connect the positive 
+4. Power the DC/Stepper motor from the PWM/Servo HAT using the male-to-male cable in the duckie box, connect the positive
 
 5. connect the Pi to the board
 
 6. Finished!
-

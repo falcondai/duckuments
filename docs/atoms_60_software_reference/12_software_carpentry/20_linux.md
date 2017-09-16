@@ -1,4 +1,4 @@
-# GNU/Linux general notions {#linux}
+# GNU/Linux general notions {#linux-general status=draft}
 
 Assigned: Andrea
 
@@ -24,13 +24,15 @@ Assigned: Andrea
 
 
 
-# Every day Linux
+# Every day Linux {#every-day-linux status=draft}
 
 
 ## `cd` {#cd}
+
 TODO: to write
 
 ## `sudo` {#sudo}
+
 TODO: to write
 
 ## `ls` {#ls}
@@ -54,6 +56,7 @@ TODO: to write
 TODO: to write
 
 ## `shutdown` {#shutdown}
+
 TODO: to write
 
 
@@ -61,7 +64,7 @@ TODO: to write
 
 TODO: to write
 
-# Users
+# Users {#users-management status=draft}
 
 
 
@@ -69,7 +72,7 @@ TODO: to write
 
 TODO: to write
 
-# UNIX tools
+# UNIX tools {#unix-tools status=draft}
 
 
 ## `cat` {#cat}
@@ -85,7 +88,7 @@ TODO: to write
 
 TODO: to write
 
-# Linux disks and files
+# Linux disks and files {#linux-disk-and-files status=draft}
 
 ## `fdisk` {#fdisk}
 
@@ -125,16 +128,23 @@ TODO: to write
 
 TODO: to write
 
-# Other administration commands
+## How to make a partition {#how-to-partition status=draft}
+
+TODO: to write
+
+# Other administration commands {#linux-other-admin status=draft}
 
 
 ## `visudo` {#visudo}
+
 TODO: to write
 
 ## `update-alternatives` {#update-alternatives}
+
 TODO: to write
 
 ## `udevadm` {#udevadm}
+
 TODO: to write
 
 ## `systemctl` {#systemctl}
@@ -143,61 +153,73 @@ TODO: to write
 
 
 
-# Make
+# Make {#gnu-make status=draft}
 
 ## `make` {#make}
+
 TODO: to write
 
 
-# Python-related tools
+# Python-related tools {#python-tools status=draft}
 
 ## `virtualenv` {#virtualenv}
 
 TODO: to write
 
 ## `pip` {#pip}
+
 TODO: to write
 
 
-# Raspberry-PI commands
+# Raspberry-PI commands {#RPI-commands status=draft}
 
 ## `raspi-config` {#raspi-config}
+
 TODO: to write
 
 ## `vcgencmd` {#vcgencmd}
+
 TODO: to write
 
 ## `raspistill` {#raspistill}
+
 TODO: to write
 
 
 ## `jstest` {#jstest}
+
 TODO: to write
 
 ## `swapon` {#swapon}
+
 TODO: to write
 
 ## `mkswap` {#mkswap}
+
 TODO: to write
 
 
 
-# Users and permissions
+# Users and permissions {#users-and-permissions status=draft}
 
 ## `chmod` {#chmod}
+
 TODO: to write
 
 ## `groups` {#groups}
+
 TODO: to write
 
 ## `adduser` {#adduser}
+
 TODO: to write
 
 ## `useradd` {#useradd}
+
 TODO: to write
 
 
-# Downloading
+# Downloading {#download-utils status=draft}
 
 
 ## `curl` {#curl}
@@ -216,11 +238,13 @@ TODO: to write
 
 
 ## `xz` {#xz}
+
 TODO: to write
 
-# Shells and environments
+# Shells and environments {#linux-shells status=draft}
 
 ## `source` {#source}
+
 TODO: to write
 
 ## `which` {#which}
@@ -231,7 +255,7 @@ TODO: to write
 
 TODO: to write
 
-# Other misc commands
+# Other misc commands {#linux-misc status=draft}
 
 
 ## `pgrep`

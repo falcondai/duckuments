@@ -1,4 +1,4 @@
-# Minimal ROS node - `pkg_name` {#ros-python-howto}
+# Minimal ROS node - `pkg_name` {#ros-python-howto status=beta}
 
 Assigned: Andrea
 
@@ -33,6 +33,7 @@ defines the name of the project.
 
 The `find_package` lines:
 
+
     find_package(catkin REQUIRED COMPONENTS
       roscpp
       rospy
@@ -46,7 +47,7 @@ In Duckietown, most packages depend on `duckietown_msgs` to make use of the cust
 
 The line:
 
-    catkine_python_setup()
+    catkin_python_setup()
 
 tells `catkin` to setup Python-related stuff for this package.
 

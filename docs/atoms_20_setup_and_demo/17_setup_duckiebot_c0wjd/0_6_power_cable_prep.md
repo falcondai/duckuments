@@ -1,12 +1,10 @@
-# Preparing the power cable for `C0` {#power-cable-prep-c0}
+# Preparing the power cable for `C0` {#power-cable-prep-c0 status=ready}
 
 In configuration `C0` we will need a cable to power the DC motor HAT from the battery. The keen observer might have noticed that such a cable was not included in the [`C0` Duckiebot parts](#acquiring-parts-c0) chapter. Here, we create this cable by splitting open any USB-A cable, identifying and stripping the power wires, and using them to power the DC motor HAT. If you are unsure about the definitions of the different Duckiebot configurations, read [](#duckiebot-configurations).
 
 It is important to note that these instructions are relevant only for assembling a `C0+wjd` configuration Duckiebot. If you intend to build a `C1` configuration Duckiebot, you can skip these instructions.
 
 <div class='requirements' markdown="1">
-
-Resources necessary:
 
 Requires: One male USB-A to anything cable.
 
@@ -113,4 +111,5 @@ If you have soldered the boards already, you may test correct functionality of t
      <img src="final-result-power-c0.jpg" style='width: 15em'/>
 </div>
 
+Comment: We need to test this on a working Duckiebot. -JT
 If the green LED turns on, the DC motor HAT is receving power.

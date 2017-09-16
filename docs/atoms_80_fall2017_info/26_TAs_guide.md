@@ -1,8 +1,10 @@
-# Guide for TAs
+# Guide for TAs {#guide-for-TAs status=beta}
 
 ## Dramatis personae
 
-These are the TAs:
+These are the TAs.
+
+At ETHZ:
 
 - Shiying Li (shili@student.ethz.ch)
 - Ercan Selçuk (ercans@student.ethz.ch)
@@ -11,16 +13,20 @@ These are the TAs:
 - Lapandic Dzenan (ldzenan@student.ethz.ch)
 - Marco Erni (merni@ethz.ch)
 
+At TTIC:
+
 - Andrea F. Daniele (afdaniele@ttic.edu)
 - Falcon Dai (dai@ttic.edu)
 - Jon Michaux (jmichaux@ttic.edu)
 
-- Florian Golemo (fgolemo@gmail.com) (Montreal)
+At Montreal:
+
+- Florian Golemo (fgolemo@gmail.com)
 
 
 ## First steps
 
-Here are the first steps.
+Here are the first steps for the TAs.
 
 Note that many of these are not sequential and can be done in parallel.
 
@@ -45,7 +51,10 @@ Point of Contact: [Kirsten Bowser](mailto:akbowser@gmail.com)
 
 ### Install Ubuntu
 
-Install Ubuntu 16.04 on your laptop.
+Install Ubuntu 16.04 on your laptop,
+and then install ROS, Atom, Liclipse, etc.
+
+See: [](#setup-laptop)
 
 ### Duckuments
 
@@ -78,13 +87,14 @@ Point of Contact: Andrea
 
 Build your Duckiebot according to the instructions.
 
-See: [](#part:building-duckiebot)
+See: [](#building-duckiebot-c0)
+
 
 Point of Contact: Shiying (ETH)
 
-Point of Contact: TBD (UdeM)
+Point of Contact: ??? (UdeM)
 
-Point of Contact: TBD (TTIC)
+Point of Contact: ??? (TTIC)
 
 As you read the instructions, keep open the Duckuments source, and note any
 discrepancies. You must note any unexpected thing that is not predicted from the
@@ -117,7 +127,7 @@ Please fill up the [preliminary questionnaire for TAs]().
 TODO: add interactive unit and related questionnaires.
 
 Point of contact: Jacopo -->
-
+<!--
 ## On the interaction with students
 
 TODO: to write
@@ -134,4 +144,4 @@ TODO: to write
 
 TODO: to write - used by many others
 
-TODO: to write - translations
+TODO: to write - translations -->

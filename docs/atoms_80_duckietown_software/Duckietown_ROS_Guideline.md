@@ -1,4 +1,4 @@
-# Duckietown ROS Guidelines
+# Duckietown ROS Guidelines {#duckietown-ROS-conventions status=draft}
 
 ## Node and Topics
 In the source code, a node must only publish/subscribe to private topics.
@@ -19,6 +19,8 @@ All the parameters of a node must be private parameters to that node.
 All the nodes must write the value of the parameters being used to the parameter server at initialization. This ensures transparence of the parameters. Note that the `get_param(name,default_value)` does not write the default value to the parameter server automatically.
 
 The default parameter of `pkg_name/node_name` should be put in `~/duckietown/catkin_ws/src/duckietown/config/baseline/pkg_name/node_name/dafault.yaml`. The elemental launch file of this node should load the parameter using <code>&lt;rosparam&gt;</code>.
+
+Note: The above is deprecated. The configuration is handled differently.
 
 ## Launch file
 Each node must have a launch file with the same name in the `launch` folder of the package. ex: `joy_mapper.py` must have a `joy_mapper.launch`. These are referred to as the elemental launch files.
